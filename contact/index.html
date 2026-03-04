@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | DRP & Co. LLP — Chartered Accountants, Pune</title>
+    <meta name="description" content="Contact DRP & Co. LLP, Chartered Accountants at 101 Amelia, Rege Path, Model Colony, Shivajinagar, Pune 411016. Phone +91 20 2995 2400. Email info@drpca.com.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&display=swap" rel="stylesheet">
+    <style>
+        /* ═══════════════════════════════════════════════════════════
+           DRP & Co. LLP — Design System (shared) + Contact Page
+           ═══════════════════════════════════════════════════════════ */
+
+        :root {
+            --navy: #1F3864;
+            --navy-deep: #162a4d;
+            --navy-light: #2a4a7a;
+            --blue: #2E5FA3;
+            --mid-blue: #4472C4;
+            --light-blue: #D6E4F7;
+            --ice: #EDF3FC;
+            --gold: #B8860B;
+            --gold-light: #D4A843;
+            --gold-muted: rgba(184,134,11,0.12);
+            --white: #FFFFFF;
+            --off-white: #FAFBFD;
+            --warm-gray: #F5F5F2;
+            --border-light: rgba(31,56,100,0.06);
+            --border-mid: rgba(31,56,100,0.12);
+            --text-dark: #1a1a2e;
+            --text-body: #3d3d56;
+            --text-muted: #6b6b80;
+            --text-on-dark: rgba(255,255,255,0.85);
+            --text-on-dark-muted: rgba(255,255,255,0.45);
+            --serif: 'DM Serif Display', Georgia, 'Times New Roman', serif;
+            --sans: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            --max-width: 1200px;
+            --nav-height: 72px;
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+            --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+            --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; font-size: 16px; scroll-padding-top: var(--nav-height); }
+        body {
+            font-family: var(--sans); color: var(--text-body); background: var(--white);
+            overflow-x: hidden; -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale; line-height: 1.6;
+        }
+        a { color: inherit; text-decoration: none; }
+        ul, ol { list-style: none; }
+        img { max-width: 100%; display: block; }
+        button { font-family: var(--sans); cursor: pointer; border: none; background: none; }
+        .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
+
+        /* ═══════════════════ NAVBAR (shared) ═══════════════════ */
+        .nav {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+            height: var(--nav-height); background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px);
+            border-bottom: 1px solid var(--border-light); transition: all 0.4s var(--ease-smooth);
+        }
+        .nav.scrolled { box-shadow: 0 1px 20px rgba(31,56,100,0.06); }
+        .nav-inner {
+            max-width: var(--max-width); margin: 0 auto; padding: 0 2rem;
+            height: 100%; display: flex; align-items: center; justify-content: space-between;
+        }
+        .nav-brand { display: flex; align-items: center; gap: 0.7rem; flex-shrink: 0; }
+        .nav-brand-mark {
+            width: 40px; height: 40px; background: var(--navy); border-radius: var(--radius-sm);
+            display: flex; align-items: center; justify-content: center;
+            color: var(--white); font-family: var(--serif); font-size: 1.05rem;
+            letter-spacing: -0.02em; transition: transform 0.3s var(--ease-out);
+        }
+        .nav-brand:hover .nav-brand-mark { transform: scale(1.05); }
+        .nav-brand-text { display: flex; flex-direction: column; line-height: 1.15; }
+        .nav-brand-name { font-family: var(--serif); font-size: 1.1rem; color: var(--navy); letter-spacing: -0.01em; }
+        .nav-brand-sub { font-size: 0.6rem; color: var(--text-muted); letter-spacing: 0.14em; text-transform: uppercase; font-weight: 500; }
+        .nav-menu { display: flex; align-items: center; gap: 0; }
+        .nav-item { position: relative; }
+        .nav-link {
+            display: flex; align-items: center; gap: 0.3rem; padding: 0.5rem 1rem;
+            font-size: 0.84rem; font-weight: 500; color: var(--text-body);
+            letter-spacing: 0.01em; transition: color 0.25s; white-space: nowrap;
+        }
+        .nav-link:hover, .nav-link.active { color: var(--navy); }
+        .nav-link.active { font-weight: 600; }
+        .nav-link svg { width: 12px; height: 12px; opacity: 0.4; transition: transform 0.3s, opacity 0.3s; }
+        .nav-item:hover .nav-link svg, .nav-item.open .nav-link svg { transform: rotate(180deg); opacity: 0.7; }
+        .nav-actions { display: flex; align-items: center; gap: 0.5rem; flex-shrink: 0; }
+        .nav-cta {
+            padding: 0.55rem 1.4rem; background: var(--navy); color: var(--white);
+            border-radius: var(--radius-sm); font-size: 0.82rem; font-weight: 600;
+            letter-spacing: 0.01em; transition: all 0.25s var(--ease-smooth);
+        }
+        .nav-cta:hover { background: var(--blue); transform: translateY(-1px); box-shadow: 0 4px 16px rgba(31,56,100,0.2); }
+        .nav-login-wrap { position: relative; }
+        .nav-login-btn {
+            display: flex; align-items: center; gap: 0.4rem; padding: 0.5rem 0.85rem;
+            font-size: 0.8rem; font-weight: 500; color: var(--text-muted);
+            border: 1px solid var(--border-mid); border-radius: var(--radius-sm); transition: all 0.25s;
+        }
+        .nav-login-btn:hover { color: var(--navy); border-color: var(--navy); }
+        .nav-login-btn svg { width: 14px; height: 14px; }
+        .nav-login-btn .chevron { width: 10px; height: 10px; opacity: 0.4; transition: transform 0.3s; }
+        .nav-login-wrap.open .nav-login-btn .chevron { transform: rotate(180deg); }
+        .nav-login-wrap.open .nav-login-btn { color: var(--navy); border-color: var(--navy); background: var(--ice); }
+        .login-dropdown {
+            position: absolute; top: calc(100% + 8px); right: 0; width: 220px;
+            background: var(--white); border-radius: var(--radius-md);
+            box-shadow: 0 12px 40px rgba(31,56,100,0.12), 0 0 0 1px var(--border-light);
+            opacity: 0; visibility: hidden; transform: translateY(6px);
+            transition: all 0.25s var(--ease-out); padding: 0.5rem; z-index: 100;
+        }
+        .nav-login-wrap.open .login-dropdown { opacity: 1; visibility: visible; transform: translateY(0); }
+        .login-dropdown-label { font-size: 0.65rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); padding: 0.5rem 0.75rem 0.35rem; }
+        .login-dropdown a {
+            display: flex; align-items: center; gap: 0.6rem; padding: 0.6rem 0.75rem;
+            border-radius: var(--radius-sm); font-size: 0.84rem; font-weight: 500; color: var(--text-body); transition: all 0.2s;
+        }
+        .login-dropdown a:hover { background: var(--ice); color: var(--navy); }
+        .login-dropdown a svg { width: 16px; height: 16px; color: var(--mid-blue); flex-shrink: 0; }
+        .login-dropdown a .arrow { margin-left: auto; width: 12px; height: 12px; opacity: 0; transform: translateX(-4px); transition: all 0.2s; color: var(--text-muted); }
+        .login-dropdown a:hover .arrow { opacity: 0.6; transform: translateX(0); }
+
+        /* Mega Menu */
+        .mega-menu {
+            position: fixed; top: var(--nav-height); left: 0; right: 0;
+            background: var(--white); border-bottom: 1px solid var(--border-light);
+            box-shadow: 0 20px 60px rgba(31,56,100,0.08);
+            opacity: 0; visibility: hidden; transform: translateY(-4px);
+            transition: all 0.3s var(--ease-out); z-index: 999;
+        }
+        .nav-item.open .mega-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+        .mega-menu-inner {
+            max-width: var(--max-width); margin: 0 auto; padding: 2.5rem 2rem 2rem;
+            display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;
+        }
+        .mega-col-label {
+            font-size: 0.65rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase;
+            color: var(--text-muted); padding-bottom: 0.85rem; margin-bottom: 0.5rem; border-bottom: 1px solid var(--border-light);
+        }
+        .mega-link { display: flex; align-items: center; gap: 0.75rem; padding: 0.65rem 0.75rem; margin: 0 -0.75rem; border-radius: var(--radius-sm); transition: all 0.2s; }
+        .mega-link:hover { background: var(--ice); }
+        .mega-link-icon {
+            width: 36px; height: 36px; border-radius: var(--radius-sm); display: flex;
+            align-items: center; justify-content: center; flex-shrink: 0; background: var(--ice); transition: background 0.2s;
+        }
+        .mega-link:hover .mega-link-icon { background: var(--light-blue); }
+        .mega-link-icon svg { width: 18px; height: 18px; color: var(--blue); }
+        .mega-link-text h4 { font-size: 0.88rem; font-weight: 600; color: var(--navy); margin-bottom: 0.1rem; }
+        .mega-link-text p { font-size: 0.72rem; color: var(--text-muted); line-height: 1.4; }
+        .nav-item--services::after { content: ''; position: absolute; bottom: -8px; left: 0; width: 100%; height: 8px; }
+
+        /* Mobile */
+        .nav-toggle { display: none; flex-direction: column; justify-content: center; gap: 5px; width: 32px; height: 32px; padding: 4px; }
+        .nav-toggle span { width: 100%; height: 2px; background: var(--navy); border-radius: 2px; transition: all 0.3s var(--ease-out); transform-origin: center; }
+        .nav-toggle.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+        .nav-toggle.active span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+        .nav-toggle.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+        .mobile-menu {
+            display: none; position: fixed; top: var(--nav-height); left: 0; right: 0; bottom: 0;
+            background: var(--white); z-index: 998; overflow-y: auto; padding: 2rem;
+            transform: translateX(100%); transition: transform 0.4s var(--ease-out);
+        }
+        .mobile-menu.open { transform: translateX(0); }
+        .mobile-nav-section { padding: 1rem 0; border-bottom: 1px solid var(--border-light); }
+        .mobile-nav-section:last-child { border-bottom: none; }
+        .mobile-nav-label { font-size: 0.65rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.5rem; }
+        .mobile-nav-link { display: block; padding: 0.6rem 0; font-size: 0.95rem; font-weight: 500; color: var(--text-body); }
+        .mobile-nav-link:hover { color: var(--navy); }
+        .mobile-nav-sub { padding-left: 1rem; }
+        .mobile-nav-sub .mobile-nav-link { font-size: 0.88rem; font-weight: 400; color: var(--text-muted); }
+        .mobile-nav-cta { display: block; text-align: center; padding: 0.85rem; background: var(--navy); color: var(--white); border-radius: var(--radius-sm); font-size: 0.9rem; font-weight: 600; margin-top: 1rem; }
+        .mobile-login-links { display: flex; gap: 0.75rem; margin-top: 1rem; }
+        .mobile-login-links a { flex: 1; text-align: center; padding: 0.65rem; border: 1px solid var(--border-mid); border-radius: var(--radius-sm); font-size: 0.8rem; font-weight: 500; color: var(--text-muted); }
+
+        /* ═══════════════════════════════════════════════════════════
+           PAGE HERO (inner pages)
+           ═══════════════════════════════════════════════════════════ */
+        .page-hero {
+            padding: calc(var(--nav-height) + 4rem) 2rem 4rem;
+            background: linear-gradient(135deg, #162a4d 0%, #1F3864 40%, #2a4a7a 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .page-hero::before {
+            content: '';
+            position: absolute; top: -40%; right: -15%;
+            width: 700px; height: 700px; border-radius: 50%;
+            background: radial-gradient(circle, rgba(255,255,255,0.02) 0%, transparent 70%);
+        }
+        .page-hero-inner {
+            max-width: var(--max-width); margin: 0 auto; position: relative; z-index: 2;
+        }
+        .page-hero-label {
+            font-size: 0.7rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase;
+            color: var(--gold-light); margin-bottom: 1rem;
+        }
+        .page-hero-title {
+            font-family: var(--serif); font-size: clamp(2rem, 4vw, 3rem);
+            color: var(--white); line-height: 1.2; margin-bottom: 1rem; max-width: 600px;
+        }
+        .page-hero-desc {
+            font-size: 1.05rem; line-height: 1.7; color: var(--text-on-dark); max-width: 560px;
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            display: flex; align-items: center; gap: 0.4rem;
+            font-size: 0.78rem; color: rgba(255,255,255,0.35); margin-bottom: 1.5rem;
+        }
+        .breadcrumb a { color: rgba(255,255,255,0.45); transition: color 0.2s; }
+        .breadcrumb a:hover { color: var(--gold-light); }
+        .breadcrumb svg { width: 12px; height: 12px; opacity: 0.4; }
+
+        /* ═══════════════════════════════════════════════════════════
+           CONTACT PAGE CONTENT
+           ═══════════════════════════════════════════════════════════ */
+
+        /* Contact Cards Row */
+        .contact-cards {
+            max-width: var(--max-width); margin: -2.5rem auto 0; padding: 0 2rem;
+            position: relative; z-index: 5;
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem;
+        }
+        .contact-card {
+            background: var(--white); border-radius: var(--radius-md);
+            padding: 1.75rem; border: 1px solid var(--border-light);
+            box-shadow: 0 8px 32px rgba(31,56,100,0.06);
+            display: flex; align-items: flex-start; gap: 1rem;
+            transition: all 0.3s var(--ease-smooth);
+        }
+        .contact-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(31,56,100,0.1);
+            border-color: transparent;
+        }
+        .contact-card-icon {
+            width: 44px; height: 44px; flex-shrink: 0;
+            background: var(--ice); border-radius: var(--radius-sm);
+            display: flex; align-items: center; justify-content: center;
+            transition: background 0.3s;
+        }
+        .contact-card:hover .contact-card-icon { background: var(--light-blue); }
+        .contact-card-icon svg { width: 20px; height: 20px; color: var(--blue); }
+        .contact-card h3 {
+            font-size: 0.88rem; font-weight: 600; color: var(--navy); margin-bottom: 0.35rem;
+        }
+        .contact-card p {
+            font-size: 0.84rem; line-height: 1.6; color: var(--text-muted);
+        }
+        .contact-card a {
+            color: var(--blue); font-weight: 500; transition: color 0.2s;
+        }
+        .contact-card a:hover { color: var(--navy); }
+
+        /* Main Contact Section */
+        .contact-main {
+            max-width: var(--max-width); margin: 0 auto;
+            padding: 4rem 2rem 5rem;
+            display: grid; grid-template-columns: 1fr 1.25fr; gap: 4rem;
+        }
+
+        /* Left: Location Info */
+        .contact-location {}
+        .contact-section-label {
+            font-size: 0.7rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase;
+            color: var(--mid-blue); margin-bottom: 1.5rem;
+        }
+
+        .location-card {
+            padding: 1.5rem; background: var(--off-white); border-radius: var(--radius-md);
+            border: 1px solid var(--border-light); margin-bottom: 1.25rem;
+            transition: border-color 0.3s;
+        }
+        .location-card:hover { border-color: var(--border-mid); }
+        .location-badge {
+            display: inline-block; padding: 0.2rem 0.6rem; border-radius: 100px;
+            font-size: 0.62rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;
+            margin-bottom: 0.75rem;
+        }
+        .location-badge--hq { background: var(--gold-muted); color: var(--gold); }
+        .location-badge--branch { background: var(--ice); color: var(--mid-blue); }
+        .location-card h4 {
+            font-family: var(--serif); font-size: 1.05rem; color: var(--navy); margin-bottom: 0.5rem;
+        }
+        .location-card p { font-size: 0.84rem; line-height: 1.7; color: var(--text-body); margin-bottom: 0.5rem; }
+        .location-detail {
+            display: flex; align-items: center; gap: 0.5rem;
+            font-size: 0.82rem; color: var(--text-muted); margin-top: 0.35rem;
+        }
+        .location-detail svg { width: 14px; height: 14px; color: var(--mid-blue); flex-shrink: 0; }
+        .location-detail a { color: var(--blue); font-weight: 500; transition: color 0.2s; }
+        .location-detail a:hover { color: var(--navy); }
+
+        /* Social / LinkedIn */
+        .contact-social { margin-top: 2rem; }
+        .contact-social-label {
+            font-size: 0.65rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;
+            color: var(--text-muted); margin-bottom: 0.75rem;
+        }
+        .social-link {
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            padding: 0.6rem 1.2rem; border: 1px solid var(--border-mid);
+            border-radius: var(--radius-sm); font-size: 0.84rem; font-weight: 500;
+            color: var(--text-body); transition: all 0.25s;
+        }
+        .social-link:hover { border-color: var(--navy); color: var(--navy); background: var(--ice); }
+        .social-link svg { width: 16px; height: 16px; }
+
+        /* Right: Enquiry Form */
+        .enquiry-form {
+            background: var(--white); border-radius: var(--radius-lg);
+            padding: 2.5rem; border: 1px solid var(--border-light);
+            box-shadow: 0 4px 24px rgba(31,56,100,0.04);
+        }
+        .enquiry-form h3 {
+            font-family: var(--serif); font-size: 1.25rem; color: var(--navy); margin-bottom: 0.4rem;
+        }
+        .enquiry-form > p {
+            font-size: 0.88rem; color: var(--text-muted); margin-bottom: 2rem; line-height: 1.6;
+        }
+
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+        .form-group { margin-bottom: 1.15rem; }
+        .form-group label {
+            display: block; font-size: 0.78rem; font-weight: 600; color: var(--text-body);
+            margin-bottom: 0.4rem; letter-spacing: 0.02em;
+        }
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%; padding: 0.75rem 1rem; border: 1px solid var(--border-mid);
+            border-radius: var(--radius-sm); font-family: var(--sans); font-size: 0.88rem;
+            color: var(--text-dark); background: var(--white); transition: all 0.2s; outline: none;
+        }
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+            border-color: var(--blue); box-shadow: 0 0 0 3px rgba(46,95,163,0.08);
+        }
+        .form-group input::placeholder, .form-group textarea::placeholder { color: var(--text-muted); opacity: 0.5; }
+        .form-group textarea { height: 130px; resize: vertical; }
+        .form-group select { cursor: pointer; }
+
+        .btn {
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            padding: 0.85rem 1.8rem; border-radius: var(--radius-sm);
+            font-size: 0.9rem; font-weight: 600; font-family: var(--sans);
+            transition: all 0.3s var(--ease-smooth); border: none; cursor: pointer;
+        }
+        .btn svg { width: 16px; height: 16px; }
+        .btn--dark { background: var(--navy); color: var(--white); width: 100%; justify-content: center; }
+        .btn--dark:hover { background: var(--blue); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(31,56,100,0.2); }
+
+        .form-note {
+            font-size: 0.72rem; color: var(--text-muted); margin-top: 1rem; text-align: center;
+            line-height: 1.6;
+        }
+
+        /* Map Section */
+        .map-section {
+            height: 400px; background: var(--ice);
+            border-top: 1px solid var(--border-light);
+        }
+        .map-section iframe { width: 100%; height: 100%; border: none; filter: saturate(0.85) contrast(1.05); }
+
+        /* ═══════════════════ FOOTER (shared) ═══════════════════ */
+        .footer {
+            background: var(--navy-deep); color: var(--text-on-dark-muted);
+            padding: 4rem 2rem 2rem;
+        }
+        .footer-inner {
+            max-width: var(--max-width); margin: 0 auto;
+            display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 3rem;
+        }
+        .footer-brand-mark { display: flex; align-items: center; gap: 0.7rem; margin-bottom: 1rem; }
+        .footer-brand-icon {
+            width: 36px; height: 36px; background: rgba(255,255,255,0.08);
+            border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center;
+            color: var(--white); font-family: var(--serif); font-size: 0.95rem;
+        }
+        .footer-brand-name { font-family: var(--serif); font-size: 1rem; color: var(--white); }
+        .footer-brand-sub { font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-on-dark-muted); }
+        .footer-brand p { font-size: 0.82rem; line-height: 1.7; color: var(--text-on-dark-muted); }
+        .footer-col h4 {
+            font-size: 0.7rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;
+            color: rgba(255,255,255,0.6); margin-bottom: 1.1rem;
+        }
+        .footer-col ul { display: flex; flex-direction: column; gap: 0.5rem; }
+        .footer-col a { font-size: 0.84rem; color: var(--text-on-dark-muted); transition: color 0.25s; }
+        .footer-col a:hover { color: var(--gold-light); }
+        .footer-compliance {
+            max-width: var(--max-width); margin: 2rem auto 0; padding-top: 1.5rem;
+            border-top: 1px solid rgba(255,255,255,0.06); text-align: center;
+            font-size: 0.72rem; line-height: 2; color: rgba(255,255,255,0.3);
+        }
+        .footer-compliance strong { color: rgba(255,255,255,0.5); font-weight: 600; }
+        .footer-compliance a { color: rgba(255,255,255,0.4); transition: color 0.25s; }
+        .footer-compliance a:hover { color: var(--gold-light); }
+        .footer-bottom {
+            max-width: var(--max-width); margin: 1rem auto 0; padding-top: 1rem;
+            border-top: 1px solid rgba(255,255,255,0.04); display: flex;
+            justify-content: space-between; align-items: center;
+            font-size: 0.75rem; color: rgba(255,255,255,0.25);
+        }
+
+        /* Scroll animations */
+        .anim {
+            opacity: 0; transform: translateY(24px);
+            transition: opacity 0.7s var(--ease-out), transform 0.7s var(--ease-out);
+        }
+        .anim.visible { opacity: 1; transform: translateY(0); }
+
+        /* ═══════════════════ RESPONSIVE ═══════════════════ */
+        @media (max-width: 1024px) {
+            .contact-cards { grid-template-columns: 1fr; }
+            .footer-inner { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+        }
+        @media (max-width: 768px) {
+            .nav-menu, .nav-actions .nav-cta, .nav-login-wrap { display: none; }
+            .nav-toggle { display: flex; }
+            .mobile-menu { display: block; }
+            .mega-menu { display: none; }
+            .contact-cards { grid-template-columns: 1fr; margin-top: -1.5rem; }
+            .contact-main { grid-template-columns: 1fr; gap: 2.5rem; padding: 3rem 2rem; }
+            .form-row { grid-template-columns: 1fr; }
+            .footer-inner { grid-template-columns: 1fr; gap: 2rem; }
+            .footer-bottom { flex-direction: column; gap: 0.5rem; text-align: center; }
+        }
+    </style>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="canonical" href="https://www.drpca.com/contact">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.drpca.com/contact">
+    <meta property="og:title" content="Contact | DRP & Co. LLP — Chartered Accountants, Pune">
+    <meta property="og:description" content="Contact DRP & Co. LLP, Chartered Accountants at 101 Amelia, Rege Path, Model Colony, Shivajinagar, Pune 411016. Phone +91 20 2995 2400. Email info@drpca.com.">
+    <meta property="og:site_name" content="DRP & Co. LLP — Chartered Accountants">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Contact | DRP & Co. LLP — Chartered Accountants, Pune">
+    <meta name="twitter:description" content="Contact DRP & Co. LLP, Chartered Accountants at 101 Amelia, Rege Path, Model Colony, Shivajinagar, Pune 411016. Phone +91 20 2995 2400. Email info@drpca.com.">
+</head>
+<body>
+
+<!-- ═══════════════════════════ NAVBAR ═══════════════════════════ -->
+<nav class="nav" id="nav">
+    <div class="nav-inner">
+        <a href="/" class="nav-brand">
+            <div class="nav-brand-mark">D</div>
+            <div class="nav-brand-text">
+                <span class="nav-brand-name">DRP & Co. LLP</span>
+                <span class="nav-brand-sub">Chartered Accountants</span>
+            </div>
+        </a>
+        <ul class="nav-menu">
+            <li class="nav-item"><a href="/about" class="nav-link">About</a></li>
+            <li class="nav-item nav-item--services" id="servicesItem">
+                <a href="/services" class="nav-link">Services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></a>
+                <div class="mega-menu" id="megaMenu">
+                    <div class="mega-menu-inner">
+                        <div class="mega-col">
+                            <div class="mega-col-label">Assurance Services</div>
+                            <a href="/services/audit-assurance" class="mega-link"><div class="mega-link-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><path d="M9 14l2 2 4-4"/></svg></div><div class="mega-link-text"><h4>Audit &amp; Assurance</h4><p>Statutory, internal, tax, GST, and bank audits</p></div></a>
+                            <a href="/services/tax-advisory" class="mega-link"><div class="mega-link-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="18" rx="2"/><path d="M2 9h20M9 21V9"/></svg></div><div class="mega-link-text"><h4>Tax Advisory</h4><p>Corporate tax, GST, transfer pricing, FEMA</p></div></a>
+                            <a href="/services/governance" class="mega-link"><div class="mega-link-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg></div><div class="mega-link-text"><h4>Corporate Governance</h4><p>Due diligence, risk advisory, IFRS, compliance</p></div></a>
+                        </div>
+                        <div class="mega-col">
+                            <div class="mega-col-label">Advisory Services</div>
+                            <a href="/services/valuation" class="mega-link"><div class="mega-link-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><path d="M3.27 6.96L12 12.01l8.73-5.05M12 22.08V12"/></svg></div><div class="mega-link-text"><h4>Business Valuation</h4><p>Equity, intangible assets, fairness opinions, PPA</p></div></a>
+                            <a href="/services/financial-advisory" class="mega-link"><div class="mega-link-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div><div class="mega-link-text"><h4>Financial Advisory</h4><p>M&amp;A, fund raising, restructuring, startup advisory</p></div></a>
+                            <a href="/services/techno-economic" class="mega-link"><div class="mega-link-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg></div><div class="mega-link-text"><h4>Techno-Economic Studies</h4><p>Feasibility reports, DPR, project finance</p></div></a>
+                            <a href="/services/wealth-management" class="mega-link"><div class="mega-link-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div><div class="mega-link-text"><h4>Wealth Management</h4><p>Financial planning, investments, estate planning</p></div></a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item"><a href="/insights" class="nav-link">Insights</a></li>
+            <li class="nav-item"><a href="/careers" class="nav-link">Career</a></li>
+            <li class="nav-item"><a href="/contact" class="nav-link active">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+            <a href="/contact" class="nav-cta">Get in Touch</a>
+            <div class="nav-login-wrap" id="loginWrap">
+                <button class="nav-login-btn" id="loginBtn" aria-label="Login to internal portals">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+                    Login
+                    <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+                </button>
+                <div class="login-dropdown">
+                    <div class="login-dropdown-label">Internal Portals</div>
+                    <a href="https://ems.drpca.com" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>TimeWise EMS<svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a>
+                    <a href="https://dms.drpca.com" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M12 18v-6M9 15l3 3 3-3"/></svg>Document Portal<svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a>
+                </div>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+        </div>
+    </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-nav-section">
+        <a href="/" class="mobile-nav-link">Home</a>
+        <a href="/about" class="mobile-nav-link">About</a>
+        <a href="/insights" class="mobile-nav-link">Insights</a>
+        <a href="/careers" class="mobile-nav-link">Career &amp; Alumni</a>
+        <a href="/contact" class="mobile-nav-link">Contact</a>
+    </div>
+    <div class="mobile-nav-section">
+        <div class="mobile-nav-label">Assurance Services</div>
+        <div class="mobile-nav-sub">
+            <a href="/services/audit-assurance" class="mobile-nav-link">Audit &amp; Assurance</a>
+            <a href="/services/tax-advisory" class="mobile-nav-link">Tax Advisory</a>
+            <a href="/services/governance" class="mobile-nav-link">Corporate Governance</a>
+        </div>
+    </div>
+    <div class="mobile-nav-section">
+        <div class="mobile-nav-label">Advisory Services</div>
+        <div class="mobile-nav-sub">
+            <a href="/services/valuation" class="mobile-nav-link">Business Valuation</a>
+            <a href="/services/financial-advisory" class="mobile-nav-link">Financial Advisory</a>
+            <a href="/services/techno-economic" class="mobile-nav-link">Techno-Economic Studies</a>
+            <a href="/services/wealth-management" class="mobile-nav-link">Wealth Management</a>
+        </div>
+    </div>
+    <div class="mobile-nav-section">
+        <a href="/contact" class="mobile-nav-cta">Get in Touch</a>
+        <div class="mobile-login-links">
+            <a href="https://ems.drpca.com" target="_blank">EMS Portal</a>
+            <a href="https://dms.drpca.com" target="_blank">DMS Portal</a>
+        </div>
+    </div>
+</div>
+
+<!-- ═══════════════════════════ PAGE HERO ═══════════════════════════ -->
+<header class="page-hero">
+    <div class="page-hero-inner">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="/">Home</a>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+            <span>Contact</span>
+        </nav>
+        <div class="page-hero-label">Get in Touch</div>
+        <h1 class="page-hero-title">We'd Like to Hear from You</h1>
+        <p class="page-hero-desc">For enquiries about our professional services, or to discuss how the firm can assist your business, please reach out using any of the channels below.</p>
+    </div>
+</header>
+
+<!-- ═══════════════════════════ CONTACT CARDS ═══════════════════════════ -->
+<div class="contact-cards">
+    <div class="contact-card anim">
+        <div class="contact-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+        </div>
+        <div>
+            <h3>Phone</h3>
+            <p><a href="tel:+912029952400">+91 20 2995 2400</a></p>
+            <p style="font-size:0.75rem;color:var(--text-muted);margin-top:0.25rem;">Mon &ndash; Sat, 10 AM &ndash; 6 PM</p>
+        </div>
+    </div>
+    <div class="contact-card anim">
+        <div class="contact-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </div>
+        <div>
+            <h3>Email</h3>
+            <p><a href="mailto:info@drpca.com">info@drpca.com</a></p>
+            <p style="font-size:0.75rem;color:var(--text-muted);margin-top:0.25rem;">General enquiries</p>
+        </div>
+    </div>
+    <div class="contact-card anim">
+        <div class="contact-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <div>
+            <h3>Head Office</h3>
+            <p>101 Amelia, Rege Path, Model Colony,<br>Shivajinagar, Pune 411016</p>
+        </div>
+    </div>
+</div>
+
+<!-- ═══════════════════════════ MAIN CONTENT ═══════════════════════════ -->
+<div class="contact-main">
+    <!-- Left: Location Details -->
+    <div class="contact-location anim">
+        <div class="contact-section-label">Our Locations</div>
+
+        <!-- Head Office -->
+        <div class="location-card">
+            <div class="location-badge location-badge--hq">Head Office</div>
+            <h4>Pune, Maharashtra</h4>
+            <p>DRP & Co. LLP, Chartered Accountants<br>101, Amelia, Rege Path, near Lakaki Road,<br>Model Colony, Shivajinagar, Pune 411016, Maharashtra</p>
+            <div class="location-detail">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                <a href="tel:+912029952400">+91 20 2995 2400</a>
+            </div>
+            <div class="location-detail">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                <a href="mailto:info@drpca.com">info@drpca.com</a>
+            </div>
+            <div class="location-detail">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                <span>Mon &ndash; Sat: 10:00 AM &ndash; 6:00 PM</span>
+            </div>
+        </div>
+
+        <!-- Branch placeholder -->
+        <div class="location-card" style="border-style:dashed; background: transparent;">
+            <div class="location-badge location-badge--branch">Branch Office</div>
+            <h4 style="color:var(--text-muted);">Branch details to be added</h4>
+            <p style="color:var(--text-muted); font-size:0.82rem;">Additional office locations and contact details will appear here once provided.</p>
+        </div>
+
+        <!-- LinkedIn -->
+        <div class="contact-social">
+            <div class="contact-social-label">Follow Us</div>
+            <a href="https://www.linkedin.com/company/drpca/" target="_blank" rel="noopener" class="social-link">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                LinkedIn
+            </a>
+        </div>
+    </div>
+
+    <!-- Right: Enquiry Form -->
+    <div class="enquiry-form anim">
+        <h3>Send us an Enquiry</h3>
+        <p>Fill in the form below and we will respond within one working day.</p>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label>Full Name</label>
+                <input type="text" placeholder="Your name" id="formName">
+            </div>
+            <div class="form-group">
+                <label>Email Address</label>
+                <input type="email" placeholder="you@company.com" id="formEmail">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+                <label>Phone Number</label>
+                <input type="tel" placeholder="+91 98XXX XXXXX" id="formPhone">
+            </div>
+            <div class="form-group">
+                <label>Organisation</label>
+                <input type="text" placeholder="Company name (optional)" id="formOrg">
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Service Interested In</label>
+            <select id="formService">
+                <option value="">Select a service</option>
+                <optgroup label="Assurance Services">
+                    <option>Audit &amp; Assurance</option>
+                    <option>Tax Advisory</option>
+                    <option>Corporate Governance</option>
+                </optgroup>
+                <optgroup label="Advisory Services">
+                    <option>Business Valuation</option>
+                    <option>Financial Advisory</option>
+                    <option>Techno-Economic Studies</option>
+                    <option>Wealth Management</option>
+                </optgroup>
+                <option>Other</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>Your Message</label>
+            <textarea placeholder="Tell us about your requirement..." id="formMessage"></textarea>
+        </div>
+        <button class="btn btn--dark" type="button" id="formSubmit">
+            Send Enquiry
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+        <p class="form-note">Your enquiry will be directed to the firm's management. We respect your privacy and do not share your information with third parties.</p>
+    </div>
+</div>
+
+<!-- ═══════════════════════════ MAP ═══════════════════════════ -->
+<div class="map-section">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1891.7!2d73.8402574!3d18.5289881!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c07f4b5e1b0d%3A0x5c8e2a3f8e9b0a1c!2sDRP%20%26%20Co.%20LLP!5e0!3m2!1sen!2sin!4v1709500000000" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+
+<!-- ═══════════════════════════ FOOTER ═══════════════════════════ -->
+<footer class="footer">
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <div class="footer-brand-mark">
+                <div class="footer-brand-icon">D</div>
+                <div>
+                    <div class="footer-brand-name">DRP & Co. LLP</div>
+                    <div class="footer-brand-sub">Chartered Accountants</div>
+                </div>
+            </div>
+            <p>Chartered Accountants, Wealth Managers &amp; Valuation Professionals. Established in 1995. Pune, Maharashtra.</p>
+        </div>
+        <div class="footer-col">
+            <h4>Services</h4>
+            <ul>
+                <li><a href="/services/audit-assurance">Audit &amp; Assurance</a></li>
+                <li><a href="/services/tax-advisory">Tax Advisory</a></li>
+                <li><a href="/services/governance">Corporate Governance</a></li>
+                <li><a href="/services/valuation">Business Valuation</a></li>
+                <li><a href="/services/financial-advisory">Financial Advisory</a></li>
+                <li><a href="/services/techno-economic">TEV Studies</a></li>
+                <li><a href="/services/wealth-management">Wealth Management</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Company</h4>
+            <ul>
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/insights">Insights</a></li>
+                <li><a href="/careers">Careers</a></li>
+                <li><a href="/alumni">Alumni</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <li><a href="/privacy">Privacy Policy</a></li>
+                <li><a href="/terms">Terms of Use</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Connect</h4>
+            <ul>
+                <li><a href="https://www.linkedin.com/company/drpca/" target="_blank" rel="noopener">LinkedIn</a></li>
+                <li><a href="mailto:info@drpca.com">info@drpca.com</a></li>
+                <li><a href="tel:+912029952400">+91 20 2995 2400</a></li>
+                <li><a href="https://www.icai.org" target="_blank" rel="noopener">ICAI</a></li>
+            </ul>
+            <h4 style="margin-top:1.5rem;">Portals</h4>
+            <ul>
+                <li><a href="https://ems.drpca.com" target="_blank" rel="noopener">TimeWise EMS</a></li>
+                <li><a href="https://dms.drpca.com" target="_blank" rel="noopener">Document Portal</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-compliance">
+        ICAI Firm Registration Number (FRN): <strong>W100047</strong> &nbsp;&bull;&nbsp;
+        Member, <a href="https://www.icai.org" target="_blank" rel="noopener">Institute of Chartered Accountants of India</a> &nbsp;&bull;&nbsp;
+        Last Updated: April 2026
+    </div>
+    <div class="footer-bottom">
+        <span>&copy; 2026 DRP & Co. LLP. All rights reserved.</span>
+        <span>Chartered Accountants &bull; Wealth Managers &bull; Valuation Professionals</span>
+    </div>
+</footer>
+
+<!-- ═══════════════════════════ SCRIPTS ═══════════════════════════ -->
+<script>
+(function() {
+    'use strict';
+
+    // Navbar scroll
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 20), { passive: true });
+
+    // Services mega menu
+    const servicesItem = document.getElementById('servicesItem');
+    const megaMenu = document.getElementById('megaMenu');
+    let menuTimeout;
+    function openMega() { clearTimeout(menuTimeout); servicesItem.classList.add('open'); }
+    function closeMega() { menuTimeout = setTimeout(() => servicesItem.classList.remove('open'), 200); }
+    servicesItem.addEventListener('mouseenter', openMega);
+    servicesItem.addEventListener('mouseleave', closeMega);
+    megaMenu.addEventListener('mouseenter', openMega);
+    megaMenu.addEventListener('mouseleave', closeMega);
+
+    // Login dropdown
+    const loginWrap = document.getElementById('loginWrap');
+    const loginBtn = document.getElementById('loginBtn');
+    loginBtn.addEventListener('click', (e) => { e.stopPropagation(); loginWrap.classList.toggle('open'); });
+    document.addEventListener('click', (e) => { if (!loginWrap.contains(e.target)) loginWrap.classList.remove('open'); });
+
+    // Mobile menu
+    const navToggle = document.getElementById('navToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    navToggle.addEventListener('click', () => {
+        const isOpen = mobileMenu.classList.contains('open');
+        navToggle.classList.toggle('active'); mobileMenu.classList.toggle('open');
+        document.body.style.overflow = isOpen ? '' : 'hidden';
+    });
+    mobileMenu.querySelectorAll('a').forEach(l => l.addEventListener('click', () => {
+        navToggle.classList.remove('active'); mobileMenu.classList.remove('open'); document.body.style.overflow = '';
+    }));
+
+    // Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            servicesItem.classList.remove('open'); loginWrap.classList.remove('open');
+            if (mobileMenu.classList.contains('open')) {
+                navToggle.classList.remove('active'); mobileMenu.classList.remove('open'); document.body.style.overflow = '';
+            }
+        }
+    });
+
+    // Enquiry form submit
+    document.getElementById('formSubmit').addEventListener('click', () => {
+        const name = document.getElementById('formName').value.trim();
+        const email = document.getElementById('formEmail').value.trim();
+        const message = document.getElementById('formMessage').value.trim();
+
+        if (!name || !email || !message) {
+            alert('Please fill in your name, email, and message.');
+            return;
+        }
+
+        // Construct mailto as fallback — will be replaced with Netlify Forms / Formspree in production
+        const phone = document.getElementById('formPhone').value.trim();
+        const org = document.getElementById('formOrg').value.trim();
+        const service = document.getElementById('formService').value;
+
+        const subject = encodeURIComponent('Website Enquiry from ' + name);
+        const body = encodeURIComponent(
+            'Name: ' + name + '\n' +
+            'Email: ' + email + '\n' +
+            'Phone: ' + (phone || 'Not provided') + '\n' +
+            'Organisation: ' + (org || 'Not provided') + '\n' +
+            'Service: ' + (service || 'Not specified') + '\n\n' +
+            'Message:\n' + message
+        );
+
+        window.location.href = 'mailto:dhananjay@drpca.com?subject=' + subject + '&body=' + body;
+    });
+
+    // Scroll animatio

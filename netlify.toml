@@ -1,0 +1,16 @@
+[build]
+  publish = "."
+
+[[redirects]]
+  from = "/alumni"
+  to = "/careers#alumni"
+  status = 302
+
+# Pretty URLs enabled by default on Netlify
+# All /folder/index.html files serve as /folder
+
+[build.processing]
+  skip_processing = false
+
+[build.processing.html]
+  pretty_urls = true
