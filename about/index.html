@@ -42,6 +42,16 @@
         /* ─── FIRM OVERVIEW ─── */
         .firm-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 4rem; align-items: start; }
         .firm-text p { font-size: 0.95rem; line-height: 1.8; color: var(--text-body); margin-bottom: 1rem; }
+        .firm-milestone { background: linear-gradient(135deg, rgba(184,134,11,0.08) 0%, rgba(184,134,11,0.04) 100%); border: 1px solid rgba(184,134,11,0.15); border-radius: var(--radius-lg); padding: 3rem 2.5rem; display: flex; flex-direction: column; align-items: center; text-align: center; position: sticky; top: calc(var(--nav-height) + 2rem); }
+        .firm-milestone-img { width: 200px; height: 200px; object-fit: contain; margin-bottom: 1.5rem; }
+        .firm-milestone-title { font-family: var(--serif); font-size: 1.3rem; color: var(--navy); line-height: 1.3; margin-bottom: 0.75rem; }
+        .firm-milestone-sub { font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 2rem; max-width: 320px; }
+        .firm-milestone-stats { display: flex; gap: 1px; width: 100%; background: rgba(184,134,11,0.12); border-radius: var(--radius-sm); overflow: hidden; }
+        .firm-ms { flex: 1; padding: 1rem 0.5rem; background: var(--white); text-align: center; }
+        .firm-ms:first-child { border-radius: var(--radius-sm) 0 0 var(--radius-sm); }
+        .firm-ms:last-child { border-radius: 0 var(--radius-sm) var(--radius-sm) 0; }
+        .firm-ms-val { font-family: var(--serif); font-size: 1.15rem; color: var(--navy); margin-bottom: 0.15rem; }
+        .firm-ms-label { font-size: 0.65rem; color: var(--text-muted); font-weight: 500; letter-spacing: 0.03em; }
         .firm-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
         .firm-stat {
             padding: 1.5rem; background: var(--white); border: 1px solid var(--border-light);
@@ -124,6 +134,8 @@
 
         @media(max-width:1024px){
             .firm-grid{grid-template-columns:1fr;gap:2.5rem}
+            .firm-milestone{position:static;padding:2rem 1.5rem}
+            .firm-milestone-img{width:150px;height:150px}
             .team-grid{grid-template-columns:repeat(2,1fr)}
             .approach-grid{grid-template-columns:1fr}
             .empanel-grid{grid-template-columns:1fr}
@@ -215,34 +227,15 @@
                 <p>The team comprises Chartered Accountants, Cost Accountants, Registered Valuers, Certified Wealth Managers, DISA-qualified professionals, and specialists in forensic audit and IFRS. The firm serves a diverse client base ranging from listed companies and banks to SMEs and startups.</p>
                 
             </div>
-            <div class="firm-celebrate-top anim">
-                    <img src="/assets/30-years-gold.png" alt="Celebrating 30 Years of Trust and Integrity" class="firm-celebrate-top-img">
-                    <div class="firm-celebrate-top-text"><strong>Celebrating 30 Years.</strong> Est. 1995 &mdash; Three decades of professional service.</div>
-                </div>
-                <div class="firm-stats anim">
-                <div class="firm-stat">
-                    <div class="firm-stat-value">1995</div>
-                    <div class="firm-stat-label">Year Established</div>
-                </div>
-                <div class="firm-stat">
-                    <div class="firm-stat-value">35+</div>
-                    <div class="firm-stat-label">Qualified Professionals</div>
-                </div>
-                <div class="firm-stat">
-                    <div class="firm-stat-value">7</div>
-                    <div class="firm-stat-label">Service Lines</div>
-                </div>
-                <div class="firm-stat">
-                    <div class="firm-stat-value" style="font-family:var(--sans);font-size:0.85rem;font-weight:600;color:var(--gold);">W100047</div>
-                    <div class="firm-stat-label">ICAI FRN</div>
-                </div>
-                <div class="firm-stat">
-                    <div class="firm-stat-value">4</div>
-                    <div class="firm-stat-label">Partners</div>
-                </div>
-                <div class="firm-stat">
-                    <div class="firm-stat-value">8</div>
-                    <div class="firm-stat-label">Partners &amp; Leadership</div>
+            <div class="firm-milestone anim">
+                <img src="/assets/30-years-gold.png" alt="Celebrating 30 Years of Trust and Integrity" class="firm-milestone-img">
+                <div class="firm-milestone-title">Celebrating 30 Years of Trust &amp; Integrity</div>
+                <div class="firm-milestone-sub">Established in 1995, DRP &amp; Co. LLP marks three decades of professional service in chartered accountancy, valuation, and advisory.</div>
+                <div class="firm-milestone-stats">
+                    <div class="firm-ms"><div class="firm-ms-val">1995</div><div class="firm-ms-label">Established</div></div>
+                    <div class="firm-ms"><div class="firm-ms-val">35+</div><div class="firm-ms-label">Professionals</div></div>
+                    <div class="firm-ms"><div class="firm-ms-val">4</div><div class="firm-ms-label">Partners</div></div>
+                    <div class="firm-ms"><div class="firm-ms-val">7</div><div class="firm-ms-label">Services</div></div>
                 </div>
             </div>
         </div>
