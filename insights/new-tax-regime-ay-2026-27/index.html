@@ -324,4 +324,9 @@
         if (active) active.link.classList.add('active');
     }, { passive: true });
 
-    var ao=new IntersectionObserver(function(entries){entries.forEach(function(entry,i){if(entry.isIntersecting){setTimeout(function(
+        var ao=new IntersectionObserver(function(entries){entries.forEach(function(entry,i){if(entry.isIntersecting){setTimeout(function(){entry.target.classList.add('visible')},i*60);ao.unobserve(entry.target)}})},{threshold:0.12});
+    document.querySelectorAll('.anim').forEach(function(el){ao.observe(el)});
+})();
+</script>
+</body>
+</html>

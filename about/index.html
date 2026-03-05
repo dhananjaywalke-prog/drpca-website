@@ -511,4 +511,9 @@
     var lw=document.getElementById('loginWrap'),lb=document.getElementById('loginBtn');lb.addEventListener('click',function(e){e.stopPropagation();lw.classList.toggle('open')});document.addEventListener('click',function(e){if(!lw.contains(e.target))lw.classList.remove('open')});
     var nt=document.getElementById('navToggle'),mob=document.getElementById('mobileMenu');nt.addEventListener('click',function(){var o=mob.classList.contains('open');nt.classList.toggle('active');mob.classList.toggle('open');document.body.style.overflow=o?'':'hidden'});mob.querySelectorAll('a').forEach(function(l){l.addEventListener('click',function(){nt.classList.remove('active');mob.classList.remove('open');document.body.style.overflow=''})}); 
     document.addEventListener('keydown',function(e){if(e.key==='Escape'){si.classList.remove('open');lw.classList.remove('open');if(mob.classList.contains('open')){nt.classList.remove('active');mob.classList.remove('open');document.body.style.overflow=''}}});
-    var ao=new IntersectionObserver(function(entries){entries.forEach(function(entry,i){if(entry.isIntersecting){setTimeout(function(
+        var ao=new IntersectionObserver(function(entries){entries.forEach(function(entry,i){if(entry.isIntersecting){setTimeout(function(){entry.target.classList.add('visible')},i*60);ao.unobserve(entry.target)}})},{threshold:0.12});
+    document.querySelectorAll('.anim').forEach(function(el){ao.observe(el)});
+})();
+</script>
+</body>
+</html>

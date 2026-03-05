@@ -223,7 +223,7 @@
                     </div>
                     <div class="opp-detail">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                        <span><strong>Apply:</strong> Send your CV to <a href="mailto:info@drpca.com" style="color:var(--blue);font-weight:600">info@drpca.com</a></span>
+                        <span><strong>Apply:</strong> Send your CV to <a href="/cdn-cgi/l/email-protection#365f5850597652444655571855595b" style="color:var(--blue);font-weight:600"><span class="__cf_email__" data-cfemail="94fdfaf2fbd4f0e6e4f7f5baf7fbf9">[email&#160;protected]</span></a></span>
                     </div>
                 </div>
 
@@ -232,7 +232,7 @@
                     Apply Now
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
                 </a>
-                <p class="opp-note">Application form opens in a new tab. Alternatively, email your CV directly to info@drpca.com with the subject line indicating the position of interest.</p>
+                <p class="opp-note">Application form opens in a new tab. Alternatively, email your CV directly to <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="137a7d757c5377616370723d707c7e">[email&#160;protected]</a> with the subject line indicating the position of interest.</p>
             </div>
 
             <!-- Articleship -->
@@ -258,7 +258,7 @@
                     </div>
                     <div class="opp-detail">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                        <span><strong>Apply:</strong> Send your CV to <a href="mailto:info@drpca.com" style="color:var(--blue);font-weight:600">info@drpca.com</a></span>
+                        <span><strong>Apply:</strong> Send your CV to <a href="/cdn-cgi/l/email-protection#9cf5f2faf3dcf8eeecfffdb2fff3f1" style="color:var(--blue);font-weight:600"><span class="__cf_email__" data-cfemail="573e3931381733252734367934383a">[email&#160;protected]</span></a></span>
                     </div>
                 </div>
 
@@ -354,4 +354,10 @@
     var si=document.getElementById('servicesItem'),mm=document.getElementById('megaMenu'),mt;function om(){clearTimeout(mt);si.classList.add('open')}function cm(){mt=setTimeout(function(){si.classList.remove('open')},200)}si.addEventListener('mouseenter',om);si.addEventListener('mouseleave',cm);mm.addEventListener('mouseenter',om);mm.addEventListener('mouseleave',cm);
     var lw=document.getElementById('loginWrap'),lb=document.getElementById('loginBtn');lb.addEventListener('click',function(e){e.stopPropagation();lw.classList.toggle('open')});document.addEventListener('click',function(e){if(!lw.contains(e.target))lw.classList.remove('open')});
     var nt=document.getElementById('navToggle'),mob=document.getElementById('mobileMenu');nt.addEventListener('click',function(){var o=mob.classList.contains('open');nt.classList.toggle('active');mob.classList.toggle('open');document.body.style.overflow=o?'':'hidden'});mob.querySelectorAll('a').forEach(function(l){l.addEventListener('click',function(){nt.classList.remove('active');mob.classList.remove('open');document.body.style.overflow=''})});
-    document.addEventListe
+    document.addEventListener('keydown',function(e){if(e.key==='Escape'){si.classList.remove('open');lw.classList.remove('open');if(mob.classList.contains('open')){nt.classList.remove('active');mob.classList.remove('open');document.body.style.overflow=''}}});
+    var ao=new IntersectionObserver(function(entries){entries.forEach(function(entry,i){if(entry.isIntersecting){setTimeout(function(){entry.target.classList.add('visible')},i*60);ao.unobserve(entry.target)}})},{threshold:0.12});
+    document.querySelectorAll('.anim').forEach(function(el){ao.observe(el)});
+})();
+</script>
+</body>
+</html>
