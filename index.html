@@ -87,6 +87,7 @@
             letter-spacing: -0.02em; transition: transform 0.3s var(--ease-out);
         }
         .nav-brand:hover .nav-brand-mark { transform: scale(1.05); }
+        .nav-logo { height: 42px; width: auto; transition: opacity 0.3s; } .nav-brand:hover .nav-logo { opacity: 0.85; }
         .nav-brand-text { display: flex; flex-direction: column; line-height: 1.15; }
         .nav-brand-name { font-family: var(--serif); font-size: 1.1rem; color: var(--navy); letter-spacing: -0.01em; }
         .nav-brand-sub { font-size: 0.6rem; color: var(--text-muted); letter-spacing: 0.14em; text-transform: uppercase; font-weight: 500; }
@@ -239,6 +240,15 @@
         }
 
         /* Decorative elements on slides */
+
+        .hero-slide--celebrate {
+            background: linear-gradient(135deg, #0d1b33 0%, #1F3864 40%, #162a4d 100%);
+        }
+        .hero-celebrate-badge {
+            width: 140px; height: 140px; margin-bottom: 1.5rem;
+            filter: brightness(0) invert(1); opacity: 0.9;
+        }
+        @media (max-width: 768px) { .hero-celebrate-badge { width: 100px; height: 100px; } }
         .hero-slide::before {
             content: '';
             position: absolute;
@@ -655,6 +665,8 @@
             justify-content: space-between; align-items: center;
             font-size: 0.75rem; color: rgba(255,255,255,0.25);
         }
+        .footer-celebrate{max-width:var(--max-width);margin:2rem auto 0;padding:1.25rem 0;border-top:1px solid rgba(255,255,255,0.06);display:flex;align-items:center;justify-content:center;gap:1rem}.footer-celebrate-img{height:48px;width:48px;object-fit:contain;filter:brightness(0) invert(1);opacity:0.5}.footer-celebrate span{font-size:.8rem;color:rgba(255,255,255,0.4);letter-spacing:.08em;font-weight:500}
+
 
         /* ═══════════════════════════════════════════════════════════
            SCROLL ANIMATIONS
@@ -709,13 +721,7 @@
 <!-- ═══════════════════════════ NAVBAR ═══════════════════════════ -->
 <nav class="nav" id="nav">
     <div class="nav-inner">
-        <a href="/" class="nav-brand">
-            <div class="nav-brand-mark">D</div>
-            <div class="nav-brand-text">
-                <span class="nav-brand-name">DRP & Co. LLP</span>
-                <span class="nav-brand-sub">Chartered Accountants</span>
-            </div>
-        </a>
+        <a href="/" class="nav-brand"><img src="/assets/drpca-logo.png" alt="DRP &amp; Co. LLP — Chartered Accountants" class="nav-logo"></a>
         <ul class="nav-menu">
             <li class="nav-item"><a href="/about" class="nav-link">About</a></li>
             <li class="nav-item nav-item--services" id="servicesItem">
@@ -827,8 +833,21 @@
 
 <!-- ═══════════════════════════ HERO SLIDER ═══════════════════════════ -->
 <section class="hero" id="hero">
-    <!-- Slide 1: About Us -->
-    <div class="hero-slide hero-slide--about active" data-slide="0">
+    <!-- Slide 1: 30-Year Celebration -->
+    <div class="hero-slide hero-slide--celebrate active" data-slide="0">
+        <div class="hero-content">
+            <img src="/assets/30-years.png" alt="Celebrating 30 Years" class="hero-celebrate-badge">
+            <h1 class="hero-title">Celebrating 30 Years of Trust &amp; Integrity</h1>
+            <p class="hero-desc">Established in 1995, DRP &amp; Co. LLP has provided professional services across audit, tax, valuation, and advisory for three decades. A team of 35+ qualified professionals serving clients across India.</p>
+            <div class="hero-actions">
+                <a href="/about" class="btn btn--primary">About the Firm <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+                <a href="/contact" class="btn btn--outline">Get in Touch</a>
+            </div>
+        </div>
+    </div>
+
+        <!-- Slide 2: About Us -->
+    <div class="hero-slide hero-slide--about" data-slide="1">
         <div class="hero-content">
             <div class="hero-label">Established 1995 &bull; Pune, Maharashtra</div>
             <h1 class="hero-title">Chartered Accountants, Wealth Managers &amp; Valuation Professionals</h1>
@@ -841,7 +860,7 @@
     </div>
 
     <!-- Slide 2: Assurance Services -->
-    <div class="hero-slide hero-slide--assurance" data-slide="1">
+    <div class="hero-slide hero-slide--assurance" data-slide="2">
         <div class="hero-content">
             <div class="hero-label">Assurance Services</div>
             <h1 class="hero-title">Audit, Tax &amp; Governance Services</h1>
@@ -854,7 +873,7 @@
     </div>
 
     <!-- Slide 3: Advisory Services -->
-    <div class="hero-slide hero-slide--advisory" data-slide="2">
+    <div class="hero-slide hero-slide--advisory" data-slide="3">
         <div class="hero-content">
             <div class="hero-label">Advisory Services</div>
             <h1 class="hero-title">Valuation, Financial Advisory &amp; Wealth Management</h1>
@@ -867,7 +886,7 @@
     </div>
 
     <!-- Slide 4: Insights -->
-    <div class="hero-slide hero-slide--insights" data-slide="3">
+    <div class="hero-slide hero-slide--insights" data-slide="4">
         <div class="hero-content">
             <div class="hero-label">Insights &amp; Updates</div>
             <h1 class="hero-title">Articles, Updates &amp; Professional Resources</h1>
@@ -885,8 +904,9 @@
         <button class="hero-dot" data-index="1" aria-label="Slide 2"></button>
         <button class="hero-dot" data-index="2" aria-label="Slide 3"></button>
         <button class="hero-dot" data-index="3" aria-label="Slide 4"></button>
+        <button class="hero-dot" data-index="4" aria-label="Slide 5"></button>
     </div>
-    <div class="hero-counter"><strong id="slideNum">01</strong> / 04</div>
+    <div class="hero-counter"><strong id="slideNum">01</strong> / 05</div>
 </section>
 
 <!-- ═══════════════════════════ STATS BAR ═══════════════════════════ -->
@@ -1121,7 +1141,7 @@
     <div class="footer-inner">
         <div class="footer-brand">
             <div class="footer-brand-mark">
-                <div class="footer-brand-icon">D</div>
+                <img src="/assets/drpca-logo.png" alt="DRP &amp; Co. LLP" style="height:32px;width:auto;filter:brightness(0) invert(1);opacity:0.85">
                 <div>
                     <div class="footer-brand-name">DRP & Co. LLP</div>
                     <div class="footer-brand-sub">Chartered Accountants</div>
@@ -1168,7 +1188,8 @@
             </ul>
         </div>
     </div>
-    <div class="footer-compliance">
+<div class="footer-celebrate"><img src="/assets/30-years.png" alt="Celebrating 30 Years" class="footer-celebrate-img"><span>Celebrating 30 Years &middot; Est. 1995</span></div>
+        <div class="footer-compliance">
         ICAI Firm Registration Number (FRN): <strong>W100047</strong> &nbsp;&bull;&nbsp;
         Member, <a href="https://www.icai.org" target="_blank" rel="noopener">Institute of Chartered Accountants of India</a> &nbsp;&bull;&nbsp;
         Last Updated: April 2026

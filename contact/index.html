@@ -78,6 +78,7 @@
             letter-spacing: -0.02em; transition: transform 0.3s var(--ease-out);
         }
         .nav-brand:hover .nav-brand-mark { transform: scale(1.05); }
+        .nav-logo { height: 42px; width: auto; transition: opacity 0.3s; } .nav-brand:hover .nav-logo { opacity: 0.85; }
         .nav-brand-text { display: flex; flex-direction: column; line-height: 1.15; }
         .nav-brand-name { font-family: var(--serif); font-size: 1.1rem; color: var(--navy); letter-spacing: -0.01em; }
         .nav-brand-sub { font-size: 0.6rem; color: var(--text-muted); letter-spacing: 0.14em; text-transform: uppercase; font-weight: 500; }
@@ -406,6 +407,8 @@
             justify-content: space-between; align-items: center;
             font-size: 0.75rem; color: rgba(255,255,255,0.25);
         }
+        .footer-celebrate{max-width:var(--max-width);margin:2rem auto 0;padding:1.25rem 0;border-top:1px solid rgba(255,255,255,0.06);display:flex;align-items:center;justify-content:center;gap:1rem}.footer-celebrate-img{height:48px;width:48px;object-fit:contain;filter:brightness(0) invert(1);opacity:0.5}.footer-celebrate span{font-size:.8rem;color:rgba(255,255,255,0.4);letter-spacing:.08em;font-weight:500}
+
 
         /* Scroll animations */
         .anim {
@@ -448,13 +451,7 @@
 <!-- ═══════════════════════════ NAVBAR ═══════════════════════════ -->
 <nav class="nav" id="nav">
     <div class="nav-inner">
-        <a href="/" class="nav-brand">
-            <div class="nav-brand-mark">D</div>
-            <div class="nav-brand-text">
-                <span class="nav-brand-name">DRP & Co. LLP</span>
-                <span class="nav-brand-sub">Chartered Accountants</span>
-            </div>
-        </a>
+        <a href="/" class="nav-brand"><img src="/assets/drpca-logo.png" alt="DRP &amp; Co. LLP — Chartered Accountants" class="nav-logo"></a>
         <ul class="nav-menu">
             <li class="nav-item"><a href="/about" class="nav-link">About</a></li>
             <li class="nav-item nav-item--services" id="servicesItem">
@@ -689,7 +686,7 @@
     <div class="footer-inner">
         <div class="footer-brand">
             <div class="footer-brand-mark">
-                <div class="footer-brand-icon">D</div>
+                <img src="/assets/drpca-logo.png" alt="DRP &amp; Co. LLP" style="height:32px;width:auto;filter:brightness(0) invert(1);opacity:0.85">
                 <div>
                     <div class="footer-brand-name">DRP & Co. LLP</div>
                     <div class="footer-brand-sub">Chartered Accountants</div>
@@ -736,7 +733,8 @@
             </ul>
         </div>
     </div>
-    <div class="footer-compliance">
+<div class="footer-celebrate"><img src="/assets/30-years.png" alt="Celebrating 30 Years" class="footer-celebrate-img"><span>Celebrating 30 Years &middot; Est. 1995</span></div>
+        <div class="footer-compliance">
         ICAI Firm Registration Number (FRN): <strong>W100047</strong> &nbsp;&bull;&nbsp;
         Member, <a href="https://www.icai.org" target="_blank" rel="noopener">Institute of Chartered Accountants of India</a> &nbsp;&bull;&nbsp;
         Last Updated: April 2026
