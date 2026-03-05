@@ -496,9 +496,22 @@
         .services { padding: 5rem 2rem; background: var(--off-white); }
         .services-inner { max-width: var(--max-width); margin: 0 auto; }
         .services-grid {
-            display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem;
+            display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;
         }
+        .svc-col {}
+        .svc-col-label {
+            font-size: 0.65rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase;
+            color: var(--text-muted); padding-bottom: 0.75rem; margin-bottom: 1.25rem;
+            border-bottom: 1px solid var(--border-light);
+        }
+        .svc-col-label span {
+            display: block; font-size: 0.8rem; font-weight: 400; letter-spacing: 0; text-transform: none;
+            color: var(--text-muted); margin-top: 0.3rem; line-height: 1.5;
+        }
+        .svc-col .service-card { margin-bottom: 1rem; }
+        .svc-col .service-card:last-child { margin-bottom: 0; }
         .service-card {
+            display: block; color: inherit; text-decoration: none;
             background: var(--white); border-radius: var(--radius-md);
             padding: 2rem 1.75rem; border: 1px solid var(--border-light);
             transition: all 0.35s var(--ease-smooth); position: relative; overflow: hidden;
@@ -531,10 +544,7 @@
             font-size: 0.68rem; font-weight: 500; padding: 0.25rem 0.65rem;
             border-radius: 100px; background: var(--ice); color: var(--mid-blue);
         }
-        /* Last row centering for 7 cards (3 + 3 + 1) */
-        .services-grid .service-card:nth-child(7) {
-            grid-column: 2;
-        }
+        /* Two-column responsive */
 
         /* ═══════════════════════════════════════════════════════════
            SECTORS
@@ -683,8 +693,7 @@
            ═══════════════════════════════════════════════════════════ */
         @media (max-width: 1024px) {
             .nav-logo { height: 52px; }
-            .services-grid { grid-template-columns: repeat(2, 1fr); }
-            .services-grid .service-card:nth-child(7) { grid-column: auto; }
+            .services-grid { gap: 2rem; }
             .practice-grid { grid-template-columns: repeat(2, 1fr); }
             .footer-inner { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
         }
@@ -978,47 +987,63 @@
             <p class="section-desc">DRP & Co. LLP provides the following professional services.</p>
         </div>
         <div class="services-grid">
-            <div class="service-card anim">
-                <div class="service-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><path d="M9 14l2 2 4-4"/></svg></div>
-                <h3>Audit &amp; Assurance</h3>
-                <p>Assurance services covering statutory audit, internal audit, tax audit, and GST audit as required under applicable laws and regulations.</p>
-                <div class="service-tags"><span class="service-tag">Statutory Audit</span><span class="service-tag">Internal Audit</span><span class="service-tag">Tax Audit</span><span class="service-tag">Bank Audit</span></div>
+            <!-- LEFT: Assurance Services -->
+            <div class="svc-col anim">
+                <div class="svc-col-label">Assurance Services<span>Statutory and regulatory audit, tax compliance, and governance services.</span></div>
+
+                <a href="/services/audit-assurance" class="service-card">
+                    <div class="service-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><path d="M9 14l2 2 4-4"/></svg></div>
+                    <h3>Audit &amp; Assurance</h3>
+                    <p>Assurance services covering statutory audit, internal audit, tax audit, and GST audit as required under applicable laws and regulations.</p>
+                    <div class="service-tags"><span class="service-tag">Statutory Audit</span><span class="service-tag">Internal Audit</span><span class="service-tag">Tax Audit</span><span class="service-tag">Bank Audit</span></div>
+                </a>
+
+                <a href="/services/tax-advisory" class="service-card">
+                    <div class="service-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="18" rx="2"/><path d="M2 9h20M9 21V9"/></svg></div>
+                    <h3>Tax Advisory</h3>
+                    <p>Tax planning and compliance services covering corporate taxation, GST, transfer pricing, and matters relating to FEMA and RBI regulations.</p>
+                    <div class="service-tags"><span class="service-tag">Corporate Tax</span><span class="service-tag">GST</span><span class="service-tag">Transfer Pricing</span><span class="service-tag">FEMA</span></div>
+                </a>
+
+                <a href="/services/governance" class="service-card">
+                    <div class="service-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg></div>
+                    <h3>Corporate Governance</h3>
+                    <p>Due diligence, risk advisory, and IFRS conversion services to assist businesses with governance and regulatory compliance.</p>
+                    <div class="service-tags"><span class="service-tag">Due Diligence</span><span class="service-tag">Risk Advisory</span><span class="service-tag">IFRS</span><span class="service-tag">IFC</span></div>
+                </a>
             </div>
-            <div class="service-card anim">
-                <div class="service-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="18" rx="2"/><path d="M2 9h20M9 21V9"/></svg></div>
-                <h3>Tax Advisory</h3>
-                <p>Tax planning and compliance services covering corporate taxation, GST, transfer pricing, and matters relating to FEMA and RBI regulations.</p>
-                <div class="service-tags"><span class="service-tag">Corporate Tax</span><span class="service-tag">GST</span><span class="service-tag">Transfer Pricing</span><span class="service-tag">FEMA</span></div>
-            </div>
-            <div class="service-card anim">
-                <div class="service-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg></div>
-                <h3>Corporate Governance</h3>
-                <p>Due diligence, risk advisory, and IFRS conversion services to assist businesses with governance and regulatory compliance.</p>
-                <div class="service-tags"><span class="service-tag">Due Diligence</span><span class="service-tag">Risk Advisory</span><span class="service-tag">IFRS</span><span class="service-tag">IFC</span></div>
-            </div>
-            <div class="service-card anim">
-                <div class="service-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><path d="M3.27 6.96L12 12.01l8.73-5.05M12 22.08V12"/></svg></div>
-                <h3>Business Valuation</h3>
-                <p>Valuation services for equity, intangible assets, and business enterprises for transactions, regulatory filings, and compliance purposes.</p>
-                <div class="service-tags"><span class="service-tag">Equity Valuation</span><span class="service-tag">Intangible Assets</span><span class="service-tag">Fairness Opinions</span></div>
-            </div>
-            <div class="service-card anim">
-                <div class="service-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
-                <h3>Financial Advisory</h3>
-                <p>Transaction advisory, fund raising, business restructuring, and startup advisory services for corporates and promoters.</p>
-                <div class="service-tags"><span class="service-tag">M&amp;A Advisory</span><span class="service-tag">Fund Raising</span><span class="service-tag">Restructuring</span></div>
-            </div>
-            <div class="service-card anim">
-                <div class="service-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg></div>
-                <h3>Techno-Economic Studies</h3>
-                <p>Project feasibility reports, techno-economic viability assessments, and government representations for businesses and promoters.</p>
-                <div class="service-tags"><span class="service-tag">Feasibility Reports</span><span class="service-tag">DPR</span><span class="service-tag">Project Finance</span></div>
-            </div>
-            <div class="service-card anim">
-                <div class="service-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div>
-                <h3>Wealth Management</h3>
-                <p>Financial planning, investment advisory, and estate planning services for individuals, families, and corporates.</p>
-                <div class="service-tags"><span class="service-tag">Financial Planning</span><span class="service-tag">Investment Advisory</span><span class="service-tag">Estate Planning</span></div>
+
+            <!-- RIGHT: Advisory Services -->
+            <div class="svc-col anim">
+                <div class="svc-col-label">Advisory Services<span>Valuation, transaction advisory, financial planning, and techno-economic studies.</span></div>
+
+                <a href="/services/valuation" class="service-card">
+                    <div class="service-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><path d="M3.27 6.96L12 12.01l8.73-5.05M12 22.08V12"/></svg></div>
+                    <h3>Business Valuation</h3>
+                    <p>Valuation services for equity, intangible assets, and business enterprises for transactions, regulatory filings, and compliance purposes.</p>
+                    <div class="service-tags"><span class="service-tag">Equity Valuation</span><span class="service-tag">Intangible Assets</span><span class="service-tag">Fairness Opinions</span></div>
+                </a>
+
+                <a href="/services/financial-advisory" class="service-card">
+                    <div class="service-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
+                    <h3>Financial Advisory</h3>
+                    <p>Transaction advisory, fund raising, business restructuring, and startup advisory services for corporates and promoters.</p>
+                    <div class="service-tags"><span class="service-tag">M&amp;A Advisory</span><span class="service-tag">Fund Raising</span><span class="service-tag">Restructuring</span></div>
+                </a>
+
+                <a href="/services/techno-economic" class="service-card">
+                    <div class="service-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg></div>
+                    <h3>Techno-Economic Studies</h3>
+                    <p>Project feasibility reports, techno-economic viability assessments, and government representations for businesses and promoters.</p>
+                    <div class="service-tags"><span class="service-tag">Feasibility Reports</span><span class="service-tag">DPR</span><span class="service-tag">Project Finance</span></div>
+                </a>
+
+                <a href="/services/wealth-management" class="service-card">
+                    <div class="service-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div>
+                    <h3>Wealth Management</h3>
+                    <p>Financial planning, investment advisory, and estate planning services for individuals, families, and corporates.</p>
+                    <div class="service-tags"><span class="service-tag">Financial Planning</span><span class="service-tag">Investment Advisory</span><span class="service-tag">Estate Planning</span></div>
+                </a>
             </div>
         </div>
     </div>
