@@ -78,7 +78,7 @@
             letter-spacing: -0.02em; transition: transform 0.3s var(--ease-out);
         }
         .nav-brand:hover .nav-brand-mark { transform: scale(1.05); }
-        .nav-logo { height: 48px; width: auto; transition: opacity 0.3s; } .nav-brand:hover .nav-logo { opacity: 0.85; }
+        .nav-logo { height: 60px; width: auto; transition: opacity 0.3s; } .nav-brand:hover .nav-logo { opacity: 0.85; }
         .nav-brand-text { display: flex; flex-direction: column; line-height: 1.15; }
         .nav-brand-name { font-family: var(--serif); font-size: 1.1rem; color: var(--navy); letter-spacing: -0.01em; }
         .nav-brand-sub { font-size: 0.6rem; color: var(--text-muted); letter-spacing: 0.14em; text-transform: uppercase; font-weight: 500; }
@@ -419,10 +419,12 @@
 
         /* ═══════════════════ RESPONSIVE ═══════════════════ */
         @media (max-width: 1024px) {
+            .nav-logo { height: 52px; }
             .contact-cards { grid-template-columns: 1fr; }
             .footer-inner { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
         }
         @media (max-width: 768px) {
+            .nav-logo { height: 44px; }
             .nav-menu, .nav-actions .nav-cta, .nav-login-wrap { display: none; }
             .nav-toggle { display: flex; }
             .mobile-menu { display: block; }

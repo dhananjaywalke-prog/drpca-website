@@ -87,7 +87,7 @@
             letter-spacing: -0.02em; transition: transform 0.3s var(--ease-out);
         }
         .nav-brand:hover .nav-brand-mark { transform: scale(1.05); }
-        .nav-logo { height: 48px; width: auto; transition: opacity 0.3s; } .nav-brand:hover .nav-logo { opacity: 0.85; }
+        .nav-logo { height: 60px; width: auto; transition: opacity 0.3s; } .nav-brand:hover .nav-logo { opacity: 0.85; }
         .nav-brand-text { display: flex; flex-direction: column; line-height: 1.15; }
         .nav-brand-name { font-family: var(--serif); font-size: 1.1rem; color: var(--navy); letter-spacing: -0.01em; }
         .nav-brand-sub { font-size: 0.6rem; color: var(--text-muted); letter-spacing: 0.14em; text-transform: uppercase; font-weight: 500; }
@@ -681,12 +681,14 @@
            RESPONSIVE
            ═══════════════════════════════════════════════════════════ */
         @media (max-width: 1024px) {
+            .nav-logo { height: 52px; }
             .services-grid { grid-template-columns: repeat(2, 1fr); }
             .services-grid .service-card:nth-child(7) { grid-column: auto; }
             .practice-grid { grid-template-columns: repeat(2, 1fr); }
             .footer-inner { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
         }
         @media (max-width: 768px) {
+            .nav-logo { height: 44px; }
             .nav-menu, .nav-actions .nav-cta, .nav-login-wrap { display: none; }
             .nav-toggle { display: flex; }
             .mobile-menu { display: block; }
@@ -838,7 +840,7 @@
         <div class="hero-content">
             <img src="/assets/30-years-white.png" alt="Celebrating 30 Years" class="hero-celebrate-badge">
             <h1 class="hero-title">Celebrating 30 Years of Trust &amp; Integrity</h1>
-            <p class="hero-desc">Established in 1995, DRP &amp; Co. LLP has provided professional services across audit, tax, valuation, and advisory for three decades. A team of 35+ qualified professionals serving clients across India.</p>
+            <p class="hero-desc">Established in 1995, DRP &amp; Co. LLP provides professional services across audit, tax, valuation, and advisory.</p>
             <div class="hero-actions">
                 <a href="/about" class="btn btn--primary">About the Firm <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
                 <a href="/contact" class="btn btn--outline">Get in Touch</a>
@@ -849,9 +851,9 @@
         <!-- Slide 2: About Us -->
     <div class="hero-slide hero-slide--about" data-slide="1">
         <div class="hero-content">
-            <div class="hero-label">Established 1995 &bull; Pune, Maharashtra</div>
+            <div class="hero-label">Established 1995</div>
             <h1 class="hero-title">Chartered Accountants, Wealth Managers &amp; Valuation Professionals</h1>
-            <p class="hero-desc">DRP & Co. LLP provides audit, tax advisory, wealth management, valuation, and corporate governance services. A team of 35+ qualified professionals serving clients across India.</p>
+            <p class="hero-desc">We support corporates in meeting their assurance and compliance obligations, enabling management to focus on business growth.</p>
             <div class="hero-actions">
                 <a href="/about" class="btn btn--primary">About the Firm <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
                 <a href="/contact" class="btn btn--outline">Contact Us</a>
