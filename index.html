@@ -37,7 +37,7 @@
             --serif: 'DM Serif Display', Georgia, 'Times New Roman', serif;
             --sans: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
             --max-width: 1200px;
-            --nav-height: 72px;
+            --nav-height: 84px;
             --radius-sm: 8px;
             --radius-md: 12px;
             --radius-lg: 16px;
@@ -87,7 +87,7 @@
             letter-spacing: -0.02em; transition: transform 0.3s var(--ease-out);
         }
         .nav-brand:hover .nav-brand-mark { transform: scale(1.05); }
-        .nav-logo { height: 60px; width: auto; transition: opacity 0.3s; } .nav-brand:hover .nav-logo { opacity: 0.85; }
+        .nav-logo { height: 76px; width: auto; transition: opacity 0.3s; } .nav-brand:hover .nav-logo { opacity: 0.85; }
         .nav-brand-text { display: flex; flex-direction: column; line-height: 1.15; }
         .nav-brand-name { font-family: var(--serif); font-size: 1.1rem; color: var(--navy); letter-spacing: -0.01em; }
         .nav-brand-sub { font-size: 0.6rem; color: var(--text-muted); letter-spacing: 0.14em; text-transform: uppercase; font-weight: 500; }
@@ -662,24 +662,9 @@
         .footer-col ul { display: flex; flex-direction: column; gap: 0.5rem; }
         .footer-col a { font-size: 0.84rem; color: var(--text-on-dark-muted); transition: color 0.25s; }
         .footer-col a:hover { color: var(--gold-light); }
-        .footer-compliance {
-            max-width: var(--max-width); margin: 2rem auto 0; padding-top: 1.5rem;
-            border-top: 1px solid rgba(255,255,255,0.06); text-align: center;
-            font-size: 0.72rem; line-height: 2; color: rgba(255,255,255,0.3);
-        }
-        .footer-compliance strong { color: rgba(255,255,255,0.5); font-weight: 600; }
-        .footer-compliance a { color: rgba(255,255,255,0.4); transition: color 0.25s; }
-        .footer-compliance a:hover { color: var(--gold-light); }
-        .footer-bottom {
-            max-width: var(--max-width); margin: 1rem auto 0; padding-top: 1rem;
-            border-top: 1px solid rgba(255,255,255,0.04); display: flex;
-            justify-content: space-between; align-items: center;
-            font-size: 0.75rem; color: rgba(255,255,255,0.25);
-        }
-        .footer-celebrate{max-width:var(--max-width);margin:2rem auto 0;padding:1.25rem 0;border-top:1px solid rgba(255,255,255,0.06);display:flex;align-items:center;justify-content:center;gap:1rem}.footer-celebrate-img{height:48px;width:48px;object-fit:contain;opacity:0.8}.footer-celebrate span{font-size:.8rem;color:rgba(255,255,255,0.4);letter-spacing:.08em;font-weight:500}
+        .footer-bar{max-width:var(--max-width);margin:2.5rem auto 0;padding:1.5rem 0;border-top:1px solid rgba(255,255,255,0.08)}.footer-bar-inner{display:flex;align-items:center;justify-content:space-between;gap:2rem}.footer-bar-left{display:flex;align-items:center;gap:1rem;flex-shrink:0;padding-left:0.5rem;border-left:2px solid var(--gold)}.footer-bar-badge{width:52px;height:52px;object-fit:contain;opacity:0.85}.footer-bar-celeb{font-size:.9rem;color:rgba(255,255,255,0.5);letter-spacing:.06em;font-weight:500;white-space:nowrap}.footer-bar-right{text-align:right}.footer-bar-line1{font-size:.72rem;line-height:1.8;color:rgba(255,255,255,0.3)}.footer-bar-line1 strong{color:rgba(255,255,255,0.5);font-weight:600}.footer-bar-line1 a{color:rgba(255,255,255,0.4);transition:color .25s}.footer-bar-line1 a:hover{color:var(--gold-light)}.footer-bar-line2{font-size:.72rem;line-height:1.8;color:rgba(255,255,255,0.25)}
 
-
-        /* ═══════════════════════════════════════════════════════════
+/* ═══════════════════════════════════════════════════════════
            SCROLL ANIMATIONS
            ═══════════════════════════════════════════════════════════ */
         .anim {
@@ -692,13 +677,13 @@
            RESPONSIVE
            ═══════════════════════════════════════════════════════════ */
         @media (max-width: 1024px) {
-            .nav-logo { height: 52px; }
+            .nav-logo { height: 62px; }
             .services-grid { gap: 2rem; }
             .practice-grid { grid-template-columns: repeat(2, 1fr); }
             .footer-inner { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
         }
         @media (max-width: 768px) {
-            .nav-logo { height: 44px; }
+            .nav-logo { height: 50px; }
             .nav-menu, .nav-actions .nav-cta, .nav-login-wrap { display: none; }
             .nav-toggle { display: flex; }
             .mobile-menu { display: block; }
@@ -713,8 +698,9 @@
             .practice-grid { grid-template-columns: 1fr; }
             .contact-inner { grid-template-columns: 1fr; gap: 2rem; }
             .footer-inner { grid-template-columns: 1fr; gap: 2rem; }
-            .footer-bottom { flex-direction: column; gap: 0.5rem; text-align: center; }
-        }
+            .footer-bar-inner{flex-direction:column;text-align:center;gap:1rem}.footer-bar-left{border-left:none;padding-left:0;justify-content:center}.footer-bar-right{text-align:center}
+
+}
     </style>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="canonical" href="https://www.drpca.com/">
@@ -1216,15 +1202,17 @@
             </ul>
         </div>
     </div>
-<div class="footer-celebrate"><img src="/assets/30-years-gold.png" alt="Celebrating 30 Years" class="footer-celebrate-img"><span>Celebrating 30 Years &middot; Est. 1995</span></div>
-        <div class="footer-compliance">
-        ICAI Firm Registration Number (FRN): <strong>W100047</strong> &nbsp;&bull;&nbsp;
-        Member, <a href="https://www.icai.org" target="_blank" rel="noopener">Institute of Chartered Accountants of India</a> &nbsp;&bull;&nbsp;
-        Last Updated: April 2026
-    </div>
-    <div class="footer-bottom">
-        <span>&copy; 2026 DRP & Co. LLP. All rights reserved.</span>
-        <span>Chartered Accountants &bull; Wealth Managers &bull; Valuation Professionals</span>
+<div class="footer-bar">
+        <div class="footer-bar-inner">
+            <div class="footer-bar-left">
+                <img src="/assets/30-years-gold.png" alt="Celebrating 30 Years" class="footer-bar-badge">
+                <span class="footer-bar-celeb">Celebrating 30 Years &middot; Est. 1995</span>
+            </div>
+            <div class="footer-bar-right">
+                <div class="footer-bar-line1">ICAI Firm Registration Number (FRN): <strong>W100047</strong> &nbsp;&bull;&nbsp; Member, <a href="https://www.icai.org" target="_blank" rel="noopener">Institute of Chartered Accountants of India</a> &nbsp;&bull;&nbsp; Last Updated: April 2026</div>
+                <div class="footer-bar-line2">&copy; 2026 DRP &amp; Co. LLP. All rights reserved. &nbsp;|&nbsp; Chartered Accountants &bull; Wealth Managers &bull; Valuation Professionals</div>
+            </div>
+        </div>
     </div>
 </footer>
 
