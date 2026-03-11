@@ -551,18 +551,52 @@
            ═══════════════════════════════════════════════════════════ */
         .sectors { padding: 5rem 2rem; background: var(--navy-deep); }
         .sectors-inner { max-width: var(--max-width); margin: 0 auto; }
-        .sectors-flex {
-            display: flex; flex-wrap: wrap; justify-content: center; gap: 0.75rem;
+        .sectors-grid {
+            display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem;
         }
-        .sector-pill {
-            padding: 0.6rem 1.35rem; background: rgba(255,255,255,0.06);
-            border: 1px solid rgba(255,255,255,0.08); border-radius: 100px;
-            font-size: 0.84rem; font-weight: 500; color: rgba(255,255,255,0.7);
-            transition: all 0.3s var(--ease-smooth);
+        .sector-tile {
+            position: relative; border-radius: var(--radius-md); overflow: hidden;
+            height: 200px; cursor: default;
         }
-        .sector-pill:hover {
-            background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.15);
-            color: var(--white);
+        .sector-tile-bg {
+            position: absolute; inset: 0; background-size: cover; background-position: center;
+            transition: transform 0.5s var(--ease-out);
+        }
+        .sector-tile:hover .sector-tile-bg { transform: scale(1.08); }
+        .sector-tile-overlay {
+            position: absolute; inset: 0;
+            background: linear-gradient(to top, rgba(10,22,40,0.92) 0%, rgba(10,22,40,0.5) 50%, rgba(10,22,40,0.3) 100%);
+            transition: background 0.4s var(--ease-smooth);
+        }
+        .sector-tile:hover .sector-tile-overlay {
+            background: linear-gradient(to top, rgba(10,22,40,0.95) 0%, rgba(10,22,40,0.8) 50%, rgba(10,22,40,0.7) 100%);
+        }
+        .sector-tile-content {
+            position: absolute; inset: 0; padding: 1.25rem;
+            display: flex; flex-direction: column; justify-content: flex-end;
+            z-index: 2;
+        }
+        .sector-tile-name {
+            font-family: var(--serif); font-size: 1.05rem; color: var(--white);
+            margin-bottom: 0.25rem; transition: transform 0.35s var(--ease-out);
+        }
+        .sector-tile:hover .sector-tile-name { transform: translateY(-4px); }
+        .sector-tile-line {
+            width: 28px; height: 2px; background: var(--gold); margin-bottom: 0;
+            transition: all 0.35s var(--ease-out);
+        }
+        .sector-tile:hover .sector-tile-line { width: 40px; margin-bottom: 0.6rem; }
+        .sector-tile-hover {
+            opacity: 0; max-height: 0; overflow: hidden;
+            transition: all 0.4s var(--ease-out);
+        }
+        .sector-tile:hover .sector-tile-hover { opacity: 1; max-height: 100px; }
+        .sector-tile-desc {
+            font-size: 0.75rem; color: rgba(255,255,255,0.7); line-height: 1.55;
+            font-style: italic; margin-bottom: 0.3rem;
+        }
+        .sector-tile-services {
+            font-size: 0.68rem; color: rgba(255,255,255,0.45); line-height: 1.5;
         }
 
         /* ═══════════════════════════════════════════════════════════
@@ -680,6 +714,7 @@
             .nav-logo { height: 62px; }
             .services-grid { gap: 2rem; }
             .practice-grid { grid-template-columns: repeat(2, 1fr); }
+            .sectors-grid { grid-template-columns: repeat(3, 1fr); }
             .footer-inner { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
         }
         @media (max-width: 768px) {
@@ -696,6 +731,8 @@
             .stat-item:nth-child(2) { border-right: none; }
             .stat-item:nth-child(1), .stat-item:nth-child(2) { border-bottom: 1px solid var(--border-light); }
             .practice-grid { grid-template-columns: 1fr; }
+            .sectors-grid { grid-template-columns: repeat(2, 1fr); }
+            .sector-tile { height: 170px; }
             .contact-inner { grid-template-columns: 1fr; gap: 2rem; }
             .footer-inner { grid-template-columns: 1fr; gap: 2rem; }
             .footer-bar-inner{flex-direction:column;text-align:center;gap:0.75rem}.footer-bar-left{border-right:none;padding-right:0;justify-content:center}.footer-bar-right{text-align:center}
@@ -1043,17 +1080,151 @@
             <h2 class="section-title section-title--light">Sectors We Serve</h2>
             <p class="section-desc section-desc--light">The firm serves clients across the following industry sectors.</p>
         </div>
-        <div class="sectors-flex anim">
-            <div class="sector-pill">Real Estate</div>
-            <div class="sector-pill">Renewable Energy</div>
-            <div class="sector-pill">Pharmaceuticals</div>
-            <div class="sector-pill">Manufacturing</div>
-            <div class="sector-pill">IT &amp; Services</div>
-            <div class="sector-pill">Banking &amp; Finance</div>
-            <div class="sector-pill">Retail &amp; FMCG</div>
-            <div class="sector-pill">Agri-business</div>
-            <div class="sector-pill">Education</div>
-            <div class="sector-pill">Infrastructure</div>
+        <div class="sectors-grid">
+            <div class="sector-tile anim">
+                <div class="sector-tile-bg" style="background-image:url('/assets/sectors/banking.jpg')"></div>
+                <div class="sector-tile-overlay"></div>
+                <div class="sector-tile-content">
+                    <div class="sector-tile-name">Banking &amp; NBFCs</div>
+                    <div class="sector-tile-line"></div>
+                    <div class="sector-tile-hover">
+                        <div class="sector-tile-desc">Trusted by financial institutions for regulatory assurance and compliance</div>
+                        <div class="sector-tile-services">Statutory audit, RBI compliance, NPA provisioning, IRAC norms, concurrent audit</div>
+                    </div>
+                </div>
+            </div>
+            <div class="sector-tile anim">
+                <div class="sector-tile-bg" style="background-image:url('/assets/sectors/sugar.jpg')"></div>
+                <div class="sector-tile-overlay"></div>
+                <div class="sector-tile-content">
+                    <div class="sector-tile-name">Sugar &amp; Distilleries</div>
+                    <div class="sector-tile-line"></div>
+                    <div class="sector-tile-hover">
+                        <div class="sector-tile-desc">Deep understanding of sugar economics, ethanol policy, and allied operations</div>
+                        <div class="sector-tile-services">Statutory audit, excise advisory, CARO compliance, TEV studies, project feasibility</div>
+                    </div>
+                </div>
+            </div>
+            <div class="sector-tile anim">
+                <div class="sector-tile-bg" style="background-image:url('/assets/sectors/realestate.jpg')"></div>
+                <div class="sector-tile-overlay"></div>
+                <div class="sector-tile-content">
+                    <div class="sector-tile-name">Real Estate</div>
+                    <div class="sector-tile-line"></div>
+                    <div class="sector-tile-hover">
+                        <div class="sector-tile-desc">Structured advisory from land acquisition through project completion</div>
+                        <div class="sector-tile-services">Project funding, RERA compliance, valuation, Ind AS implementation, tax structuring</div>
+                    </div>
+                </div>
+            </div>
+            <div class="sector-tile anim">
+                <div class="sector-tile-bg" style="background-image:url('/assets/sectors/energy.jpg')"></div>
+                <div class="sector-tile-overlay"></div>
+                <div class="sector-tile-content">
+                    <div class="sector-tile-name">Renewable Energy</div>
+                    <div class="sector-tile-line"></div>
+                    <div class="sector-tile-hover">
+                        <div class="sector-tile-desc">Supporting India's energy transition with financial and regulatory clarity</div>
+                        <div class="sector-tile-services">Project feasibility, DPR preparation, government representations, subsidy advisory</div>
+                    </div>
+                </div>
+            </div>
+            <div class="sector-tile anim">
+                <div class="sector-tile-bg" style="background-image:url('/assets/sectors/pharma.jpg')"></div>
+                <div class="sector-tile-overlay"></div>
+                <div class="sector-tile-content">
+                    <div class="sector-tile-name">Pharmaceuticals</div>
+                    <div class="sector-tile-line"></div>
+                    <div class="sector-tile-hover">
+                        <div class="sector-tile-desc">Navigating complex regulatory and cross-border compliance for pharma enterprises</div>
+                        <div class="sector-tile-services">Transfer pricing, FEMA advisory, statutory audit, R&amp;D tax incentives</div>
+                    </div>
+                </div>
+            </div>
+            <div class="sector-tile anim">
+                <div class="sector-tile-bg" style="background-image:url('/assets/sectors/auto.jpg')"></div>
+                <div class="sector-tile-overlay"></div>
+                <div class="sector-tile-content">
+                    <div class="sector-tile-name">Auto &amp; Manufacturing</div>
+                    <div class="sector-tile-line"></div>
+                    <div class="sector-tile-hover">
+                        <div class="sector-tile-desc">Cost efficiency and compliance across the manufacturing value chain</div>
+                        <div class="sector-tile-services">Cost audit, GST advisory, internal audit, IFC assessment, vendor due diligence</div>
+                    </div>
+                </div>
+            </div>
+            <div class="sector-tile anim">
+                <div class="sector-tile-bg" style="background-image:url('/assets/sectors/it.jpg')"></div>
+                <div class="sector-tile-overlay"></div>
+                <div class="sector-tile-content">
+                    <div class="sector-tile-name">IT &amp; Services</div>
+                    <div class="sector-tile-line"></div>
+                    <div class="sector-tile-hover">
+                        <div class="sector-tile-desc">Financial advisory aligned with the pace of technology-driven businesses</div>
+                        <div class="sector-tile-services">Income tax advisory, transfer pricing, startup advisory, ESOP valuation</div>
+                    </div>
+                </div>
+            </div>
+            <div class="sector-tile anim">
+                <div class="sector-tile-bg" style="background-image:url('/assets/sectors/infra.jpg')"></div>
+                <div class="sector-tile-overlay"></div>
+                <div class="sector-tile-content">
+                    <div class="sector-tile-name">Infrastructure &amp; EPC</div>
+                    <div class="sector-tile-line"></div>
+                    <div class="sector-tile-hover">
+                        <div class="sector-tile-desc">Financial rigour for large-scale projects from planning to execution</div>
+                        <div class="sector-tile-services">TEV studies, project finance advisory, bank audit, contract revenue accounting</div>
+                    </div>
+                </div>
+            </div>
+            <div class="sector-tile anim">
+                <div class="sector-tile-bg" style="background-image:url('/assets/sectors/agri.jpg')"></div>
+                <div class="sector-tile-overlay"></div>
+                <div class="sector-tile-content">
+                    <div class="sector-tile-name">Agri &amp; Food Processing</div>
+                    <div class="sector-tile-line"></div>
+                    <div class="sector-tile-hover">
+                        <div class="sector-tile-desc">Supporting agri-business with compliance, funding, and financial structuring</div>
+                        <div class="sector-tile-services">Statutory audit, government subsidy advisory, cooperative audit, GST compliance</div>
+                    </div>
+                </div>
+            </div>
+            <div class="sector-tile anim">
+                <div class="sector-tile-bg" style="background-image:url('/assets/sectors/retail.jpg')"></div>
+                <div class="sector-tile-overlay"></div>
+                <div class="sector-tile-content">
+                    <div class="sector-tile-name">Retail &amp; FMCG</div>
+                    <div class="sector-tile-line"></div>
+                    <div class="sector-tile-hover">
+                        <div class="sector-tile-desc">Enabling growth-stage and established retail businesses with financial discipline</div>
+                        <div class="sector-tile-services">GST compliance, inventory valuation, internal audit, tax planning</div>
+                    </div>
+                </div>
+            </div>
+            <div class="sector-tile anim">
+                <div class="sector-tile-bg" style="background-image:url('/assets/sectors/education.jpg')"></div>
+                <div class="sector-tile-overlay"></div>
+                <div class="sector-tile-content">
+                    <div class="sector-tile-name">Education</div>
+                    <div class="sector-tile-line"></div>
+                    <div class="sector-tile-hover">
+                        <div class="sector-tile-desc">Governance and compliance advisory for educational trusts and institutions</div>
+                        <div class="sector-tile-services">Trust/society audit, FCRA advisory, statutory compliance, tax exemption planning</div>
+                    </div>
+                </div>
+            </div>
+            <div class="sector-tile anim">
+                <div class="sector-tile-bg" style="background-image:url('/assets/sectors/fintech.jpg')"></div>
+                <div class="sector-tile-overlay"></div>
+                <div class="sector-tile-content">
+                    <div class="sector-tile-name">Fintech &amp; Startups</div>
+                    <div class="sector-tile-line"></div>
+                    <div class="sector-tile-hover">
+                        <div class="sector-tile-desc">From incorporation to fund raise — financial partnership for emerging businesses</div>
+                        <div class="sector-tile-services">Fund raising advisory, ESOP valuation, regulatory compliance, wealth management</div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
