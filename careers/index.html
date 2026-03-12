@@ -342,34 +342,10 @@
         </div>
 
         <div class="alumni-wall anim" id="alumniWall">
-            <!-- SAMPLE DATA — replace with real alumni from Google Form responses -->
-            <div class="alumni-name" data-name="Rahul Sharma" data-year="2024">CA Rahul Sharma <span class="aq">'24</span>
-                <div class="alumni-popup"><div class="alumni-popup-name">CA Rahul Sharma</div><div class="alumni-popup-year">CA Qualified: 2024</div><div class="alumni-popup-org">Deloitte India</div><div class="alumni-popup-role">Audit Associate</div></div>
-            </div>
-            <div class="alumni-name" data-name="Sneha Kulkarni" data-year="2023">CA Sneha Kulkarni <span class="aq">'23</span>
-                <div class="alumni-popup"><div class="alumni-popup-name">CA Sneha Kulkarni</div><div class="alumni-popup-year">CA Qualified: 2023</div><div class="alumni-popup-org">KPMG India</div><div class="alumni-popup-role">Tax Analyst</div></div>
-            </div>
-            <div class="alumni-name" data-name="Aditya Patil" data-year="2023">CA Aditya Patil <span class="aq">'23</span>
-                <div class="alumni-popup"><div class="alumni-popup-name">CA Aditya Patil</div><div class="alumni-popup-year">CA Qualified: 2023</div><div class="alumni-popup-org">EY India</div><div class="alumni-popup-role">Advisory Associate</div></div>
-            </div>
-            <div class="alumni-name" data-name="Priya Deshmukh" data-year="2022">CA Priya Deshmukh <span class="aq">'22</span>
-                <div class="alumni-popup"><div class="alumni-popup-name">CA Priya Deshmukh</div><div class="alumni-popup-year">CA Qualified: 2022</div><div class="alumni-popup-org">Grant Thornton Bharat</div><div class="alumni-popup-role">Senior Associate, Valuations</div></div>
-            </div>
-            <div class="alumni-name" data-name="Vikram Joshi" data-year="2021">CA Vikram Joshi <span class="aq">'21</span>
-                <div class="alumni-popup"><div class="alumni-popup-name">CA Vikram Joshi</div><div class="alumni-popup-year">CA Qualified: 2021</div><div class="alumni-popup-org">BDO India</div><div class="alumni-popup-role">Manager, Assurance</div></div>
-            </div>
-            <div class="alumni-name" data-name="Meera Raut" data-year="2020">CA Meera Raut <span class="aq">'20</span>
-                <div class="alumni-popup"><div class="alumni-popup-name">CA Meera Raut</div><div class="alumni-popup-year">CA Qualified: 2020</div><div class="alumni-popup-org">Self Practice</div><div class="alumni-popup-role">Proprietor, M. Raut &amp; Associates</div></div>
-            </div>
-            <div class="alumni-name" data-name="Rohan Mehta" data-year="2019">CA Rohan Mehta <span class="aq">'19</span>
-                <div class="alumni-popup"><div class="alumni-popup-name">CA Rohan Mehta</div><div class="alumni-popup-year">CA Qualified: 2019</div><div class="alumni-popup-org">PwC India</div><div class="alumni-popup-role">Senior Associate, Tax</div></div>
-            </div>
-            <div class="alumni-name" data-name="Ananya Bhide" data-year="2018">CA Ananya Bhide <span class="aq">'18</span>
-                <div class="alumni-popup"><div class="alumni-popup-name">CA Ananya Bhide</div><div class="alumni-popup-year">CA Qualified: 2018</div><div class="alumni-popup-org">Mazars India</div><div class="alumni-popup-role">Manager, Audit &amp; Assurance</div></div>
-            </div>
+            <div class="alumni-loading" id="alumniLoading" style="font-size:.85rem;color:var(--text-on-dark-muted);padding:1rem 0;">Loading alumni data...</div>
         </div>
 
-        <div class="alumni-none" id="alumniNone">No alumni found matching your search.</div>
+        <div class="alumni-none" id="alumniNone" style="display:none">No alumni found matching your search.</div>
 
         <div class="alumni-cta anim">
             <p>If you qualified as a CA and completed your articleship training at DRP &amp; Co. LLP, we'd be proud to feature you here.</p>
@@ -408,19 +384,127 @@
     var lw=document.getElementById('loginWrap'),lb=document.getElementById('loginBtn');lb.addEventListener('click',function(e){e.stopPropagation();lw.classList.toggle('open')});document.addEventListener('click',function(e){if(!lw.contains(e.target))lw.classList.remove('open')});
     var nt=document.getElementById('navToggle'),mob=document.getElementById('mobileMenu');nt.addEventListener('click',function(){var o=mob.classList.contains('open');nt.classList.toggle('active');mob.classList.toggle('open');document.body.style.overflow=o?'':'hidden'});mob.querySelectorAll('a').forEach(function(l){l.addEventListener('click',function(){nt.classList.remove('active');mob.classList.remove('open');document.body.style.overflow=''})});
     document.addEventListener('keydown',function(e){if(e.key==='Escape'){si.classList.remove('open');lw.classList.remove('open');if(mob.classList.contains('open')){nt.classList.remove('active');mob.classList.remove('open');document.body.style.overflow=''}}});
-    // Alumni search
-    var searchInput=document.getElementById('alumniSearch');
-    if(searchInput){searchInput.addEventListener('input',function(){
-        var q=this.value.toLowerCase();
-        var names=document.querySelectorAll('.alumni-name');
-        var visible=0;
-        names.forEach(function(n){
-            var match=n.getAttribute('data-name').toLowerCase().includes(q)||n.getAttribute('data-year').includes(q);
-            n.style.display=match?'':'none';
-            if(match)visible++;
-        });
-        document.getElementById('alumniNone').style.display=visible===0?'block':'none';
-    });}
+    // Alumni: Load from Google Sheets CSV
+    (function(){
+        var SHEET_URL='https://docs.google.com/spreadsheets/d/e/2PACX-1vTNwF2-kaJH6I_UeK7YZ8ciWzR2p1qzV2zZyGJhJJeCsPG1j_vTM6-9qz0uZnUrohdqzdNKt7DkoMW4/pub?output=csv';
+        var wall=document.getElementById('alumniWall');
+        var loading=document.getElementById('alumniLoading');
+        var noneMsg=document.getElementById('alumniNone');
+        var countEl=document.getElementById('alumniCount');
+        var yearsEl=document.getElementById('alumniYears');
+        if(!wall)return;
+
+        fetch(SHEET_URL)
+        .then(function(r){return r.text()})
+        .then(function(csv){
+            var rows=parseCSV(csv);
+            if(rows.length<2){loading.textContent='No alumni data available yet.';return;}
+            var headers=rows[0].map(function(h){return h.trim().toLowerCase()});
+            var nameIdx=findCol(headers,['full name','name']);
+            var yearIdx=findCol(headers,['ca qualification year','qualification year','year']);
+            var roleIdx=findCol(headers,['current designation','designation','role']);
+            var orgIdx=findCol(headers,['current organisation','organisation','organization','org']);
+            var liIdx=findCol(headers,['linkedin','linkedin profile','linkedin profile url']);
+            var quoteIdx=findCol(headers,['one-line','one-line message','message','quote']);
+            var dispIdx=findCol(headers,['display']);
+
+            var alumni=[];
+            for(var i=1;i<rows.length;i++){
+                var r=rows[i];
+                if(!r||r.length<3)continue;
+                var disp=dispIdx>=0?r[dispIdx]:'';
+                if(disp.trim().toLowerCase()!=='yes')continue;
+                var name=nameIdx>=0?r[nameIdx].trim():'';
+                var year=yearIdx>=0?r[yearIdx].trim():'';
+                if(!name)continue;
+                alumni.push({
+                    name:name,
+                    year:year,
+                    role:roleIdx>=0?r[roleIdx].trim():'',
+                    org:orgIdx>=0?r[orgIdx].trim():'',
+                    linkedin:liIdx>=0?r[liIdx].trim():'',
+                    quote:quoteIdx>=0?r[quoteIdx].trim():''
+                });
+            }
+
+            // Sort by year oldest to recent
+            alumni.sort(function(a,b){return (parseInt(a.year)||0)-(parseInt(b.year)||0)});
+
+            // Update stats
+            if(countEl)countEl.textContent=alumni.length;
+            if(yearsEl&&alumni.length>0){
+                var minY=alumni[0].year,maxY=alumni[alumni.length-1].year;
+                yearsEl.textContent=minY===maxY?minY:minY+'–'+maxY;
+            }
+
+            // Render wall
+            wall.innerHTML='';
+            alumni.forEach(function(a){
+                var shortYear=a.year?("'"+a.year.slice(-2)):'';
+                var el=document.createElement('div');
+                el.className='alumni-name';
+                el.setAttribute('data-name',a.name);
+                el.setAttribute('data-year',a.year);
+
+                var popup='<div class="alumni-popup">';
+                popup+='<div class="alumni-popup-name">CA '+esc(a.name)+'</div>';
+                if(a.year)popup+='<div class="alumni-popup-year">CA Qualified: '+esc(a.year)+'</div>';
+                if(a.org)popup+='<div class="alumni-popup-org">'+esc(a.org)+'</div>';
+                if(a.role)popup+='<div class="alumni-popup-role">'+esc(a.role)+'</div>';
+                if(a.quote)popup+='<div class="alumni-popup-quote">"'+esc(a.quote)+'"</div>';
+                if(a.linkedin)popup+='<a href="'+esc(a.linkedin)+'" target="_blank" rel="noopener" class="alumni-popup-li"><svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>LinkedIn</a>';
+                popup+='</div>';
+
+                el.innerHTML='CA '+esc(a.name)+' <span class="aq">'+shortYear+'</span>'+popup;
+                wall.appendChild(el);
+            });
+
+            // Search
+            var searchInput=document.getElementById('alumniSearch');
+            if(searchInput){searchInput.addEventListener('input',function(){
+                var q=this.value.toLowerCase();
+                var names=wall.querySelectorAll('.alumni-name');
+                var visible=0;
+                names.forEach(function(n){
+                    var match=n.getAttribute('data-name').toLowerCase().includes(q)||n.getAttribute('data-year').includes(q);
+                    n.style.display=match?'':'none';
+                    if(match)visible++;
+                });
+                noneMsg.style.display=visible===0?'block':'none';
+            });}
+        })
+        .catch(function(){if(loading)loading.textContent='Unable to load alumni data. Please try again later.';});
+
+        function findCol(headers,names){
+            for(var i=0;i<names.length;i++){
+                var idx=headers.indexOf(names[i]);
+                if(idx>=0)return idx;
+                for(var j=0;j<headers.length;j++){if(headers[j].includes(names[i]))return j;}
+            }
+            return -1;
+        }
+        function esc(s){var d=document.createElement('div');d.textContent=s;return d.innerHTML;}
+        function parseCSV(text){
+            var rows=[];var row=[];var field='';var inQuote=false;
+            for(var i=0;i<text.length;i++){
+                var c=text[i];var next=text[i+1]||'';
+                if(inQuote){
+                    if(c==='"'&&next==='"'){field+='"';i++;}
+                    else if(c==='"'){inQuote=false;}
+                    else{field+=c;}
+                }else{
+                    if(c==='"'){inQuote=true;}
+                    else if(c===','){row.push(field);field='';}
+                    else if(c==='\n'||(c==='\r'&&next==='\n')){row.push(field);field='';rows.push(row);row=[];if(c==='\r')i++;}
+                    else if(c==='\r'){row.push(field);field='';rows.push(row);row=[];}
+                    else{field+=c;}
+                }
+            }
+            if(field||row.length)row.push(field);
+            if(row.length)rows.push(row);
+            return rows;
+        }
+    })();
     var ao=new IntersectionObserver(function(entries){entries.forEach(function(entry,i){if(entry.isIntersecting){setTimeout(function(){entry.target.classList.add('visible')},i*60);ao.unobserve(entry.target)}})},{threshold:0.12});
     document.querySelectorAll('.anim').forEach(function(el){ao.observe(el)});
 })();
