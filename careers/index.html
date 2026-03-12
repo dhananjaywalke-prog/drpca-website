@@ -79,31 +79,37 @@
         .why-card h4{font-family:var(--serif);font-size:1rem;color:var(--navy);margin-bottom:.4rem}
         .why-card p{font-size:.82rem;line-height:1.65;color:var(--text-muted)}
 
-        /* ─── Alumni Section ─── */
-        .alumni-intro{max-width:700px;margin-bottom:2.5rem}
+        /* ─── Alumni Wall ─── */
+        .alumni-intro{max-width:700px;margin-bottom:2rem}
         .alumni-intro p{font-size:.95rem;line-height:1.8;color:var(--text-on-dark)}
-
-        .alumni-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
-        .alumni-card{
-            padding:1.25rem;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);
-            border-radius:var(--radius-md);text-align:center;transition:all .3s;
-        }
-        .alumni-card:hover{background:rgba(255,255,255,0.07);border-color:rgba(255,255,255,0.12)}
-        .alumni-avatar{
-            width:56px;height:56px;border-radius:50%;background:rgba(255,255,255,0.06);
-            display:flex;align-items:center;justify-content:center;margin:0 auto .75rem;
-            font-family:var(--serif);font-size:1rem;color:var(--light-blue);
-        }
-        .alumni-card h4{font-size:.9rem;font-weight:600;color:var(--white);margin-bottom:.15rem}
-        .alumni-card .year{font-size:.72rem;color:var(--gold-light);font-weight:600;margin-bottom:.3rem}
-        .alumni-card .role{font-size:.75rem;color:var(--text-on-dark-muted);line-height:1.5}
-
-        .alumni-placeholder{
-            grid-column:1/-1;padding:3rem 2rem;text-align:center;
-            border:2px dashed rgba(255,255,255,0.08);border-radius:var(--radius-lg);
-        }
-        .alumni-placeholder h4{font-family:var(--serif);font-size:1.1rem;color:var(--white);margin-bottom:.4rem}
-        .alumni-placeholder p{font-size:.88rem;color:var(--text-on-dark-muted)}
+        .alumni-stats{display:flex;gap:2.5rem;margin-bottom:2rem}
+        .alumni-stat-num{font-family:var(--serif);font-size:1.8rem;color:var(--gold-light)}
+        .alumni-stat-label{font-size:.68rem;color:var(--text-on-dark-muted);letter-spacing:.08em;text-transform:uppercase}
+        .alumni-search{margin-bottom:1.5rem;max-width:340px;position:relative}
+        .alumni-search input{width:100%;padding:.6rem 1rem .6rem 2.4rem;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:var(--radius-sm);color:var(--white);font-family:var(--sans);font-size:.84rem;outline:none;transition:all .25s}
+        .alumni-search input:focus{border-color:var(--gold);background:rgba(255,255,255,0.08)}
+        .alumni-search input::placeholder{color:rgba(255,255,255,0.3)}
+        .alumni-search svg{position:absolute;left:.8rem;top:50%;transform:translateY(-50%);width:15px;height:15px;color:rgba(255,255,255,0.3);pointer-events:none}
+        .alumni-wall{display:flex;flex-wrap:wrap;gap:.5rem}
+        .alumni-name{position:relative;padding:.4rem .85rem;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);border-radius:var(--radius-sm);font-size:.82rem;font-weight:500;color:rgba(255,255,255,0.6);cursor:default;transition:all .25s var(--ease-smooth)}
+        .alumni-name:hover{background:rgba(255,255,255,0.1);border-color:var(--gold);color:var(--white);z-index:10}
+        .alumni-name .aq{color:var(--gold-light);font-weight:600;margin-left:.25rem;font-size:.7rem}
+        .alumni-popup{position:absolute;bottom:calc(100% + 10px);left:50%;transform:translateX(-50%);width:250px;background:var(--white);border-radius:var(--radius-md);box-shadow:0 12px 40px rgba(0,0,0,0.3);padding:1rem;opacity:0;visibility:hidden;pointer-events:none;transition:all .25s var(--ease-out);z-index:100}
+        .alumni-name:hover .alumni-popup{opacity:1;visibility:visible;transform:translateX(-50%) translateY(-4px)}
+        .alumni-popup::after{content:'';position:absolute;top:100%;left:50%;transform:translateX(-50%);border:6px solid transparent;border-top-color:var(--white)}
+        .alumni-popup-name{font-family:var(--serif);font-size:.92rem;color:var(--navy);margin-bottom:.1rem}
+        .alumni-popup-year{font-size:.68rem;color:var(--gold);font-weight:600;margin-bottom:.45rem}
+        .alumni-popup-role{font-size:.76rem;color:var(--text-body);line-height:1.5}
+        .alumni-popup-org{font-size:.76rem;color:var(--text-muted);font-weight:500;margin-bottom:.25rem}
+        .alumni-popup-quote{font-size:.7rem;color:var(--text-muted);font-style:italic;margin-top:.4rem;padding-top:.4rem;border-top:1px solid var(--border-light);line-height:1.45}
+        .alumni-popup-li{display:inline-flex;align-items:center;gap:.25rem;margin-top:.4rem;font-size:.68rem;color:var(--blue);font-weight:500;text-decoration:none}
+        .alumni-popup-li:hover{color:var(--navy)}
+        .alumni-popup-li svg{width:11px;height:11px}
+        .alumni-cta{margin-top:2.5rem;padding:1.25rem 1.75rem;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:var(--radius-md);display:flex;align-items:center;justify-content:space-between;gap:1.5rem}
+        .alumni-cta p{font-size:.85rem;color:var(--text-on-dark);line-height:1.6}
+        .alumni-cta a{padding:.55rem 1.2rem;background:var(--gold);color:var(--white);border-radius:var(--radius-sm);font-size:.8rem;font-weight:600;white-space:nowrap;transition:all .25s;text-decoration:none}
+        .alumni-cta a:hover{background:var(--gold-light);transform:translateY(-1px)}
+        .alumni-none{font-size:.85rem;color:var(--text-on-dark-muted);padding:1rem 0;display:none}
 
         /* FOOTER */
         .footer{background:var(--navy-deep);color:var(--text-on-dark-muted);padding:4rem 2rem 6rem}.footer-inner{max-width:var(--max-width);margin:0 auto;display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:3rem}.footer-brand-mark{display:flex;align-items:center;gap:.7rem;margin-bottom:1rem}.footer-brand-icon{width:36px;height:36px;background:rgba(255,255,255,0.08);border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;color:var(--white);font-family:var(--serif);font-size:.95rem}.footer-brand-name{font-family:var(--serif);font-size:1rem;color:var(--white)}.footer-brand-sub{font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:var(--text-on-dark-muted)}.footer-brand p{font-size:.82rem;line-height:1.7;color:var(--text-on-dark-muted)}.footer-col h4{font-size:.7rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,0.6);margin-bottom:1.1rem}.footer-col ul{display:flex;flex-direction:column;gap:.5rem}.footer-col a{font-size:.84rem;color:var(--text-on-dark-muted);transition:color .25s}.footer-col a:hover{color:var(--gold-light)}.footer-bar{position:fixed;bottom:0;left:0;right:0;z-index:999;background:var(--navy-deep);padding:0.75rem 2rem;border-top:1px solid rgba(255,255,255,0.08)}.footer-bar-inner{max-width:var(--max-width);margin:0 auto}.footer-bar-inner{display:flex;align-items:center;justify-content:space-between;gap:2rem}.footer-bar-left{display:flex;align-items:center;gap:1rem;flex-shrink:0;padding-right:2rem;border-right:1px solid var(--gold);margin-right:0;}.footer-bar-badge{width:52px;height:52px;object-fit:contain;opacity:0.85}.footer-bar-celeb{font-size:.9rem;color:rgba(255,255,255,0.5);letter-spacing:.06em;font-weight:500;white-space:nowrap}.footer-bar-right{text-align:right}.footer-bar-line1{font-size:.72rem;line-height:1.8;color:rgba(255,255,255,0.3)}.footer-bar-line1 strong{color:rgba(255,255,255,0.5);font-weight:600}.footer-bar-line1 a{color:rgba(255,255,255,0.4);transition:color .25s}.footer-bar-line1 a:hover{color:var(--gold-light)}.footer-bar-line2{font-size:.72rem;line-height:1.8;color:rgba(255,255,255,0.25)}
@@ -113,13 +119,13 @@
         @media(max-width:1024px){.nav-logo{height:62px}
             .opp-grid{grid-template-columns:1fr}
             .why-grid{grid-template-columns:1fr 1fr}
-            .alumni-grid{grid-template-columns:repeat(2,1fr)}
+            
             .footer-inner{grid-template-columns:1fr 1fr;gap:2.5rem}
         }
         @media(max-width:768px){.nav-logo{height:50px}
             .nav-menu,.nav-actions .nav-cta,.nav-login-wrap{display:none}.nav-toggle{display:flex}.mobile-menu{display:block}.mega-menu{display:none}
             .why-grid{grid-template-columns:1fr}
-            .alumni-grid{grid-template-columns:1fr}
+            
             .footer-inner{grid-template-columns:1fr;gap:2rem}.footer-bar-inner{flex-direction:column;text-align:center;gap:0.75rem}.footer-bar-left{border-right:none;padding-right:0;justify-content:center}.footer-bar-right{text-align:center}
         }
     </style>
@@ -322,15 +328,52 @@
             <h2 class="section-title section-title--light">Our CA Qualifiers</h2>
         </div>
         <div class="alumni-intro anim">
-            <p>We take pride in the Chartered Accountants who completed their articleship training at the firm and have gone on to qualify. Their names and achievements will be featured here as this section is populated.</p>
+            <p>We take pride in the Chartered Accountants who completed their articleship training at the firm. Hover over a name to see their journey since qualifying.</p>
         </div>
 
-        <div class="alumni-grid">
-            <!-- Placeholder — replace with real alumni data -->
-            <div class="alumni-placeholder anim">
-                <h4>Alumni profiles coming soon</h4>
-                <p>We are compiling the list of CA qualifiers who trained at DRP & Co. LLP. This section will be updated with names, qualification years, and current roles.</p>
+        <div class="alumni-stats anim">
+            <div><div class="alumni-stat-num" id="alumniCount">8</div><div class="alumni-stat-label">CA Qualifiers</div></div>
+            <div><div class="alumni-stat-num" id="alumniYears">2018–2024</div><div class="alumni-stat-label">Qualification Span</div></div>
+        </div>
+
+        <div class="alumni-search anim">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+            <input type="text" placeholder="Search by name or year..." id="alumniSearch">
+        </div>
+
+        <div class="alumni-wall anim" id="alumniWall">
+            <!-- SAMPLE DATA — replace with real alumni from Google Form responses -->
+            <div class="alumni-name" data-name="Rahul Sharma" data-year="2024">CA Rahul Sharma <span class="aq">'24</span>
+                <div class="alumni-popup"><div class="alumni-popup-name">CA Rahul Sharma</div><div class="alumni-popup-year">CA Qualified: 2024</div><div class="alumni-popup-org">Deloitte India</div><div class="alumni-popup-role">Audit Associate</div></div>
             </div>
+            <div class="alumni-name" data-name="Sneha Kulkarni" data-year="2023">CA Sneha Kulkarni <span class="aq">'23</span>
+                <div class="alumni-popup"><div class="alumni-popup-name">CA Sneha Kulkarni</div><div class="alumni-popup-year">CA Qualified: 2023</div><div class="alumni-popup-org">KPMG India</div><div class="alumni-popup-role">Tax Analyst</div></div>
+            </div>
+            <div class="alumni-name" data-name="Aditya Patil" data-year="2023">CA Aditya Patil <span class="aq">'23</span>
+                <div class="alumni-popup"><div class="alumni-popup-name">CA Aditya Patil</div><div class="alumni-popup-year">CA Qualified: 2023</div><div class="alumni-popup-org">EY India</div><div class="alumni-popup-role">Advisory Associate</div></div>
+            </div>
+            <div class="alumni-name" data-name="Priya Deshmukh" data-year="2022">CA Priya Deshmukh <span class="aq">'22</span>
+                <div class="alumni-popup"><div class="alumni-popup-name">CA Priya Deshmukh</div><div class="alumni-popup-year">CA Qualified: 2022</div><div class="alumni-popup-org">Grant Thornton Bharat</div><div class="alumni-popup-role">Senior Associate, Valuations</div></div>
+            </div>
+            <div class="alumni-name" data-name="Vikram Joshi" data-year="2021">CA Vikram Joshi <span class="aq">'21</span>
+                <div class="alumni-popup"><div class="alumni-popup-name">CA Vikram Joshi</div><div class="alumni-popup-year">CA Qualified: 2021</div><div class="alumni-popup-org">BDO India</div><div class="alumni-popup-role">Manager, Assurance</div></div>
+            </div>
+            <div class="alumni-name" data-name="Meera Raut" data-year="2020">CA Meera Raut <span class="aq">'20</span>
+                <div class="alumni-popup"><div class="alumni-popup-name">CA Meera Raut</div><div class="alumni-popup-year">CA Qualified: 2020</div><div class="alumni-popup-org">Self Practice</div><div class="alumni-popup-role">Proprietor, M. Raut &amp; Associates</div></div>
+            </div>
+            <div class="alumni-name" data-name="Rohan Mehta" data-year="2019">CA Rohan Mehta <span class="aq">'19</span>
+                <div class="alumni-popup"><div class="alumni-popup-name">CA Rohan Mehta</div><div class="alumni-popup-year">CA Qualified: 2019</div><div class="alumni-popup-org">PwC India</div><div class="alumni-popup-role">Senior Associate, Tax</div></div>
+            </div>
+            <div class="alumni-name" data-name="Ananya Bhide" data-year="2018">CA Ananya Bhide <span class="aq">'18</span>
+                <div class="alumni-popup"><div class="alumni-popup-name">CA Ananya Bhide</div><div class="alumni-popup-year">CA Qualified: 2018</div><div class="alumni-popup-org">Mazars India</div><div class="alumni-popup-role">Manager, Audit &amp; Assurance</div></div>
+            </div>
+        </div>
+
+        <div class="alumni-none" id="alumniNone">No alumni found matching your search.</div>
+
+        <div class="alumni-cta anim">
+            <p>Completed your articleship at DRP &amp; Co. LLP? We'd love to feature you.</p>
+            <a href="https://forms.google.com" target="_blank" rel="noopener">Register as Alumni</a>
         </div>
     </div>
 </section>
@@ -365,6 +408,19 @@
     var lw=document.getElementById('loginWrap'),lb=document.getElementById('loginBtn');lb.addEventListener('click',function(e){e.stopPropagation();lw.classList.toggle('open')});document.addEventListener('click',function(e){if(!lw.contains(e.target))lw.classList.remove('open')});
     var nt=document.getElementById('navToggle'),mob=document.getElementById('mobileMenu');nt.addEventListener('click',function(){var o=mob.classList.contains('open');nt.classList.toggle('active');mob.classList.toggle('open');document.body.style.overflow=o?'':'hidden'});mob.querySelectorAll('a').forEach(function(l){l.addEventListener('click',function(){nt.classList.remove('active');mob.classList.remove('open');document.body.style.overflow=''})});
     document.addEventListener('keydown',function(e){if(e.key==='Escape'){si.classList.remove('open');lw.classList.remove('open');if(mob.classList.contains('open')){nt.classList.remove('active');mob.classList.remove('open');document.body.style.overflow=''}}});
+    // Alumni search
+    var searchInput=document.getElementById('alumniSearch');
+    if(searchInput){searchInput.addEventListener('input',function(){
+        var q=this.value.toLowerCase();
+        var names=document.querySelectorAll('.alumni-name');
+        var visible=0;
+        names.forEach(function(n){
+            var match=n.getAttribute('data-name').toLowerCase().includes(q)||n.getAttribute('data-year').includes(q);
+            n.style.display=match?'':'none';
+            if(match)visible++;
+        });
+        document.getElementById('alumniNone').style.display=visible===0?'block':'none';
+    });}
     var ao=new IntersectionObserver(function(entries){entries.forEach(function(entry,i){if(entry.isIntersecting){setTimeout(function(){entry.target.classList.add('visible')},i*60);ao.unobserve(entry.target)}})},{threshold:0.12});
     document.querySelectorAll('.anim').forEach(function(el){ao.observe(el)});
 })();
