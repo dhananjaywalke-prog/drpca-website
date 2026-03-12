@@ -91,13 +91,20 @@
         .alumni-search input::placeholder{color:rgba(255,255,255,0.3)}
         .alumni-search svg{position:absolute;left:.8rem;top:50%;transform:translateY(-50%);width:15px;height:15px;color:rgba(255,255,255,0.3);pointer-events:none}
         .alumni-wall{display:flex;flex-wrap:wrap;gap:.5rem}
-        .alumni-name{position:relative;padding:.4rem .85rem;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);border-radius:var(--radius-sm);font-size:.82rem;font-weight:500;color:rgba(255,255,255,0.6);cursor:default;transition:all .25s var(--ease-smooth)}
-        .alumni-name:hover{background:rgba(255,255,255,0.1);border-color:var(--gold);color:var(--white);z-index:10}
-        .alumni-name .aq{color:var(--gold-light);font-weight:600;margin-left:.25rem;font-size:.7rem}
-        .alumni-popup{position:absolute;bottom:calc(100% + 10px);left:50%;transform:translateX(-50%);width:250px;background:var(--white);border-radius:var(--radius-md);box-shadow:0 12px 40px rgba(0,0,0,0.3);padding:1rem;opacity:0;visibility:hidden;pointer-events:none;transition:all .25s var(--ease-out);z-index:100}
-        .alumni-name:hover .alumni-popup{opacity:1;visibility:visible;transform:translateX(-50%) translateY(-4px)}
+        .alumni-name{position:relative;display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .85rem;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);border-radius:var(--radius-sm);font-size:.82rem;font-weight:500;color:rgba(255,255,255,0.6);cursor:pointer;transition:all .25s var(--ease-smooth);user-select:none}
+        .alumni-name:hover,.alumni-name.active{background:rgba(255,255,255,0.1);border-color:var(--gold);color:var(--white);z-index:10}
+        .alumni-name .aq{color:var(--gold-light);font-weight:600;font-size:.7rem}
+        .alumni-name .alumni-li-inline{display:inline-flex;align-items:center;justify-content:center;width:16px;height:16px;margin-left:.15rem;opacity:.4;transition:opacity .25s}
+        .alumni-name:hover .alumni-li-inline,.alumni-name.active .alumni-li-inline{opacity:.8}
+        .alumni-li-inline svg{width:12px;height:12px;fill:rgba(255,255,255,0.7)}
+        .alumni-li-inline:hover svg{fill:#0077B5}
+        .alumni-popup{position:absolute;bottom:calc(100% + 2px);left:50%;transform:translateX(-50%);width:260px;background:var(--white);border-radius:var(--radius-md);box-shadow:0 12px 40px rgba(0,0,0,0.3);padding:1.1rem;opacity:0;visibility:hidden;pointer-events:none;transition:all .25s var(--ease-out);z-index:100}
+        .alumni-name.active .alumni-popup{opacity:1;visibility:visible;pointer-events:auto;transform:translateX(-50%) translateY(-4px)}
         .alumni-popup::after{content:'';position:absolute;top:100%;left:50%;transform:translateX(-50%);border:6px solid transparent;border-top-color:var(--white)}
-        .alumni-popup-name{font-family:var(--serif);font-size:.92rem;color:var(--navy);margin-bottom:.1rem}
+        .alumni-popup-close{position:absolute;top:.5rem;right:.5rem;width:20px;height:20px;display:flex;align-items:center;justify-content:center;cursor:pointer;opacity:.3;transition:opacity .2s;border:none;background:none;padding:0}
+        .alumni-popup-close:hover{opacity:.7}
+        .alumni-popup-close svg{width:14px;height:14px;stroke:var(--text-body);stroke-width:2}
+        .alumni-popup-name{font-family:var(--serif);font-size:.92rem;color:var(--navy);margin-bottom:.1rem;padding-right:1.5rem}
         .alumni-popup-year{font-size:.68rem;color:var(--gold);font-weight:600;margin-bottom:.45rem}
         .alumni-popup-role{font-size:.76rem;color:var(--text-body);line-height:1.5}
         .alumni-popup-org{font-size:.76rem;color:var(--text-muted);font-weight:500;margin-bottom:.25rem}
@@ -439,29 +446,81 @@
 
             // Render wall
             wall.innerHTML='';
+            var LI_SVG='<svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>';
             alumni.forEach(function(a){
-                
                 var el=document.createElement('div');
                 el.className='alumni-name';
                 el.setAttribute('data-name',a.name);
                 el.setAttribute('data-year',a.year);
 
                 var popup='<div class="alumni-popup">';
+                popup+='<button class="alumni-popup-close" aria-label="Close"><svg viewBox="0 0 24 24" fill="none"><path d="M18 6L6 18M6 6l12 12"/></svg></button>';
                 popup+='<div class="alumni-popup-name">'+esc(a.name)+'</div>';
-                if(a.year)popup+='<div class="alumni-popup-year">CA Qualified: '+esc(a.year)+'</div>';
+                if(a.year)popup+='<div class="alumni-popup-year">Qualified: '+esc(a.year)+'</div>';
                 if(a.org)popup+='<div class="alumni-popup-org">'+esc(a.org)+'</div>';
                 if(a.role)popup+='<div class="alumni-popup-role">'+esc(a.role)+'</div>';
                 if(a.quote)popup+='<div class="alumni-popup-quote">"'+esc(a.quote)+'"</div>';
-                if(a.linkedin)popup+='<a href="'+esc(a.linkedin)+'" target="_blank" rel="noopener" class="alumni-popup-li"><svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>LinkedIn</a>';
+                if(a.linkedin)popup+='<a href="'+esc(a.linkedin)+'" target="_blank" rel="noopener" class="alumni-popup-li">'+LI_SVG+' View LinkedIn</a>';
                 popup+='</div>';
 
-                el.innerHTML=esc(a.name)+' <span class="aq">'+a.year+'</span>'+popup;
+                // Inline LinkedIn icon after year
+                var inlineLi='';
+                if(a.linkedin)inlineLi='<a href="'+esc(a.linkedin)+'" target="_blank" rel="noopener" class="alumni-li-inline" title="LinkedIn" onclick="event.stopPropagation()">'+LI_SVG+'</a>';
+
+                el.innerHTML='<span class="alumni-name-text">'+esc(a.name)+' <span class="aq">'+a.year+'</span></span>'+inlineLi+popup;
                 wall.appendChild(el);
+            });
+
+            // Hybrid hover + click behavior
+            var activeEl=null;
+            var hoverTimer=null;
+
+            function closeActive(){
+                if(activeEl){activeEl.classList.remove('active');activeEl=null;}
+            }
+
+            wall.addEventListener('click',function(e){
+                var nameEl=e.target.closest('.alumni-name');
+                var closeBtn=e.target.closest('.alumni-popup-close');
+                if(closeBtn){closeActive();return;}
+                if(!nameEl)return;
+                if(e.target.closest('.alumni-li-inline')||e.target.closest('.alumni-popup-li'))return;
+                if(nameEl===activeEl){closeActive();}
+                else{closeActive();nameEl.classList.add('active');activeEl=nameEl;}
+            });
+
+            // Hover: open on desktop, with delay to prevent flicker
+            wall.addEventListener('mouseover',function(e){
+                var nameEl=e.target.closest('.alumni-name');
+                if(!nameEl||activeEl)return;
+                clearTimeout(hoverTimer);
+                nameEl.classList.add('active');
+                activeEl=nameEl;
+            });
+            wall.addEventListener('mouseout',function(e){
+                var nameEl=e.target.closest('.alumni-name');
+                if(!nameEl)return;
+                var related=e.relatedTarget;
+                if(related&&nameEl.contains(related))return;
+                hoverTimer=setTimeout(function(){
+                    if(activeEl===nameEl){closeActive();}
+                },200);
+            });
+
+            // Close on click outside
+            document.addEventListener('click',function(e){
+                if(activeEl&&!activeEl.contains(e.target)){closeActive();}
+            });
+
+            // Close on Escape
+            document.addEventListener('keydown',function(e){
+                if(e.key==='Escape')closeActive();
             });
 
             // Search
             var searchInput=document.getElementById('alumniSearch');
             if(searchInput){searchInput.addEventListener('input',function(){
+                closeActive();
                 var q=this.value.toLowerCase();
                 var names=wall.querySelectorAll('.alumni-name');
                 var visible=0;
