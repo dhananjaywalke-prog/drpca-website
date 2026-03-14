@@ -1,0 +1,362 @@
+[
+  {
+    "slug": "new-tax-regime-ay-2026-27",
+    "title": "Key Changes in the New Tax Regime for AY 2026-27",
+    "date": "2026-04-01",
+    "date_display": "April 2026",
+    "category": "Tax",
+    "cat_stripe": "tax",
+    "reading_time": 5,
+    "summary": "An overview of revised income tax slab rates under the new tax regime for AY 2026-27, including increased rebate under Section 87A and revised standard deduction limits."
+  },
+  {
+    "slug": "where-does-your-tax-money-go-past-6-budgets-272-lakh-crores",
+    "title": "Where Does Your Tax Money Go? Past 6 Budgets' 272 Lakh Crores Visualized",
+    "date": "2026-02-10",
+    "date_display": "February 10, 2026",
+    "category": "Tax",
+    "cat_stripe": "tax",
+    "reading_time": 2,
+    "summary": "I built an interactive dashboard to decode 6 years of Union Budget data. Here's what I found."
+  },
+  {
+    "slug": "sme-ipo-boom-10-rbi-insights-every-professional-should",
+    "title": "SME IPO Boom: 10 RBI Insights Every Professional Should Know",
+    "date": "2025-11-08",
+    "date_display": "November 08, 2025",
+    "category": "Regulatory",
+    "cat_stripe": "regulatory",
+    "reading_time": 3,
+    "summary": "India\u2019s small and medium enterprises (SMEs) are no longer confined to factory floors \u2014 they\u2019re stepping onto stock exchanges. \ud83d\udcc8  The Reserve Bank of India\u2019s latest study on  \u201cFundraising by Indian..."
+  },
+  {
+    "slug": "capm-vs-build-up-two-roads-finding-true-cost-equity",
+    "title": "CAPM vs. Build-Up: Two Roads to Finding the True Cost of Equity",
+    "date": "2025-10-26",
+    "date_display": "October 26, 2025",
+    "category": "Valuation",
+    "cat_stripe": "valuation",
+    "reading_time": 3,
+    "summary": "When valuing a business, the  Cost of Equity  is more than just a number \u2014 it\u2019s the heartbeat \u2764\ufe0f of the valuation model. \ud83d\udca1 It defines what return investors expect for taking risks \ud83c\udfaf, and even a 1%..."
+  },
+  {
+    "slug": "decoding-build-up-method-finding-true-cost-equity-india",
+    "title": "Decoding the Build-Up Method: Finding True Cost of Equity in India",
+    "date": "2025-10-24",
+    "date_display": "October 24, 2025",
+    "category": "Valuation",
+    "cat_stripe": "valuation",
+    "reading_time": 3,
+    "summary": "\ud83d\udcad How do investors decide what return they deserve for taking a risk on a company? At the heart of every business valuation lies one crucial number \u2014 the  Cost of Equity \ud83d\udcb0 ."
+  },
+  {
+    "slug": "section-247-law-brought-evolved-business-valuation-india",
+    "title": "Section 247: The Law That Brought Evolved Business Valuation in India",
+    "date": "2025-10-17",
+    "date_display": "October 17, 2025",
+    "category": "Valuation",
+    "cat_stripe": "valuation",
+    "reading_time": 3,
+    "summary": "\ud83d\udca1 Business valuation is no longer just about crunching numbers \u2014 it\u2019s about  trust, transparency, and governance. For years, valuations in India were largely unregulated, leading to inconsistencies..."
+  },
+  {
+    "slug": "sebis-reit-reclassification-new-era-indian-real-estate",
+    "title": "SEBIs REIT Reclassification: A New Era for Indian Real Estate Investments",
+    "date": "2025-10-12",
+    "date_display": "October 12, 2025",
+    "category": "Regulatory",
+    "cat_stripe": "regulatory",
+    "reading_time": 3,
+    "summary": "\ud83c\udfd9\ufe0f SEBI\u2019s REIT Reclassification: A New Era for Indian Real Estate Investments  India\u2019s real estate market just crossed a new milestone. \u2728 SEBI\u2019s latest reform \u2014 reclassifying  REITs (Real Estate..."
+  },
+  {
+    "slug": "rbis-revised-prudential-norms-ucbs-game-changer-challenge",
+    "title": "RBIs Revised Prudential Norms for UCBs: A Game Changer or a Challenge?",
+    "date": "2025-03-09",
+    "date_display": "March 09, 2025",
+    "category": "Regulatory",
+    "cat_stripe": "regulatory",
+    "reading_time": 3,
+    "summary": "The Reserve Bank of India (RBI) has once again taken a strategic step towards enhancing the financial stability of Urban Co-operative Banks (UCBs) with its latest notification dated  February 24,..."
+  },
+  {
+    "slug": "valuation-conclusions-case-inconsistent-results-across",
+    "title": "Valuation Conclusions in Case of Inconsistent Results Across Methodologies",
+    "date": "2024-12-30",
+    "date_display": "December 30, 2024",
+    "category": "Valuation",
+    "cat_stripe": "valuation",
+    "reading_time": 3,
+    "summary": "Valuation is as much an art as it is a science. When methodologies and inputs yield different results, assigning weights to reconcile these differences is a cornerstone of professional..."
+  },
+  {
+    "slug": "engine-democracy-how-indian-parliament-truly-functions",
+    "title": "The Engine of Democracy: How the Indian Parliament Truly Functions",
+    "date": "2024-12-23",
+    "date_display": "December 23, 2024",
+    "category": "General",
+    "cat_stripe": "advisory",
+    "reading_time": 4,
+    "summary": "As we commemorate the historic first session of the Constituent Assembly (9 December \u2013 23 December 1946), it is a fitting occasion to reflect on the workings of the Indian Parliament. For over seven..."
+  },
+  {
+    "slug": "adapting-change-sebis-new-sme-framework-its-impact-ipo",
+    "title": "Adapting to Change: SEBIs New SME Framework and Its Impact on IPO Platforms",
+    "date": "2024-12-19",
+    "date_display": "December 19, 2024",
+    "category": "Regulatory",
+    "cat_stripe": "regulatory",
+    "reading_time": 3,
+    "summary": "The Securities and Exchange Board of India (SEBI) has introduced significant amendments to the SME framework under its SEBI (ICDR) Regulations, 2018, and SEBI (LODR) Regulations, 2015. These changes,..."
+  },
+  {
+    "slug": "unlocking-tax-savings-how-unpaid-expenses-impact-your",
+    "title": "Unlocking Tax Savings: How Unpaid Expenses Impact Your Tax Deductions",
+    "date": "2024-01-25",
+    "date_display": "January 25, 2024",
+    "category": "Tax",
+    "cat_stripe": "tax",
+    "reading_time": 4,
+    "summary": "In today's ever-evolving business landscape, understanding the nuances of tax provisions is crucial for effective financial management. One such critical provision is Section 43B of the Income Tax..."
+  },
+  {
+    "slug": "navigating-ibc-terrain-insights-from-rbi-governors-speech",
+    "title": "Navigating the IBC Terrain: Insights from RBI Governor's Speech",
+    "date": "2024-01-16",
+    "date_display": "January 16, 2024",
+    "category": "Regulatory",
+    "cat_stripe": "regulatory",
+    "reading_time": 3,
+    "summary": "In a thought-provoking speech at the CAFRAL conference in Mumbai, RBI Governor Shri Shaktikanta Das shed light on the Insolvency and Bankruptcy Code (IBC), underscoring its significance as a..."
+  },
+  {
+    "slug": "rbis-new-guidelines-commercial-papers-non-convertible",
+    "title": "RBI's New Guidelines on Commercial Papers and Non-Convertible Debentures",
+    "date": "2024-01-08",
+    "date_display": "January 08, 2024",
+    "category": "Regulatory",
+    "cat_stripe": "regulatory",
+    "reading_time": 1,
+    "summary": "The Reserve Bank of India (RBI) issued the \"Master Direction \u2013 Reserve Bank of India (Commercial Paper and Non-Convertible Debentures of original or initial maturity up to one year) Directions 2024\"..."
+  },
+  {
+    "slug": "orderly-vs-forced-liquidation-value",
+    "title": "Orderly v/s Forced Liquidation Value",
+    "date": "2023-07-19",
+    "date_display": "July 19, 2023",
+    "category": "Valuation",
+    "cat_stripe": "valuation",
+    "reading_time": 3,
+    "summary": "The valuation of assets can be affected significantly by the liquidation scenario. In a liquidation, assets are sold to the highest bidder, but the process and timing of the sale can vary..."
+  },
+  {
+    "slug": "discount-rates-vs-capitalization",
+    "title": "Discount Rates vs. Capitalization Rates",
+    "date": "2023-06-25",
+    "date_display": "June 25, 2023",
+    "category": "Valuation",
+    "cat_stripe": "valuation",
+    "reading_time": 4,
+    "summary": "Accurately valuing a business is of paramount importance for investors, owners, and professionals involved in the financial landscape. Discount rates and capitalization rates are two key concepts..."
+  },
+  {
+    "slug": "navigating-startup-business-valuation",
+    "title": "Navigating Startup Business Valuation",
+    "date": "2023-06-20",
+    "date_display": "June 20, 2023",
+    "category": "Valuation",
+    "cat_stripe": "valuation",
+    "reading_time": 4,
+    "summary": "Valuing a startup business is a critical process that influences key decisions such as fundraising, investor attraction, and strategic planning. However, startup valuation presents unique challenges..."
+  },
+  {
+    "slug": "dloc-vs-dlom",
+    "title": "DLOC v/s DLOM",
+    "date": "2023-05-31",
+    "date_display": "May 31, 2023",
+    "category": "Valuation",
+    "cat_stripe": "valuation",
+    "reading_time": 6,
+    "summary": "Business valuation is a complex process that requires careful consideration of various factors influencing the perceived value of an asset. Two significant aspects that impact the valuation are the..."
+  },
+  {
+    "slug": "terminal-growth-rate-business-valuation",
+    "title": "Terminal Growth Rate in Business Valuation",
+    "date": "2023-05-20",
+    "date_display": "May 20, 2023",
+    "category": "Valuation",
+    "cat_stripe": "valuation",
+    "reading_time": 7,
+    "summary": "Accurately determining the terminal growth rate is of paramount importance in business valuation, as it directly influences investment decisions and valuation outcomes. The Discounted Cash Flow (DCF)..."
+  },
+  {
+    "slug": "estimating-terminal-value",
+    "title": "Estimating Terminal Value",
+    "date": "2023-05-14",
+    "date_display": "May 14, 2023",
+    "category": "Valuation",
+    "cat_stripe": "valuation",
+    "reading_time": 8,
+    "summary": "The Discounted Cash Flow (DCF) method is a widely used valuation technique that uses future cash flow projections to estimate the value of an asset. The DCF method falls under the Income Approach,..."
+  },
+  {
+    "slug": "intrinsic-value-vs-investment",
+    "title": "Intrinsic Value vs Investment Value",
+    "date": "2023-05-07",
+    "date_display": "May 07, 2023",
+    "category": "Valuation",
+    "cat_stripe": "valuation",
+    "reading_time": 4,
+    "summary": "Valuation is a critical component of investing and corporate finance, and it involves estimating the fair value of an asset or business. There are various methods and approaches to valuation, and two..."
+  },
+  {
+    "slug": "fcff-vs-fcfe",
+    "title": "FCFF v/s FCFE",
+    "date": "2023-04-28",
+    "date_display": "April 28, 2023",
+    "category": "Valuation",
+    "cat_stripe": "valuation",
+    "reading_time": 5,
+    "summary": "Discounted Cash Flow (DCF) method is one of the most commonly used valuation techniques in business valuations. It involves calculating the present value of future cash flows that a business is..."
+  },
+  {
+    "slug": "how-comparable-guideline-private-transactions",
+    "title": "How comparable are \"Guideline Private Comparable Transactions\"??",
+    "date": "2023-04-16",
+    "date_display": "April 16, 2023",
+    "category": "General",
+    "cat_stripe": "advisory",
+    "reading_time": 5,
+    "summary": "Valuing a business is a critical process for investors, business owners, and valuation professionals. One of the most commonly used approaches in business valuation is the market approach, which..."
+  },
+  {
+    "slug": "concept-degree-marketability-business-valuation",
+    "title": "Concept of \"Degree of Marketability\" in Business Valuation",
+    "date": "2023-04-10",
+    "date_display": "April 10, 2023",
+    "category": "Valuation",
+    "cat_stripe": "valuation",
+    "reading_time": 5,
+    "summary": "The concept of \"Degree of Marketability\" is a crucial element in business valuation that plays a significant role in determining the worth of a company. Marketability refers to the ability of an..."
+  },
+  {
+    "slug": "valuation-date-business-valuations",
+    "title": "'Valuation Date' for Business Valuations",
+    "date": "2023-04-05",
+    "date_display": "April 05, 2023",
+    "category": "Valuation",
+    "cat_stripe": "valuation",
+    "reading_time": 3,
+    "summary": "Business valuation is the process of determining the worth of a business entity, taking into account various factors such as its assets, liabilities, revenue, market conditions, industry trends, and..."
+  },
+  {
+    "slug": "you-valuing-securities-assets",
+    "title": "Are you valuing securities or assets?",
+    "date": "2023-03-28",
+    "date_display": "March 28, 2023",
+    "category": "Valuation",
+    "cat_stripe": "valuation",
+    "reading_time": 4,
+    "summary": "The selection of valuation methods and procedures depends on clarifying the asset, property, or business interest to be appraised. Ambiguity regarding the subject of valuation often leads to..."
+  },
+  {
+    "slug": "principles-valuation-appraisal",
+    "title": "Principles of valuation appraisal",
+    "date": "2023-03-19",
+    "date_display": "March 19, 2023",
+    "category": "Valuation",
+    "cat_stripe": "valuation",
+    "reading_time": 4,
+    "summary": "The process of business valuation involves determining the value of a company or a business unit. This is done by taking into account various factors such as the company's financial statements,..."
+  },
+  {
+    "slug": "standard-value-premise-business-valuation",
+    "title": "The standard of value and the premise of value in business valuation.",
+    "date": "2023-03-04",
+    "date_display": "March 04, 2023",
+    "category": "Valuation",
+    "cat_stripe": "valuation",
+    "reading_time": 7,
+    "summary": "In the world of business valuation, the standard of value and premise of value are two important concepts that play a crucial role in determining the value of a business. The standard of value refers..."
+  },
+  {
+    "slug": "impact-rising-interest-rates-business-valuation",
+    "title": "Impact of rising interest rates on Business Valuation",
+    "date": "2023-02-18",
+    "date_display": "February 18, 2023",
+    "category": "Valuation",
+    "cat_stripe": "valuation",
+    "reading_time": 8,
+    "summary": "In the process of business valuation, the discount rate plays a critical role in determining the value of a company. The discount rate reflects the time value of money and the risk associated with an..."
+  },
+  {
+    "slug": "importance-financial-statement-analysis-process-business",
+    "title": "Importance of financial statement analysis in process of business valuation",
+    "date": "2023-02-12",
+    "date_display": "February 12, 2023",
+    "category": "Valuation",
+    "cat_stripe": "valuation",
+    "reading_time": 4,
+    "summary": "Valuation is the process of estimating the value of a business, which can be used for a variety of purposes such as mergers and acquisitions, fundraising, financial reporting, and litigation. One of..."
+  },
+  {
+    "slug": "purpose-valuation-its-impact-exercise",
+    "title": "The Purpose of Valuation and its Impact on Valuation Exercise!",
+    "date": "2023-02-05",
+    "date_display": "February 05, 2023",
+    "category": "Valuation",
+    "cat_stripe": "valuation",
+    "reading_time": 5,
+    "summary": "Business valuation is a crucial aspect of the decision-making process for investors, entrepreneurs, and other stakeholders. The purpose of valuation is to estimate the value of an asset, such as a..."
+  },
+  {
+    "slug": "valuation-adjustments-fair-value-measurement",
+    "title": "Valuation Adjustments in Fair Value Measurement",
+    "date": "2023-01-29",
+    "date_display": "January 29, 2023",
+    "category": "Valuation",
+    "cat_stripe": "valuation",
+    "reading_time": 5,
+    "summary": "As per International Valuation Standards (IVS), fair value measurement is the process of estimating the price that would be received for an asset or paid for a liability in an orderly transaction..."
+  },
+  {
+    "slug": "fair-value-hierarchy",
+    "title": "Fair Value Hierarchy",
+    "date": "2023-01-21",
+    "date_display": "January 21, 2023",
+    "category": "Valuation",
+    "cat_stripe": "valuation",
+    "reading_time": 1,
+    "summary": "The International Valuation Standards (IVS) provide guidance on determining the fair value of assets and liabilities. In order to ensure consistency and transparency in valuation practices, the IVS..."
+  },
+  {
+    "slug": "understanding-fair-value-part-2",
+    "title": "Understanding Fair Value - Part 2",
+    "date": "2023-01-09",
+    "date_display": "January 09, 2023",
+    "category": "Valuation",
+    "cat_stripe": "valuation",
+    "reading_time": 3,
+    "summary": "According to the International Valuation Standards (IVS), fair value is defined as \"the price at which an asset or liability could be exchanged in a transaction between market participants at the..."
+  },
+  {
+    "slug": "understanding-fair-value-part-1",
+    "title": "Understanding Fair Value - Part 1",
+    "date": "2022-12-30",
+    "date_display": "December 30, 2022",
+    "category": "Valuation",
+    "cat_stripe": "valuation",
+    "reading_time": 1,
+    "summary": "There are various definitions of fair value that are used in different contexts, including financial reporting, tax planning, and financial analysis. Some examples of fair value definitions include: ..."
+  },
+  {
+    "slug": "how-use-lockdown-time-recovery-post-corona-crisis",
+    "title": "How to use lockdown time for recovery post Corona Crisis?",
+    "date": "2020-04-06",
+    "date_display": "April 06, 2020",
+    "category": "General",
+    "cat_stripe": "advisory",
+    "reading_time": 5,
+    "summary": "Corona event is unprecedented &amp; has caught the world including all governments napping for this disastrous impact recently. Everyone including all corporates are forced to be under lockdown to..."
+  }
+]

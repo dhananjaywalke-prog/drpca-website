@@ -82,6 +82,7 @@
         .article-category--regulatory { background: rgba(192,57,43,0.08); color: #C0392B; }
 
         .article-date { font-size: 0.72rem; color: var(--text-muted); }
+        .article-reading { font-size: 0.72rem; color: var(--text-muted); }
 
         .article-card h3 {
             font-family: var(--serif); font-size: 1.05rem; color: var(--navy);
@@ -222,121 +223,15 @@
     <!-- Filters -->
     <div class="filter-bar">
         <button class="filter-btn active" data-filter="all">All</button>
-        <button class="filter-btn" data-filter="tax">Tax</button>
-        <button class="filter-btn" data-filter="gst">GST</button>
-        <button class="filter-btn" data-filter="audit">Audit</button>
         <button class="filter-btn" data-filter="valuation">Valuation</button>
-        <button class="filter-btn" data-filter="advisory">Advisory</button>
         <button class="filter-btn" data-filter="regulatory">Regulatory</button>
-        <span class="filter-count" id="filterCount">Showing 6 articles</span>
+        <button class="filter-btn" data-filter="tax">Tax</button>
+        <button class="filter-btn" data-filter="general">General</button>
+        <span class="filter-count" id="filterCount">Loading articles...</span>
     </div>
 
-    <!-- Articles Grid -->
-    <div class="articles-grid" id="articlesGrid">
-
-        <!-- FEATURED: Article 1 -->
-        <a href="/insights/new-tax-regime-ay-2026-27" class="article-card article-card--featured anim" data-category="tax">
-            <div class="article-card-stripe article-card-stripe--tax"></div>
-            <div class="article-card-body">
-                <div class="article-meta">
-                    <span class="article-category article-category--tax">Tax</span>
-                    <span class="article-date">April 2026</span>
-                </div>
-                <h3>Key Changes in the New Tax Regime for AY 2026-27</h3>
-                <p class="article-excerpt">An overview of the revised income tax slab rates under the new tax regime for Assessment Year 2026-27, including the increased rebate under Section 87A, revised standard deduction limits, and implications for salaried individuals and senior citizens. The article also covers the comparison between old and new regime to assist taxpayers in making an informed choice.</p>
-                <div class="article-card-footer">
-                    <span class="article-author">CA Rohan Adkar</span>
-                    <span class="article-read-link">Read article <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
-                </div>
-            </div>
-        </a>
-
-        <!-- Article 2 -->
-        <a href="/insights/ind-as-valuation-ppa" class="article-card anim" data-category="valuation">
-            <div class="article-card-stripe article-card-stripe--valuation"></div>
-            <div class="article-card-body">
-                <div class="article-meta">
-                    <span class="article-category article-category--valuation">Valuation</span>
-                    <span class="article-date">March 2026</span>
-                </div>
-                <h3>Purchase Price Allocation under Ind AS 103: A Practical Guide</h3>
-                <p class="article-excerpt">This article covers the process of identifying and valuing intangible assets in a business combination under Ind AS 103, including customer relationships, brand value, technology, and non-compete agreements.</p>
-                <div class="article-card-footer">
-                    <span class="article-author">CA Dhananjay Walke</span>
-                    <span class="article-read-link">Read <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
-                </div>
-            </div>
-        </a>
-
-        <!-- Article 3 -->
-        <a href="/insights/gst-annual-return-fy-2025-26" class="article-card anim" data-category="gst">
-            <div class="article-card-stripe article-card-stripe--gst"></div>
-            <div class="article-card-body">
-                <div class="article-meta">
-                    <span class="article-category article-category--gst">GST</span>
-                    <span class="article-date">March 2026</span>
-                </div>
-                <h3>GST Annual Return (GSTR-9) for FY 2025-26: Key Points and Common Errors</h3>
-                <p class="article-excerpt">A checklist of key reconciliation points, common errors in GSTR-9 filing, and practical tips for ensuring accurate annual return preparation including ITC reconciliation and HSN-wise summary.</p>
-                <div class="article-card-footer">
-                    <span class="article-author">CA Jugal Taneja</span>
-                    <span class="article-read-link">Read <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
-                </div>
-            </div>
-        </a>
-
-        <!-- Article 4 -->
-        <a href="/insights/forensic-audit-red-flags" class="article-card anim" data-category="audit">
-            <div class="article-card-stripe article-card-stripe--audit"></div>
-            <div class="article-card-body">
-                <div class="article-meta">
-                    <span class="article-category article-category--audit">Audit</span>
-                    <span class="article-date">February 2026</span>
-                </div>
-                <h3>Red Flags in Financial Statements: A Forensic Audit Perspective</h3>
-                <p class="article-excerpt">Identifying early warning signs of financial irregularities through analytical procedures, journal entry testing, and related-party transaction review. Practical indicators for auditors and management.</p>
-                <div class="article-card-footer">
-                    <span class="article-author">CA Pradnya Bamb-Chhajed</span>
-                    <span class="article-read-link">Read <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
-                </div>
-            </div>
-        </a>
-
-        <!-- Article 5 -->
-        <a href="/insights/transfer-pricing-safe-harbour" class="article-card anim" data-category="tax">
-            <div class="article-card-stripe article-card-stripe--tax"></div>
-            <div class="article-card-body">
-                <div class="article-meta">
-                    <span class="article-category article-category--tax">Tax</span>
-                    <span class="article-date">January 2026</span>
-                </div>
-                <h3>Transfer Pricing: Safe Harbour Rules and Recent Amendments</h3>
-                <p class="article-excerpt">An update on the revised safe harbour margins for IT/ITeS companies and KPO services, documentation requirements, and the impact on transfer pricing compliance for multinational groups.</p>
-                <div class="article-card-footer">
-                    <span class="article-author">CA Rohan Adkar</span>
-                    <span class="article-read-link">Read <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
-                </div>
-            </div>
-        </a>
-
-        <!-- Article 6 -->
-        <a href="/insights/wealth-planning-huf" class="article-card anim" data-category="advisory">
-            <div class="article-card-stripe article-card-stripe--advisory"></div>
-            <div class="article-card-body">
-                <div class="article-meta">
-                    <span class="article-category article-category--advisory">Advisory</span>
-                    <span class="article-date">January 2026</span>
-                </div>
-                <h3>Wealth Planning with HUF: Tax Benefits and Succession Considerations</h3>
-                <p class="article-excerpt">How Hindu Undivided Family (HUF) structures can be used for legitimate tax planning, investment holding, and succession management. Key compliance requirements and recent judicial developments.</p>
-                <div class="article-card-footer">
-                    <span class="article-author">CA Rohit Gyanchandani</span>
-                    <span class="article-read-link">Read <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
-                </div>
-            </div>
-        </a>
-
-    </div>
+    <!-- Articles Grid (loaded dynamically from articles.json) -->
+    <div class="articles-grid" id="articlesGrid"></div>
 
     <!-- Empty state (shown when filter has 0 results) -->
     <div class="insights-empty" id="insightsEmpty">
@@ -386,30 +281,52 @@
     var nt=document.getElementById('navToggle'),mob=document.getElementById('mobileMenu');nt.addEventListener('click',function(){var o=mob.classList.contains('open');nt.classList.toggle('active');mob.classList.toggle('open');document.body.style.overflow=o?'':'hidden'});mob.querySelectorAll('a').forEach(function(l){l.addEventListener('click',function(){nt.classList.remove('active');mob.classList.remove('open');document.body.style.overflow=''})});
     document.addEventListener('keydown',function(e){if(e.key==='Escape'){si.classList.remove('open');lw.classList.remove('open');if(mob.classList.contains('open')){nt.classList.remove('active');mob.classList.remove('open');document.body.style.overflow=''}}});
 
-    // Filter
-    var filterBtns = document.querySelectorAll('.filter-btn');
-    var cards = document.querySelectorAll('.article-card');
-    var countEl = document.getElementById('filterCount');
-    var emptyEl = document.getElementById('insightsEmpty');
+    // Load articles from JSON
+    var grid=document.getElementById('articlesGrid');
+    var countEl=document.getElementById('filterCount');
+    var emptyEl=document.getElementById('insightsEmpty');
+    var allArticles=[];
 
-    filterBtns.forEach(function(btn) {
-        btn.addEventListener('click', function() {
-            filterBtns.forEach(function(b) { b.classList.remove('active'); });
-            btn.classList.add('active');
-            var filter = btn.dataset.filter;
-            var visible = 0;
-            cards.forEach(function(card) {
-                if (filter === 'all' || card.dataset.category === filter) {
-                    card.style.display = '';
-                    visible++;
-                } else {
-                    card.style.display = 'none';
-                }
+    fetch('/insights/articles.json')
+    .then(function(r){return r.json()})
+    .then(function(data){
+        allArticles=data;
+        renderArticles(data);
+        countEl.textContent='Showing '+data.length+' articles';
+
+        // Filter buttons
+        document.querySelectorAll('.filter-btn').forEach(function(btn){
+            btn.addEventListener('click',function(){
+                document.querySelectorAll('.filter-btn').forEach(function(b){b.classList.remove('active')});
+                btn.classList.add('active');
+                var f=btn.dataset.filter;
+                var filtered=f==='all'?allArticles:allArticles.filter(function(a){return a.category.toLowerCase()===f});
+                renderArticles(filtered);
+                countEl.textContent='Showing '+filtered.length+' article'+(filtered.length!==1?'s':'');
+                emptyEl.style.display=filtered.length===0?'block':'none';
             });
-            countEl.textContent = 'Showing ' + visible + ' article' + (visible !== 1 ? 's' : '');
-            emptyEl.style.display = visible === 0 ? 'block' : 'none';
         });
-    });
+    })
+    .catch(function(){grid.innerHTML='<p style="color:var(--text-muted)">Unable to load articles.</p>'});
+
+    function renderArticles(articles){
+        grid.innerHTML='';
+        articles.forEach(function(a,i){
+            var card=document.createElement('a');
+            card.href='/insights/'+a.slug+'/';
+            card.className='article-card'+(i===0?' article-card--featured':'')+' anim visible';
+            card.setAttribute('data-category',a.category.toLowerCase());
+            card.innerHTML='<div class="article-card-stripe article-card-stripe--'+a.cat_stripe+'"></div>'
+                +'<div class="article-card-body">'
+                +'<div class="article-meta"><span class="article-category article-category--'+a.cat_stripe+'">'+esc(a.category)+'</span><span class="article-date">'+esc(a.date_display)+'</span><span class="article-reading">'+a.reading_time+' min read</span></div>'
+                +'<h3>'+esc(a.title)+'</h3>'
+                +'<p class="article-excerpt">'+esc(a.summary)+'</p>'
+                +'<div class="article-card-footer"><span class="article-author">CA Dhananjay Walke</span><span class="article-read-link">Read article <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></div>'
+                +'</div>';
+            grid.appendChild(card);
+        });
+    }
+    function esc(s){var d=document.createElement('div');d.textContent=s;return d.innerHTML}
 
     // Scroll animations
         var ao=new IntersectionObserver(function(entries){entries.forEach(function(entry,i){if(entry.isIntersecting){setTimeout(function(){entry.target.classList.add('visible')},i*60);ao.unobserve(entry.target)}})},{threshold:0.12});
