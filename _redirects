@@ -10,5 +10,9 @@
 # Force HTTPS + www
 # (Configure in Netlify dashboard: Domain settings → HTTPS & redirect rules)
 
+# Visit / Directions
+/visit           /contact#map          302
+/directions      /contact#map          302
+
 # Custom 404
 /*               /404.html             404
