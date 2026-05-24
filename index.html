@@ -628,46 +628,70 @@
         .practice-item p { font-size: 0.82rem; line-height: 1.65; color: var(--text-muted); }
 
         /* ═══════════════════════════════════════════════════════════
-           CONTACT SECTION
+           CONTACT - ACTION TILES
            ═══════════════════════════════════════════════════════════ */
-        .contact { padding: 5rem 2rem; background: var(--off-white); }
-        .contact-inner {
-            max-width: var(--max-width); margin: 0 auto;
-            display: grid; grid-template-columns: 1fr 1.3fr; gap: 3.5rem;
+        .contact { padding: 5rem 2rem; background: var(--navy-deep); position: relative; overflow: hidden; }
+        .contact::before {
+            content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(184,134,11,0.3), transparent);
         }
-        .contact-info h3 {
-            font-family: var(--serif); font-size: 1rem; color: var(--navy);
-            margin-bottom: 0.5rem; margin-top: 1.5rem;
-        }
-        .contact-info h3:first-child { margin-top: 0; }
-        .contact-info p { font-size: 0.9rem; line-height: 1.7; color: var(--text-body); }
-        .contact-info a { color: var(--blue); transition: color 0.2s; }
-        .contact-info a:hover { color: var(--navy); }
+        .contact .section-label--light { color: var(--gold-light); }
+        .contact .section-title--light { color: var(--white); }
+        .contact .section-desc--light { color: var(--text-on-dark-muted); }
 
-        .contact-form h3 {
-            font-family: var(--serif); font-size: 1.15rem; color: var(--navy); margin-bottom: 1.5rem;
+        .contact-tiles {
+            max-width: var(--max-width); margin: 3rem auto 0;
+            display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem;
         }
-        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-        .form-group { margin-bottom: 1rem; }
-        .form-group label {
-            display: block; font-size: 0.78rem; font-weight: 600; color: var(--text-body);
-            margin-bottom: 0.4rem; letter-spacing: 0.02em;
+        .contact-tile {
+            position: relative; padding: 2rem 1.5rem;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: var(--radius-md);
+            transition: all 0.4s var(--ease-out);
+            text-decoration: none; display: flex; flex-direction: column;
+            min-height: 220px;
         }
-        .form-group input, .form-group select, .form-group textarea {
-            width: 100%; padding: 0.75rem 1rem; border: 1px solid var(--border-mid);
-            border-radius: var(--radius-sm); font-family: var(--sans); font-size: 0.88rem;
-            color: var(--text-dark); background: var(--white); transition: border-color 0.2s;
-            outline: none;
+        .contact-tile:hover {
+            background: rgba(255,255,255,0.06);
+            border-color: var(--gold);
+            transform: translateY(-4px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
         }
-        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
-            border-color: var(--blue); box-shadow: 0 0 0 3px rgba(46,95,163,0.08);
+        .contact-tile-icon {
+            width: 52px; height: 52px; border-radius: 50%;
+            background: rgba(184,134,11,0.12); display: flex;
+            align-items: center; justify-content: center;
+            margin-bottom: 1.5rem;
+            transition: all 0.35s var(--ease-out);
         }
-        .form-group textarea { height: 120px; resize: vertical; }
-        .form-group select { cursor: pointer; }
-
-        /* Map */
-        .map-section { height: 320px; background: var(--ice); }
-        .map-section iframe { width: 100%; height: 100%; border: none; filter: saturate(0.85) contrast(1.05); }
+        .contact-tile:hover .contact-tile-icon {
+            background: var(--gold); transform: scale(1.08);
+        }
+        .contact-tile-icon svg {
+            width: 22px; height: 22px; color: var(--gold-light);
+            transition: color 0.35s;
+        }
+        .contact-tile:hover .contact-tile-icon svg { color: var(--white); }
+        .contact-tile-title {
+            font-family: var(--serif); font-size: 1.15rem; color: var(--white);
+            margin-bottom: 0.5rem; line-height: 1.3;
+        }
+        .contact-tile-desc {
+            font-size: 0.82rem; color: var(--text-on-dark-muted); line-height: 1.6;
+            margin-bottom: auto;
+        }
+        .contact-tile-arrow {
+            display: inline-flex; align-items: center; gap: 0.35rem;
+            font-size: 0.78rem; font-weight: 600; color: var(--gold-light);
+            margin-top: 1rem; letter-spacing: 0.02em;
+            transition: gap 0.3s var(--ease-out);
+        }
+        .contact-tile:hover .contact-tile-arrow { gap: 0.7rem; }
+        .contact-tile-arrow svg {
+            width: 14px; height: 14px;
+            transition: transform 0.3s var(--ease-out);
+        }
 
         /* ═══════════════════════════════════════════════════════════
            FOOTER
@@ -714,6 +738,7 @@
             .nav-logo { height: 62px; }
             .services-grid { gap: 2rem; }
             .practice-grid { grid-template-columns: repeat(2, 1fr); }
+            .contact-tiles { grid-template-columns: repeat(2, 1fr); }
             .sectors-grid { grid-template-columns: repeat(3, 1fr); }
             .footer-inner { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
         }
@@ -731,6 +756,8 @@
             .stat-item:nth-child(2) { border-right: none; }
             .stat-item:nth-child(1), .stat-item:nth-child(2) { border-bottom: 1px solid var(--border-light); }
             .practice-grid { grid-template-columns: 1fr; }
+            .contact-tiles { grid-template-columns: 1fr; gap: 1rem; }
+            .contact-tile { min-height: auto; padding: 1.5rem 1.25rem; }
             .sectors-grid { grid-template-columns: repeat(2, 1fr); }
             .sector-tile { height: 170px; }
             .contact-inner { grid-template-columns: 1fr; gap: 2rem; }
@@ -1261,65 +1288,51 @@
     </div>
 </section>
 
-<!-- ═══════════════════════════ CONTACT ═══════════════════════════ -->
+<!-- ═══════════════════════════ CONTACT - ACTION TILES ═══════════════════════════ -->
 <section class="contact" id="contact">
     <div class="section-header anim">
-        <div class="section-label">Contact</div>
-        <h2 class="section-title">Get in Touch</h2>
-        <p class="section-desc">For enquiries about our professional services, please reach out using the details below or send us a message.</p>
+        <div class="section-label section-label--light">Connect</div>
+        <h2 class="section-title section-title--light">Get in Touch</h2>
+        <p class="section-desc section-desc--light">Whether you're exploring our services, considering a career, or planning a visit — we'd be glad to hear from you.</p>
     </div>
-    <div class="contact-inner">
-        <div class="contact-info anim">
-            <h3>Office Address</h3>
-            <p>DRP & Co. LLP, Chartered Accountants<br>101, Amelia, Rege Path, near Lakaki Road,<br>Model Colony, Shivajinagar, Pune 411016, Maharashtra</p>
-            <h3>Phone</h3>
-            <p><a href="tel:+912029952400">+91 20 2995 2400</a></p>
-            <h3>Email</h3>
-            <p><a href="mailto:info@drpca.com">info@drpca.com</a></p>
-            <h3>Working Hours</h3>
-            <p>Monday &ndash; Saturday: 10:00 AM &ndash; 6:00 PM<br>Sunday: Closed</p>
-        </div>
-        <div class="contact-form anim">
-            <h3>Send us a Message</h3>
-            <div class="form-row">
-                <div class="form-group">
-                    <label>Full Name</label>
-                    <input type="text" placeholder="Your name">
-                </div>
-                <div class="form-group">
-                    <label>Email Address</label>
-                    <input type="email" placeholder="you@company.com">
-                </div>
+    <div class="contact-tiles">
+        <a href="/contact#enquiry" class="contact-tile anim">
+            <div class="contact-tile-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
             </div>
-            <div class="form-group">
-                <label>Service Interested In</label>
-                <select>
-                    <option value="">Select a service</option>
-                    <option>Audit &amp; Assurance</option>
-                    <option>Tax Advisory</option>
-                    <option>Corporate Governance</option>
-                    <option>Business Valuation</option>
-                    <option>Financial Advisory</option>
-                    <option>Techno-Economic Studies</option>
-                    <option>Wealth Management</option>
-                    <option>Other</option>
-                </select>
+            <div class="contact-tile-title">Send an Enquiry</div>
+            <div class="contact-tile-desc">Share your requirement and we'll respond within one working day.</div>
+            <div class="contact-tile-arrow">Get in Touch <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+        </a>
+
+        <a href="/careers" class="contact-tile anim">
+            <div class="contact-tile-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7h-4V5a3 3 0 0 0-3-3h-2a3 3 0 0 0-3 3v2H4a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2zm-9-2h2v2h-2V5z"/></svg>
             </div>
-            <div class="form-group">
-                <label>Message</label>
-                <textarea placeholder="Tell us about your requirement..."></textarea>
+            <div class="contact-tile-title">Careers &amp; Articleship</div>
+            <div class="contact-tile-desc">Explore opportunities to build your career or articleship with the firm.</div>
+            <div class="contact-tile-arrow">View Openings <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+        </a>
+
+        <a href="/contact#map" class="contact-tile anim">
+            <div class="contact-tile-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
             </div>
-            <button class="btn btn--dark" type="button" onclick="alert('Thank you! We will get back to you shortly.')">
-                Send Message <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </button>
-        </div>
+            <div class="contact-tile-title">Visit Our Office</div>
+            <div class="contact-tile-desc">Find us at Model Colony, Shivajinagar, Pune with one-tap directions.</div>
+            <div class="contact-tile-arrow">Get Directions <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+        </a>
+
+        <a href="https://www.linkedin.com/company/drpca/" target="_blank" rel="noopener" class="contact-tile anim">
+            <div class="contact-tile-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </div>
+            <div class="contact-tile-title">Connect on LinkedIn</div>
+            <div class="contact-tile-desc">Follow the firm for insights, articles, and updates from the team.</div>
+            <div class="contact-tile-arrow">Follow Page <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></div>
+        </a>
     </div>
 </section>
-
-<!-- ═══════════════════════════ MAP ═══════════════════════════ -->
-<div class="map-section">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1891.7!2d73.8402574!3d18.5289881!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c07f4b5e1b0d%3A0x5c8e2a3f8e9b0a1c!2sDRP%20%26%20Co.%20LLP!5e0!3m2!1sen!2sin!4v1709500000000" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-</div>
 
 <!-- ═══════════════════════════ FOOTER ═══════════════════════════ -->
 <footer class="footer">
