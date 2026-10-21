@@ -66,6 +66,8 @@
         .article-card-stripe--gst { background: linear-gradient(90deg, #2E8B57, #3CB371); }
         .article-card-stripe--advisory { background: linear-gradient(90deg, #6B5B95, #8B7DB8); }
         .article-card-stripe--regulatory { background: linear-gradient(90deg, #C0392B, #E74C3C); }
+        .article-card-stripe--governance { background: linear-gradient(90deg, var(--navy), var(--navy-light)); }
+        .article-card-stripe--general { background: linear-gradient(90deg, #6b6b80, #9a9ab0); }
 
         .article-card-body { padding: 1.5rem; flex: 1; display: flex; flex-direction: column; }
 
@@ -80,6 +82,8 @@
         .article-category--gst { background: rgba(46,139,87,0.08); color: #2E8B57; }
         .article-category--advisory { background: rgba(107,91,149,0.08); color: #6B5B95; }
         .article-category--regulatory { background: rgba(192,57,43,0.08); color: #C0392B; }
+        .article-category--governance { background: rgba(31,56,100,0.08); color: var(--navy); }
+        .article-category--general { background: rgba(107,107,128,0.1); color: var(--text-muted); }
 
         .article-date { font-size: 0.72rem; color: var(--text-muted); }
         .article-reading { font-size: 0.72rem; color: var(--text-muted); }
@@ -151,10 +155,11 @@
         }
     </style>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-    <link rel="canonical" href="https://www.drpca.com/insights">
+    <link rel="alternate" type="application/rss+xml" title="DRP &amp; Co. LLP Insights" href="/rss.xml">
+    <link rel="canonical" href="https://drpca.com/insights">
 
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.drpca.com/insights">
+    <meta property="og:url" content="https://drpca.com/insights">
     <meta property="og:title" content="Insights | DRP & Co. LLP — Chartered Accountants, Pune">
     <meta property="og:description" content="Articles, tax updates, regulatory changes, and professional insights from DRP & Co. LLP, Chartered Accountants, Pune.">
     <meta property="og:site_name" content="DRP & Co. LLP — Chartered Accountants">
@@ -226,6 +231,7 @@
         <button class="filter-btn" data-filter="valuation">Valuation</button>
         <button class="filter-btn" data-filter="regulatory">Regulatory</button>
         <button class="filter-btn" data-filter="tax">Tax</button>
+        <button class="filter-btn" data-filter="governance">Governance</button>
         <button class="filter-btn" data-filter="general">General</button>
         <span class="filter-count" id="filterCount">Loading articles...</span>
     </div>
@@ -321,7 +327,7 @@
                 +'<div class="article-meta"><span class="article-category article-category--'+a.cat_stripe+'">'+esc(a.category)+'</span><span class="article-date">'+esc(a.date_display)+'</span><span class="article-reading">'+a.reading_time+' min read</span></div>'
                 +'<h3>'+esc(a.title)+'</h3>'
                 +'<p class="article-excerpt">'+esc(a.summary)+'</p>'
-                +'<div class="article-card-footer"><span class="article-author">CA Dhananjay Walke</span><span class="article-read-link">Read article <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></div>'
+                +'<div class="article-card-footer"><span class="article-author">'+esc(a.author?'CA '+a.author:'CA Dhananjay Walke')+'</span><span class="article-read-link">Read article <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></div>'
                 +'</div>';
             grid.appendChild(card);
         });

@@ -7,7 +7,8 @@
     "category": "Tax",
     "cat_stripe": "tax",
     "reading_time": 5,
-    "summary": "An overview of revised income tax slab rates under the new tax regime for AY 2026-27, including increased rebate under Section 87A and revised standard deduction limits."
+    "summary": "An overview of revised income tax slab rates under the new tax regime for AY 2026-27, including increased rebate under Section 87A and revised standard deduction limits.",
+    "author": "Rohan Adkar"
   },
   {
     "slug": "where-does-your-tax-money-go-past-6-budgets-272-lakh-crores",
@@ -17,7 +18,8 @@
     "category": "Tax",
     "cat_stripe": "tax",
     "reading_time": 2,
-    "summary": "I built an interactive dashboard to decode 6 years of Union Budget data. Here's what I found."
+    "summary": "I built an interactive dashboard to decode 6 years of Union Budget data. Here's what I found.",
+    "author": "Dhananjay Walke"
   },
   {
     "slug": "sme-ipo-boom-10-rbi-insights-every-professional-should",
@@ -27,7 +29,8 @@
     "category": "Regulatory",
     "cat_stripe": "regulatory",
     "reading_time": 3,
-    "summary": "India\u2019s small and medium enterprises (SMEs) are no longer confined to factory floors \u2014 they\u2019re stepping onto stock exchanges. \ud83d\udcc8  The Reserve Bank of India\u2019s latest study on  \u201cFundraising by Indian..."
+    "summary": "India’s small and medium enterprises (SMEs) are no longer confined to factory floors — they’re stepping onto stock exchanges. The Reserve Bank of India’s latest study on “Fundraising by Indian...",
+    "author": "Dhananjay Walke"
   },
   {
     "slug": "capm-vs-build-up-two-roads-finding-true-cost-equity",
@@ -37,7 +40,8 @@
     "category": "Valuation",
     "cat_stripe": "valuation",
     "reading_time": 3,
-    "summary": "When valuing a business, the  Cost of Equity  is more than just a number \u2014 it\u2019s the heartbeat \u2764\ufe0f of the valuation model. \ud83d\udca1 It defines what return investors expect for taking risks \ud83c\udfaf, and even a 1%..."
+    "summary": "When valuing a business, the Cost of Equity is more than just a number — it’s the heartbeat of the valuation model. It defines what return investors expect for taking risks , and even a 1%...",
+    "author": "Dhananjay Walke"
   },
   {
     "slug": "decoding-build-up-method-finding-true-cost-equity-india",
@@ -47,7 +51,8 @@
     "category": "Valuation",
     "cat_stripe": "valuation",
     "reading_time": 3,
-    "summary": "\ud83d\udcad How do investors decide what return they deserve for taking a risk on a company? At the heart of every business valuation lies one crucial number \u2014 the  Cost of Equity \ud83d\udcb0 ."
+    "summary": "How do investors decide what return they deserve for taking a risk on a company? At the heart of every business valuation lies one crucial number — the Cost of Equity .",
+    "author": "Dhananjay Walke"
   },
   {
     "slug": "section-247-law-brought-evolved-business-valuation-india",
@@ -57,7 +62,8 @@
     "category": "Valuation",
     "cat_stripe": "valuation",
     "reading_time": 3,
-    "summary": "\ud83d\udca1 Business valuation is no longer just about crunching numbers \u2014 it\u2019s about  trust, transparency, and governance. For years, valuations in India were largely unregulated, leading to inconsistencies..."
+    "summary": "Business valuation is no longer just about crunching numbers — it’s about trust, transparency, and governance. For years, valuations in India were largely unregulated, leading to inconsistencies...",
+    "author": "Dhananjay Walke"
   },
   {
     "slug": "sebis-reit-reclassification-new-era-indian-real-estate",
@@ -67,7 +73,8 @@
     "category": "Regulatory",
     "cat_stripe": "regulatory",
     "reading_time": 3,
-    "summary": "\ud83c\udfd9\ufe0f SEBI\u2019s REIT Reclassification: A New Era for Indian Real Estate Investments  India\u2019s real estate market just crossed a new milestone. \u2728 SEBI\u2019s latest reform \u2014 reclassifying  REITs (Real Estate..."
+    "summary": "SEBI’s REIT Reclassification: A New Era for Indian Real Estate Investments India’s real estate market just crossed a new milestone. SEBI’s latest reform — reclassifying REITs (Real Estate...",
+    "author": "Dhananjay Walke"
   },
   {
     "slug": "rbis-revised-prudential-norms-ucbs-game-changer-challenge",
@@ -77,7 +84,8 @@
     "category": "Regulatory",
     "cat_stripe": "regulatory",
     "reading_time": 3,
-    "summary": "The Reserve Bank of India (RBI) has once again taken a strategic step towards enhancing the financial stability of Urban Co-operative Banks (UCBs) with its latest notification dated  February 24,..."
+    "summary": "The Reserve Bank of India (RBI) has once again taken a strategic step towards enhancing the financial stability of Urban Co-operative Banks (UCBs) with its latest notification dated February 24,...",
+    "author": "Dhananjay Walke"
   },
   {
     "slug": "valuation-conclusions-case-inconsistent-results-across",
@@ -87,7 +95,8 @@
     "category": "Valuation",
     "cat_stripe": "valuation",
     "reading_time": 3,
-    "summary": "Valuation is as much an art as it is a science. When methodologies and inputs yield different results, assigning weights to reconcile these differences is a cornerstone of professional..."
+    "summary": "Valuation is as much an art as it is a science. When methodologies and inputs yield different results, assigning weights to reconcile these differences is a cornerstone of professional...",
+    "author": "Dhananjay Walke"
   },
   {
     "slug": "engine-democracy-how-indian-parliament-truly-functions",
@@ -97,7 +106,8 @@
     "category": "General",
     "cat_stripe": "advisory",
     "reading_time": 4,
-    "summary": "As we commemorate the historic first session of the Constituent Assembly (9 December \u2013 23 December 1946), it is a fitting occasion to reflect on the workings of the Indian Parliament. For over seven..."
+    "summary": "As we commemorate the historic first session of the Constituent Assembly (9 December – 23 December 1946), it is a fitting occasion to reflect on the workings of the Indian Parliament. For over seven...",
+    "author": "Dhananjay Walke"
   },
   {
     "slug": "adapting-change-sebis-new-sme-framework-its-impact-ipo",
@@ -107,7 +117,8 @@
     "category": "Regulatory",
     "cat_stripe": "regulatory",
     "reading_time": 3,
-    "summary": "The Securities and Exchange Board of India (SEBI) has introduced significant amendments to the SME framework under its SEBI (ICDR) Regulations, 2018, and SEBI (LODR) Regulations, 2015. These changes,..."
+    "summary": "The Securities and Exchange Board of India (SEBI) has introduced significant amendments to the SME framework under its SEBI (ICDR) Regulations, 2018, and SEBI (LODR) Regulations, 2015. These changes,...",
+    "author": "Dhananjay Walke"
   },
   {
     "slug": "unlocking-tax-savings-how-unpaid-expenses-impact-your",
@@ -117,7 +128,8 @@
     "category": "Tax",
     "cat_stripe": "tax",
     "reading_time": 4,
-    "summary": "In today's ever-evolving business landscape, understanding the nuances of tax provisions is crucial for effective financial management. One such critical provision is Section 43B of the Income Tax..."
+    "summary": "In today's ever-evolving business landscape, understanding the nuances of tax provisions is crucial for effective financial management. One such critical provision is Section 43B of the Income Tax...",
+    "author": "Dhananjay Walke"
   },
   {
     "slug": "navigating-ibc-terrain-insights-from-rbi-governors-speech",
@@ -127,7 +139,8 @@
     "category": "Regulatory",
     "cat_stripe": "regulatory",
     "reading_time": 3,
-    "summary": "In a thought-provoking speech at the CAFRAL conference in Mumbai, RBI Governor Shri Shaktikanta Das shed light on the Insolvency and Bankruptcy Code (IBC), underscoring its significance as a..."
+    "summary": "In a thought-provoking speech at the CAFRAL conference in Mumbai, RBI Governor Shri Shaktikanta Das shed light on the Insolvency and Bankruptcy Code (IBC), underscoring its significance as a...",
+    "author": "Dhananjay Walke"
   },
   {
     "slug": "rbis-new-guidelines-commercial-papers-non-convertible",
@@ -137,7 +150,8 @@
     "category": "Regulatory",
     "cat_stripe": "regulatory",
     "reading_time": 1,
-    "summary": "The Reserve Bank of India (RBI) issued the \"Master Direction \u2013 Reserve Bank of India (Commercial Paper and Non-Convertible Debentures of original or initial maturity up to one year) Directions 2024\"..."
+    "summary": "The Reserve Bank of India (RBI) issued the \"Master Direction – Reserve Bank of India (Commercial Paper and Non-Convertible Debentures of original or initial maturity up to one year) Directions 2024\"...",
+    "author": "Dhananjay Walke"
   },
   {
     "slug": "orderly-vs-forced-liquidation-value",
@@ -147,7 +161,8 @@
     "category": "Valuation",
     "cat_stripe": "valuation",
     "reading_time": 3,
-    "summary": "The valuation of assets can be affected significantly by the liquidation scenario. In a liquidation, assets are sold to the highest bidder, but the process and timing of the sale can vary..."
+    "summary": "The valuation of assets can be affected significantly by the liquidation scenario. In a liquidation, assets are sold to the highest bidder, but the process and timing of the sale can vary...",
+    "author": "Dhananjay Walke"
   },
   {
     "slug": "discount-rates-vs-capitalization",
@@ -157,7 +172,8 @@
     "category": "Valuation",
     "cat_stripe": "valuation",
     "reading_time": 4,
-    "summary": "Accurately valuing a business is of paramount importance for investors, owners, and professionals involved in the financial landscape. Discount rates and capitalization rates are two key concepts..."
+    "summary": "Accurately valuing a business is of paramount importance for investors, owners, and professionals involved in the financial landscape. Discount rates and capitalization rates are two key concepts...",
+    "author": "Dhananjay Walke"
   },
   {
     "slug": "navigating-startup-business-valuation",
@@ -167,7 +183,8 @@
     "category": "Valuation",
     "cat_stripe": "valuation",
     "reading_time": 4,
-    "summary": "Valuing a startup business is a critical process that influences key decisions such as fundraising, investor attraction, and strategic planning. However, startup valuation presents unique challenges..."
+    "summary": "Valuing a startup business is a critical process that influences key decisions such as fundraising, investor attraction, and strategic planning. However, startup valuation presents unique challenges...",
+    "author": "Dhananjay Walke"
   },
   {
     "slug": "dloc-vs-dlom",
@@ -177,7 +194,8 @@
     "category": "Valuation",
     "cat_stripe": "valuation",
     "reading_time": 6,
-    "summary": "Business valuation is a complex process that requires careful consideration of various factors influencing the perceived value of an asset. Two significant aspects that impact the valuation are the..."
+    "summary": "Business valuation is a complex process that requires careful consideration of various factors influencing the perceived value of an asset. Two significant aspects that impact the valuation are the...",
+    "author": "Dhananjay Walke"
   },
   {
     "slug": "terminal-growth-rate-business-valuation",
@@ -187,7 +205,8 @@
     "category": "Valuation",
     "cat_stripe": "valuation",
     "reading_time": 7,
-    "summary": "Accurately determining the terminal growth rate is of paramount importance in business valuation, as it directly influences investment decisions and valuation outcomes. The Discounted Cash Flow (DCF)..."
+    "summary": "Accurately determining the terminal growth rate is of paramount importance in business valuation, as it directly influences investment decisions and valuation outcomes. The Discounted Cash Flow (DCF)...",
+    "author": "Dhananjay Walke"
   },
   {
     "slug": "estimating-terminal-value",
@@ -197,7 +216,8 @@
     "category": "Valuation",
     "cat_stripe": "valuation",
     "reading_time": 8,
-    "summary": "The Discounted Cash Flow (DCF) method is a widely used valuation technique that uses future cash flow projections to estimate the value of an asset. The DCF method falls under the Income Approach,..."
+    "summary": "The Discounted Cash Flow (DCF) method is a widely used valuation technique that uses future cash flow projections to estimate the value of an asset. The DCF method falls under the Income Approach,...",
+    "author": "Dhananjay Walke"
   },
   {
     "slug": "intrinsic-value-vs-investment",
@@ -207,7 +227,8 @@
     "category": "Valuation",
     "cat_stripe": "valuation",
     "reading_time": 4,
-    "summary": "Valuation is a critical component of investing and corporate finance, and it involves estimating the fair value of an asset or business. There are various methods and approaches to valuation, and two..."
+    "summary": "Valuation is a critical component of investing and corporate finance, and it involves estimating the fair value of an asset or business. There are various methods and approaches to valuation, and two...",
+    "author": "Dhananjay Walke"
   },
   {
     "slug": "fcff-vs-fcfe",
@@ -217,7 +238,8 @@
     "category": "Valuation",
     "cat_stripe": "valuation",
     "reading_time": 5,
-    "summary": "Discounted Cash Flow (DCF) method is one of the most commonly used valuation techniques in business valuations. It involves calculating the present value of future cash flows that a business is..."
+    "summary": "Discounted Cash Flow (DCF) method is one of the most commonly used valuation techniques in business valuations. It involves calculating the present value of future cash flows that a business is...",
+    "author": "Dhananjay Walke"
   },
   {
     "slug": "how-comparable-guideline-private-transactions",
@@ -227,7 +249,8 @@
     "category": "General",
     "cat_stripe": "advisory",
     "reading_time": 5,
-    "summary": "Valuing a business is a critical process for investors, business owners, and valuation professionals. One of the most commonly used approaches in business valuation is the market approach, which..."
+    "summary": "Valuing a business is a critical process for investors, business owners, and valuation professionals. One of the most commonly used approaches in business valuation is the market approach, which...",
+    "author": "Dhananjay Walke"
   },
   {
     "slug": "concept-degree-marketability-business-valuation",
@@ -237,7 +260,8 @@
     "category": "Valuation",
     "cat_stripe": "valuation",
     "reading_time": 5,
-    "summary": "The concept of \"Degree of Marketability\" is a crucial element in business valuation that plays a significant role in determining the worth of a company. Marketability refers to the ability of an..."
+    "summary": "The concept of \"Degree of Marketability\" is a crucial element in business valuation that plays a significant role in determining the worth of a company. Marketability refers to the ability of an...",
+    "author": "Dhananjay Walke"
   },
   {
     "slug": "valuation-date-business-valuations",
@@ -247,7 +271,8 @@
     "category": "Valuation",
     "cat_stripe": "valuation",
     "reading_time": 3,
-    "summary": "Business valuation is the process of determining the worth of a business entity, taking into account various factors such as its assets, liabilities, revenue, market conditions, industry trends, and..."
+    "summary": "Business valuation is the process of determining the worth of a business entity, taking into account various factors such as its assets, liabilities, revenue, market conditions, industry trends, and...",
+    "author": "Dhananjay Walke"
   },
   {
     "slug": "you-valuing-securities-assets",
@@ -257,7 +282,8 @@
     "category": "Valuation",
     "cat_stripe": "valuation",
     "reading_time": 4,
-    "summary": "The selection of valuation methods and procedures depends on clarifying the asset, property, or business interest to be appraised. Ambiguity regarding the subject of valuation often leads to..."
+    "summary": "The selection of valuation methods and procedures depends on clarifying the asset, property, or business interest to be appraised. Ambiguity regarding the subject of valuation often leads to...",
+    "author": "Dhananjay Walke"
   },
   {
     "slug": "principles-valuation-appraisal",
@@ -267,7 +293,8 @@
     "category": "Valuation",
     "cat_stripe": "valuation",
     "reading_time": 4,
-    "summary": "The process of business valuation involves determining the value of a company or a business unit. This is done by taking into account various factors such as the company's financial statements,..."
+    "summary": "The process of business valuation involves determining the value of a company or a business unit. This is done by taking into account various factors such as the company's financial statements,...",
+    "author": "Dhananjay Walke"
   },
   {
     "slug": "standard-value-premise-business-valuation",
@@ -277,7 +304,8 @@
     "category": "Valuation",
     "cat_stripe": "valuation",
     "reading_time": 7,
-    "summary": "In the world of business valuation, the standard of value and premise of value are two important concepts that play a crucial role in determining the value of a business. The standard of value refers..."
+    "summary": "In the world of business valuation, the standard of value and premise of value are two important concepts that play a crucial role in determining the value of a business. The standard of value refers...",
+    "author": "Dhananjay Walke"
   },
   {
     "slug": "impact-rising-interest-rates-business-valuation",
@@ -287,7 +315,8 @@
     "category": "Valuation",
     "cat_stripe": "valuation",
     "reading_time": 8,
-    "summary": "In the process of business valuation, the discount rate plays a critical role in determining the value of a company. The discount rate reflects the time value of money and the risk associated with an..."
+    "summary": "In the process of business valuation, the discount rate plays a critical role in determining the value of a company. The discount rate reflects the time value of money and the risk associated with an...",
+    "author": "Dhananjay Walke"
   },
   {
     "slug": "importance-financial-statement-analysis-process-business",
@@ -297,7 +326,8 @@
     "category": "Valuation",
     "cat_stripe": "valuation",
     "reading_time": 4,
-    "summary": "Valuation is the process of estimating the value of a business, which can be used for a variety of purposes such as mergers and acquisitions, fundraising, financial reporting, and litigation. One of..."
+    "summary": "Valuation is the process of estimating the value of a business, which can be used for a variety of purposes such as mergers and acquisitions, fundraising, financial reporting, and litigation. One of...",
+    "author": "Dhananjay Walke"
   },
   {
     "slug": "purpose-valuation-its-impact-exercise",
@@ -307,7 +337,8 @@
     "category": "Valuation",
     "cat_stripe": "valuation",
     "reading_time": 5,
-    "summary": "Business valuation is a crucial aspect of the decision-making process for investors, entrepreneurs, and other stakeholders. The purpose of valuation is to estimate the value of an asset, such as a..."
+    "summary": "Business valuation is a crucial aspect of the decision-making process for investors, entrepreneurs, and other stakeholders. The purpose of valuation is to estimate the value of an asset, such as a...",
+    "author": "Dhananjay Walke"
   },
   {
     "slug": "valuation-adjustments-fair-value-measurement",
@@ -317,7 +348,8 @@
     "category": "Valuation",
     "cat_stripe": "valuation",
     "reading_time": 5,
-    "summary": "As per International Valuation Standards (IVS), fair value measurement is the process of estimating the price that would be received for an asset or paid for a liability in an orderly transaction..."
+    "summary": "As per International Valuation Standards (IVS), fair value measurement is the process of estimating the price that would be received for an asset or paid for a liability in an orderly transaction...",
+    "author": "Dhananjay Walke"
   },
   {
     "slug": "fair-value-hierarchy",
@@ -327,7 +359,8 @@
     "category": "Valuation",
     "cat_stripe": "valuation",
     "reading_time": 1,
-    "summary": "The International Valuation Standards (IVS) provide guidance on determining the fair value of assets and liabilities. In order to ensure consistency and transparency in valuation practices, the IVS..."
+    "summary": "The International Valuation Standards (IVS) provide guidance on determining the fair value of assets and liabilities. In order to ensure consistency and transparency in valuation practices, the IVS...",
+    "author": "Dhananjay Walke"
   },
   {
     "slug": "understanding-fair-value-part-2",
@@ -337,7 +370,8 @@
     "category": "Valuation",
     "cat_stripe": "valuation",
     "reading_time": 3,
-    "summary": "According to the International Valuation Standards (IVS), fair value is defined as \"the price at which an asset or liability could be exchanged in a transaction between market participants at the..."
+    "summary": "According to the International Valuation Standards (IVS), fair value is defined as \"the price at which an asset or liability could be exchanged in a transaction between market participants at the...",
+    "author": "Dhananjay Walke"
   },
   {
     "slug": "understanding-fair-value-part-1",
@@ -347,7 +381,8 @@
     "category": "Valuation",
     "cat_stripe": "valuation",
     "reading_time": 1,
-    "summary": "There are various definitions of fair value that are used in different contexts, including financial reporting, tax planning, and financial analysis. Some examples of fair value definitions include: ..."
+    "summary": "There are various definitions of fair value that are used in different contexts, including financial reporting, tax planning, and financial analysis. Some examples of fair value definitions include: ...",
+    "author": "Dhananjay Walke"
   },
   {
     "slug": "how-use-lockdown-time-recovery-post-corona-crisis",
@@ -357,6 +392,7 @@
     "category": "General",
     "cat_stripe": "advisory",
     "reading_time": 5,
-    "summary": "Corona event is unprecedented &amp; has caught the world including all governments napping for this disastrous impact recently. Everyone including all corporates are forced to be under lockdown to..."
+    "summary": "Corona event is unprecedented &amp; has caught the world including all governments napping for this disastrous impact recently. Everyone including all corporates are forced to be under lockdown to...",
+    "author": "Dhananjay Walke"
   }
 ]
