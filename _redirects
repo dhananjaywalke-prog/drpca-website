@@ -1,3 +1,10 @@
+# Canonical host: www -> apex (301)
+https://www.drpca.com/*   https://drpca.com/:splat   301!
+http://www.drpca.com/*    https://drpca.com/:splat   301!
+
+# Generator sources are not web pages
+/tools/*          /404.html             404
+
 # Clean URL redirects (Netlify handles /folder/ → /folder/index.html natively)
 # Redirect aliases
 /alumni          /careers#alumni       302
@@ -6,9 +13,6 @@
 # Old slug redirects (future-proofing)
 /team            /about                301
 /people          /about                301
-
-# Force HTTPS + www
-# (Configure in Netlify dashboard: Domain settings → HTTPS & redirect rules)
 
 # Visit / Directions
 /visit           /contact#map          302
