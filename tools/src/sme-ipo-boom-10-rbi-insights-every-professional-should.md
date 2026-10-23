@@ -69,3 +69,9 @@ For investors, it’s a reminder that **due diligence beats excitement**.
 As the RBI notes, this market is still “maturing on optimism.” Balancing growth with governance will define the next decade of India’s equity evolution.
 
 Do you think SME IPOs can become India’s next big wealth-creation engine, or are we nearing peak exuberance? Let’s discuss below.
+
+## Background
+
+BSE SME and NSE Emerge are the listing platforms for small and medium enterprises on India's two main stock exchanges. The BSE SME platform opened in March 2012 and NSE Emerge in September 2012. Such issues are governed by Chapter IX of the SEBI (Issue of Capital and Disclosure Requirements) Regulations, 2018. Regulation 229 caps post-issue paid-up capital at Rs. 25 crore, and an amendment notified on 4 March 2025 added a requirement of operating profit (EBITDA) of at least Rs. 1 crore in at least two of the three preceding financial years. The RBI Bulletin article of 20 October 2025 is a staff study by Bhagyashree Chattopadhyay and Shromona Ganguly. It states that the views are the authors' own and do not represent those of the Reserve Bank. The study reports that SME IPOs raised Rs. 5,971.19 crore through 204 issues in 2023-24 and Rs. 9,119.97 crore in 2024-25, a rise of 52.7 per cent.
+
+Source: RBI Bulletin, "Fundraising by Indian Small and Medium Enterprises through IPO: Recent Trends and Developments", 20 October 2025 [link](https://www.rbi.org.in/Scripts/BS_ViewBulletin.aspx?Id=23715)
