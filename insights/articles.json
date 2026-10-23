@@ -32,18 +32,20 @@
     "cat_stripe": "tax",
     "reading_time": 2,
     "summary": "I built an interactive dashboard to decode 6 years of Union Budget data. Here's what I found.",
-    "author": "Dhananjay Walke"
+    "author": "Dhananjay Walke",
+    "linkedin_url": "https://www.linkedin.com/pulse/where-does-your-tax-money-go-past-6-budgets-272-lakh-crores-walke-1i30f/"
   },
   {
     "slug": "sme-ipo-boom-10-rbi-insights-every-professional-should",
     "title": "SME IPO Boom: 10 RBI Insights Every Professional Should Know",
     "date": "2025-11-08",
-    "date_display": "November 08, 2025",
+    "date_display": "November 8, 2025",
     "category": "Regulatory",
     "cat_stripe": "regulatory",
-    "reading_time": 3,
+    "reading_time": 2,
     "summary": "India’s small and medium enterprises (SMEs) are no longer confined to factory floors, they’re stepping onto stock exchanges. The Reserve Bank of India’s latest study on “Fundraising by Indian...",
-    "author": "Dhananjay Walke"
+    "author": "Dhananjay Walke",
+    "linkedin_url": "https://www.linkedin.com/pulse/sme-ipo-boom-10-rbi-insights-every-professional-should-walke-vpmmc/"
   },
   {
     "slug": "capm-vs-build-up-two-roads-finding-true-cost-equity",
@@ -52,9 +54,10 @@
     "date_display": "October 26, 2025",
     "category": "Valuation",
     "cat_stripe": "valuation",
-    "reading_time": 3,
+    "reading_time": 2,
     "summary": "When valuing a business, the Cost of Equity is more than just a number, it’s the heartbeat of the valuation model. It defines what return investors expect for taking risks, and even a 1%...",
-    "author": "Dhananjay Walke"
+    "author": "Dhananjay Walke",
+    "linkedin_url": "https://www.linkedin.com/pulse/capm-vs-build-up-two-roads-finding-true-cost-equity-dhananjay-walke-3fr6f/"
   },
   {
     "slug": "decoding-build-up-method-finding-true-cost-equity-india",
@@ -63,9 +66,10 @@
     "date_display": "October 24, 2025",
     "category": "Valuation",
     "cat_stripe": "valuation",
-    "reading_time": 3,
+    "reading_time": 2,
     "summary": "How do investors decide what return they deserve for taking a risk on a company? At the heart of every business valuation lies one crucial number, the Cost of Equity.",
-    "author": "Dhananjay Walke"
+    "author": "Dhananjay Walke",
+    "linkedin_url": "https://www.linkedin.com/pulse/decoding-build-up-method-finding-true-cost-equity-india-walke-ckhcf/"
   },
   {
     "slug": "section-247-law-brought-evolved-business-valuation-india",
@@ -76,7 +80,8 @@
     "cat_stripe": "valuation",
     "reading_time": 3,
     "summary": "Business valuation is no longer just about crunching numbers, it’s about trust, transparency, and governance. For years, valuations in India were largely unregulated, leading to inconsistencies...",
-    "author": "Dhananjay Walke"
+    "author": "Dhananjay Walke",
+    "linkedin_url": "https://www.linkedin.com/pulse/section-247-law-brought-evolved-business-valuation-india-walke-hwjcf/"
   },
   {
     "slug": "sebis-reit-reclassification-new-era-indian-real-estate",
@@ -87,18 +92,20 @@
     "cat_stripe": "regulatory",
     "reading_time": 3,
     "summary": "SEBI’s REIT Reclassification: A New Era for Indian Real Estate Investments India’s real estate market just crossed a new milestone. SEBI’s latest reform, reclassifying REITs (Real Estate...",
-    "author": "Dhananjay Walke"
+    "author": "Dhananjay Walke",
+    "linkedin_url": "https://www.linkedin.com/pulse/sebis-reit-reclassification-new-era-indian-real-estate-walke-qq6zf/"
   },
   {
     "slug": "rbis-revised-prudential-norms-ucbs-game-changer-challenge",
     "title": "RBIs Revised Prudential Norms for UCBs: A Game Changer or a Challenge?",
     "date": "2025-03-09",
-    "date_display": "March 09, 2025",
+    "date_display": "March 9, 2025",
     "category": "Regulatory",
     "cat_stripe": "regulatory",
-    "reading_time": 3,
+    "reading_time": 2,
     "summary": "The Reserve Bank of India (RBI) has once again taken a strategic step towards enhancing the financial stability of Urban Co-operative Banks (UCBs) with its latest notification dated February 24,...",
-    "author": "Dhananjay Walke"
+    "author": "Dhananjay Walke",
+    "linkedin_url": "https://www.linkedin.com/pulse/rbis-revised-prudential-norms-ucbs-game-changer-challenge-walke-nfcxf/"
   },
   {
     "slug": "valuation-conclusions-case-inconsistent-results-across",
@@ -109,7 +116,8 @@
     "cat_stripe": "valuation",
     "reading_time": 3,
     "summary": "Valuation is as much an art as it is a science. When methodologies and inputs yield different results, assigning weights to reconcile these differences is a cornerstone of professional...",
-    "author": "Dhananjay Walke"
+    "author": "Dhananjay Walke",
+    "linkedin_url": "https://www.linkedin.com/pulse/valuation-conclusions-case-inconsistent-results-across-walke-6b9mf/"
   },
   {
     "slug": "engine-democracy-how-indian-parliament-truly-functions",
@@ -117,10 +125,11 @@
     "date": "2024-12-23",
     "date_display": "December 23, 2024",
     "category": "General",
-    "cat_stripe": "advisory",
+    "cat_stripe": "general",
     "reading_time": 4,
-    "summary": "As we commemorate the historic first session of the Constituent Assembly (9 December – 23 December 1946), it is a fitting occasion to reflect on the workings of the Indian Parliament. For over seven...",
-    "author": "Dhananjay Walke"
+    "summary": "As we commemorate the historic first session of the Constituent Assembly (9 December, 23 December 1946), it is a fitting occasion to reflect on the workings of the Indian Parliament. For over seven...",
+    "author": "Dhananjay Walke",
+    "linkedin_url": "https://www.linkedin.com/pulse/engine-democracy-how-indian-parliament-truly-functions-walke-34ksf/"
   },
   {
     "slug": "adapting-change-sebis-new-sme-framework-its-impact-ipo",
@@ -131,7 +140,8 @@
     "cat_stripe": "regulatory",
     "reading_time": 3,
     "summary": "The Securities and Exchange Board of India (SEBI) has introduced significant amendments to the SME framework under its SEBI (ICDR) Regulations, 2018, and SEBI (LODR) Regulations, 2015. These changes,...",
-    "author": "Dhananjay Walke"
+    "author": "Dhananjay Walke",
+    "linkedin_url": "https://www.linkedin.com/pulse/adapting-change-sebis-new-sme-framework-its-impact-ipo-walke-vippf/"
   },
   {
     "slug": "unlocking-tax-savings-how-unpaid-expenses-impact-your",
@@ -142,7 +152,8 @@
     "cat_stripe": "tax",
     "reading_time": 4,
     "summary": "In today's ever-evolving business landscape, understanding the nuances of tax provisions is crucial for effective financial management. One such critical provision is Section 43B of the Income Tax...",
-    "author": "Dhananjay Walke"
+    "author": "Dhananjay Walke",
+    "linkedin_url": "https://www.linkedin.com/pulse/unlocking-tax-savings-how-unpaid-expenses-impact-your-dhananjay-walke-kthwf/"
   },
   {
     "slug": "navigating-ibc-terrain-insights-from-rbi-governors-speech",
@@ -153,18 +164,20 @@
     "cat_stripe": "regulatory",
     "reading_time": 3,
     "summary": "In a thought-provoking speech at the CAFRAL conference in Mumbai, RBI Governor Shri Shaktikanta Das shed light on the Insolvency and Bankruptcy Code (IBC), underscoring its significance as a...",
-    "author": "Dhananjay Walke"
+    "author": "Dhananjay Walke",
+    "linkedin_url": "https://www.linkedin.com/pulse/navigating-ibc-terrain-insights-from-rbi-governors-speech-walke-rl0mf/"
   },
   {
     "slug": "rbis-new-guidelines-commercial-papers-non-convertible",
     "title": "RBI's New Guidelines on Commercial Papers and Non-Convertible Debentures",
     "date": "2024-01-08",
-    "date_display": "January 08, 2024",
+    "date_display": "January 8, 2024",
     "category": "Regulatory",
     "cat_stripe": "regulatory",
-    "reading_time": 1,
-    "summary": "The Reserve Bank of India (RBI) issued the \"Master Direction – Reserve Bank of India (Commercial Paper and Non-Convertible Debentures of original or initial maturity up to one year) Directions 2024\"...",
-    "author": "Dhananjay Walke"
+    "reading_time": 2,
+    "summary": "The Reserve Bank of India (RBI) issued the 'Master Direction, Reserve Bank of India (Commercial Paper and Non-Convertible Debentures of original or initial maturity up to one year) Directions 2024'...",
+    "author": "Dhananjay Walke",
+    "linkedin_url": "https://www.linkedin.com/pulse/rbis-new-guidelines-commercial-papers-non-convertible-dhananjay-walke-3gd5f/"
   },
   {
     "slug": "orderly-vs-forced-liquidation-value",
@@ -175,7 +188,8 @@
     "cat_stripe": "valuation",
     "reading_time": 3,
     "summary": "The valuation of assets can be affected significantly by the liquidation scenario. In a liquidation, assets are sold to the highest bidder, but the process and timing of the sale can vary...",
-    "author": "Dhananjay Walke"
+    "author": "Dhananjay Walke",
+    "linkedin_url": "https://www.linkedin.com/pulse/orderly-vs-forced-liquidation-value-dhananjay-walke/"
   },
   {
     "slug": "discount-rates-vs-capitalization",
@@ -186,7 +200,8 @@
     "cat_stripe": "valuation",
     "reading_time": 4,
     "summary": "Accurately valuing a business is of paramount importance for investors, owners, and professionals involved in the financial landscape. Discount rates and capitalization rates are two key concepts...",
-    "author": "Dhananjay Walke"
+    "author": "Dhananjay Walke",
+    "linkedin_url": "https://www.linkedin.com/pulse/discount-rates-vs-capitalization-dhananjay-walke/"
   },
   {
     "slug": "navigating-startup-business-valuation",
@@ -197,7 +212,8 @@
     "cat_stripe": "valuation",
     "reading_time": 4,
     "summary": "Valuing a startup business is a critical process that influences key decisions such as fundraising, investor attraction, and strategic planning. However, startup valuation presents unique challenges...",
-    "author": "Dhananjay Walke"
+    "author": "Dhananjay Walke",
+    "linkedin_url": "https://www.linkedin.com/pulse/navigating-startup-business-valuation-dhananjay-walke/"
   },
   {
     "slug": "dloc-vs-dlom",
@@ -208,7 +224,8 @@
     "cat_stripe": "valuation",
     "reading_time": 6,
     "summary": "Business valuation is a complex process that requires careful consideration of various factors influencing the perceived value of an asset. Two significant aspects that impact the valuation are the...",
-    "author": "Dhananjay Walke"
+    "author": "Dhananjay Walke",
+    "linkedin_url": "https://www.linkedin.com/pulse/dloc-vs-dlom-dhananjay-walke/"
   },
   {
     "slug": "terminal-growth-rate-business-valuation",
@@ -219,7 +236,8 @@
     "cat_stripe": "valuation",
     "reading_time": 7,
     "summary": "Accurately determining the terminal growth rate is of paramount importance in business valuation, as it directly influences investment decisions and valuation outcomes. The Discounted Cash Flow (DCF)...",
-    "author": "Dhananjay Walke"
+    "author": "Dhananjay Walke",
+    "linkedin_url": "https://www.linkedin.com/pulse/terminal-growth-rate-business-valuation-dhananjay-walke/"
   },
   {
     "slug": "estimating-terminal-value",
@@ -230,18 +248,20 @@
     "cat_stripe": "valuation",
     "reading_time": 8,
     "summary": "The Discounted Cash Flow (DCF) method is a widely used valuation technique that uses future cash flow projections to estimate the value of an asset. The DCF method falls under the Income Approach,...",
-    "author": "Dhananjay Walke"
+    "author": "Dhananjay Walke",
+    "linkedin_url": "https://www.linkedin.com/pulse/estimating-terminal-value-dhananjay-walke/"
   },
   {
     "slug": "intrinsic-value-vs-investment",
     "title": "Intrinsic Value vs Investment Value",
     "date": "2023-05-07",
-    "date_display": "May 07, 2023",
+    "date_display": "May 7, 2023",
     "category": "Valuation",
     "cat_stripe": "valuation",
-    "reading_time": 4,
+    "reading_time": 5,
     "summary": "Valuation is a critical component of investing and corporate finance, and it involves estimating the fair value of an asset or business. There are various methods and approaches to valuation, and two...",
-    "author": "Dhananjay Walke"
+    "author": "Dhananjay Walke",
+    "linkedin_url": "https://www.linkedin.com/pulse/intrinsic-value-vs-investment-dhananjay-walke/"
   },
   {
     "slug": "fcff-vs-fcfe",
@@ -252,7 +272,8 @@
     "cat_stripe": "valuation",
     "reading_time": 5,
     "summary": "Discounted Cash Flow (DCF) method is one of the most commonly used valuation techniques in business valuations. It involves calculating the present value of future cash flows that a business is...",
-    "author": "Dhananjay Walke"
+    "author": "Dhananjay Walke",
+    "linkedin_url": "https://www.linkedin.com/pulse/fcff-vs-fcfe-dhananjay-walke/"
   },
   {
     "slug": "how-comparable-guideline-private-transactions",
@@ -260,10 +281,11 @@
     "date": "2023-04-16",
     "date_display": "April 16, 2023",
     "category": "General",
-    "cat_stripe": "advisory",
+    "cat_stripe": "general",
     "reading_time": 5,
     "summary": "Valuing a business is a critical process for investors, business owners, and valuation professionals. One of the most commonly used approaches in business valuation is the market approach, which...",
-    "author": "Dhananjay Walke"
+    "author": "Dhananjay Walke",
+    "linkedin_url": "https://www.linkedin.com/pulse/how-comparable-guideline-private-transactions-dhananjay-walke/"
   },
   {
     "slug": "concept-degree-marketability-business-valuation",
@@ -273,19 +295,21 @@
     "category": "Valuation",
     "cat_stripe": "valuation",
     "reading_time": 5,
-    "summary": "The concept of \"Degree of Marketability\" is a crucial element in business valuation that plays a significant role in determining the worth of a company. Marketability refers to the ability of an...",
-    "author": "Dhananjay Walke"
+    "summary": "The concept of 'Degree of Marketability' is a crucial element in business valuation that plays a significant role in determining the worth of a company. Marketability refers to the ability of an...",
+    "author": "Dhananjay Walke",
+    "linkedin_url": "https://www.linkedin.com/pulse/concept-degree-marketability-business-valuation-dhananjay-walke/"
   },
   {
     "slug": "valuation-date-business-valuations",
-    "title": "'Valuation Date' for Business Valuations",
+    "title": "Valuation Date' for Business Valuations",
     "date": "2023-04-05",
-    "date_display": "April 05, 2023",
+    "date_display": "April 5, 2023",
     "category": "Valuation",
     "cat_stripe": "valuation",
     "reading_time": 3,
     "summary": "Business valuation is the process of determining the worth of a business entity, taking into account various factors such as its assets, liabilities, revenue, market conditions, industry trends, and...",
-    "author": "Dhananjay Walke"
+    "author": "Dhananjay Walke",
+    "linkedin_url": "https://www.linkedin.com/pulse/valuation-date-business-valuations-dhananjay-walke/"
   },
   {
     "slug": "you-valuing-securities-assets",
@@ -296,7 +320,8 @@
     "cat_stripe": "valuation",
     "reading_time": 4,
     "summary": "The selection of valuation methods and procedures depends on clarifying the asset, property, or business interest to be appraised. Ambiguity regarding the subject of valuation often leads to...",
-    "author": "Dhananjay Walke"
+    "author": "Dhananjay Walke",
+    "linkedin_url": "https://www.linkedin.com/pulse/you-valuing-securities-assets-dhananjay-walke/"
   },
   {
     "slug": "principles-valuation-appraisal",
@@ -307,18 +332,20 @@
     "cat_stripe": "valuation",
     "reading_time": 4,
     "summary": "The process of business valuation involves determining the value of a company or a business unit. This is done by taking into account various factors such as the company's financial statements,...",
-    "author": "Dhananjay Walke"
+    "author": "Dhananjay Walke",
+    "linkedin_url": "https://www.linkedin.com/pulse/principles-valuation-appraisal-dhananjay-walke/"
   },
   {
     "slug": "standard-value-premise-business-valuation",
     "title": "The standard of value and the premise of value in business valuation.",
     "date": "2023-03-04",
-    "date_display": "March 04, 2023",
+    "date_display": "March 4, 2023",
     "category": "Valuation",
     "cat_stripe": "valuation",
     "reading_time": 7,
     "summary": "In the world of business valuation, the standard of value and premise of value are two important concepts that play a crucial role in determining the value of a business. The standard of value refers...",
-    "author": "Dhananjay Walke"
+    "author": "Dhananjay Walke",
+    "linkedin_url": "https://www.linkedin.com/pulse/standard-value-premise-business-valuation-dhananjay-walke/"
   },
   {
     "slug": "impact-rising-interest-rates-business-valuation",
@@ -329,7 +356,8 @@
     "cat_stripe": "valuation",
     "reading_time": 8,
     "summary": "In the process of business valuation, the discount rate plays a critical role in determining the value of a company. The discount rate reflects the time value of money and the risk associated with an...",
-    "author": "Dhananjay Walke"
+    "author": "Dhananjay Walke",
+    "linkedin_url": "https://www.linkedin.com/pulse/impact-rising-interest-rates-business-valuation-dhananjay-walke/"
   },
   {
     "slug": "importance-financial-statement-analysis-process-business",
@@ -340,18 +368,20 @@
     "cat_stripe": "valuation",
     "reading_time": 4,
     "summary": "Valuation is the process of estimating the value of a business, which can be used for a variety of purposes such as mergers and acquisitions, fundraising, financial reporting, and litigation. One of...",
-    "author": "Dhananjay Walke"
+    "author": "Dhananjay Walke",
+    "linkedin_url": "https://www.linkedin.com/pulse/importance-financial-statement-analysis-process-business-walke/"
   },
   {
     "slug": "purpose-valuation-its-impact-exercise",
     "title": "The Purpose of Valuation and its Impact on Valuation Exercise!",
     "date": "2023-02-05",
-    "date_display": "February 05, 2023",
+    "date_display": "February 5, 2023",
     "category": "Valuation",
     "cat_stripe": "valuation",
     "reading_time": 5,
     "summary": "Business valuation is a crucial aspect of the decision-making process for investors, entrepreneurs, and other stakeholders. The purpose of valuation is to estimate the value of an asset, such as a...",
-    "author": "Dhananjay Walke"
+    "author": "Dhananjay Walke",
+    "linkedin_url": "https://www.linkedin.com/pulse/purpose-valuation-its-impact-exercise-dhananjay-walke/"
   },
   {
     "slug": "valuation-adjustments-fair-value-measurement",
@@ -362,7 +392,8 @@
     "cat_stripe": "valuation",
     "reading_time": 5,
     "summary": "As per International Valuation Standards (IVS), fair value measurement is the process of estimating the price that would be received for an asset or paid for a liability in an orderly transaction...",
-    "author": "Dhananjay Walke"
+    "author": "Dhananjay Walke",
+    "linkedin_url": "https://www.linkedin.com/pulse/valuation-adjustments-fair-value-measurement-dhananjay-walke/"
   },
   {
     "slug": "fair-value-hierarchy",
@@ -373,18 +404,20 @@
     "cat_stripe": "valuation",
     "reading_time": 1,
     "summary": "The International Valuation Standards (IVS) provide guidance on determining the fair value of assets and liabilities. In order to ensure consistency and transparency in valuation practices, the IVS...",
-    "author": "Dhananjay Walke"
+    "author": "Dhananjay Walke",
+    "linkedin_url": "https://www.linkedin.com/pulse/fair-value-hierarchy-dhananjay-walke/"
   },
   {
     "slug": "understanding-fair-value-part-2",
     "title": "Understanding Fair Value - Part 2",
     "date": "2023-01-09",
-    "date_display": "January 09, 2023",
+    "date_display": "January 9, 2023",
     "category": "Valuation",
     "cat_stripe": "valuation",
     "reading_time": 3,
-    "summary": "According to the International Valuation Standards (IVS), fair value is defined as \"the price at which an asset or liability could be exchanged in a transaction between market participants at the...",
-    "author": "Dhananjay Walke"
+    "summary": "According to the International Valuation Standards (IVS), fair value is defined as 'the price at which an asset or liability could be exchanged in a transaction between market participants at the...",
+    "author": "Dhananjay Walke",
+    "linkedin_url": "https://www.linkedin.com/pulse/understanding-fair-value-part-2-dhananjay-walke/"
   },
   {
     "slug": "understanding-fair-value-part-1",
@@ -395,17 +428,19 @@
     "cat_stripe": "valuation",
     "reading_time": 1,
     "summary": "There are various definitions of fair value that are used in different contexts, including financial reporting, tax planning, and financial analysis. Some examples of fair value definitions include:...",
-    "author": "Dhananjay Walke"
+    "author": "Dhananjay Walke",
+    "linkedin_url": "https://www.linkedin.com/pulse/understanding-fair-value-part-1-dhananjay-walke/"
   },
   {
     "slug": "how-use-lockdown-time-recovery-post-corona-crisis",
     "title": "How to use lockdown time for recovery post Corona Crisis?",
     "date": "2020-04-06",
-    "date_display": "April 06, 2020",
+    "date_display": "April 6, 2020",
     "category": "General",
-    "cat_stripe": "advisory",
+    "cat_stripe": "general",
     "reading_time": 5,
     "summary": "Corona event is unprecedented &amp; has caught the world including all governments napping for this disastrous impact recently. Everyone including all corporates are forced to be under lockdown to...",
-    "author": "Dhananjay Walke"
+    "author": "Dhananjay Walke",
+    "linkedin_url": "https://www.linkedin.com/pulse/how-use-lockdown-time-recovery-post-corona-crisis-dhananjay-walke/"
   }
 ]
