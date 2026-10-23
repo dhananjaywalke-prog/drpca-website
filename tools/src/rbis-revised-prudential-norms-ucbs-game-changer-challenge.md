@@ -57,3 +57,9 @@ This RBI move provides much-needed flexibility to UCBs, aligning their regulator
 For UCBs, this is an opportunity to **expand their lending footprint**, particularly in MSME financing and home loans. But with greater power comes greater responsibility, ensuring **prudent lending practices** will be key to long-term success.
 
 **What do you think? Will these changes help UCBs compete better in the banking space, or do they introduce new risks? Drop your thoughts in the comments!**
+
+## Background
+
+The Reserve Bank of India issued circular RBI/2024-25/118 (DOR.CRE.REC.62/07.10.002/2024-25) on 24 February 2025, revising prudential norms for urban co-operative banks with immediate effect. Small value loans are now loans up to Rs. 25 lakh or 0.4% of Tier I capital, whichever is higher, with a ceiling of Rs. 3 crore per borrower; the earlier limits were 0.2% and Rs. 1 crore. The requirement that small value loans form at least 50% of aggregate loans and advances by 31 March 2026 is unchanged. Non-priority-sector housing loans to individuals are capped at 25% of total loans and advances, and other real estate exposure at 5%. Individual housing loan limits are Rs. 60 lakh (Tier 1), Rs. 1.40 crore (Tier 2), Rs. 2 crore (Tier 3) and Rs. 3 crore (Tier 4). The glide path for provisioning the valuation differential on specified Security Receipts is extended by two years to FY 2027-28.
+
+Source: RBI circular "Review and rationalization of prudential norms - UCBs", RBI/2024-25/118, 24 February 2025 [link](https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=12785)

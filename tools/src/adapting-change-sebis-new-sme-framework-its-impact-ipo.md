@@ -61,3 +61,9 @@ The amendments address long-standing concerns about transparency, misuse of fund
 For SMEs, these changes present an opportunity to align with higher governance standards, attract informed investors, and achieve sustainable growth. For investors, the framework promises increased trust and confidence in SME IPO platforms.
 
 As stakeholders navigate this evolving landscape, understanding these regulations and their implications will be crucial for staying ahead. The amendments underscore SEBI’s commitment to strengthening India’s capital markets and ensuring that SMEs play a pivotal role in the country’s economic growth.
+
+## Background
+
+At its 208th meeting on 18 December 2024 (PR No. 36/2024), the SEBI Board approved a revised SME public issue framework, notified in March 2025 as amendments to the ICDR and LODR Regulations. An SME issuer must have operating profit (EBITDA) of at least Rs. 1 crore in two of the three preceding financial years. Offer for sale is capped at 20% of the issue size and at 50% of a selling shareholder's holding. Promoter holding above the minimum promoter contribution is released in halves after one and two years. General corporate purposes are capped at the lower of 15% of proceeds or Rs. 10 crore, and proceeds cannot repay loans from promoters, the promoter group or related parties. The draft offer document stays open 21 days for public comment. Related party transactions of SME listed entities above the lower of 10% of turnover or Rs. 50 crore are material.
+
+Source: SEBI (Issue of Capital and Disclosure Requirements) (Amendment) Regulations, 2025, notified 4 March 2025 [link](https://www.sebi.gov.in/legal/regulations/mar-2025/securities-and-exchange-board-of-india-issue-of-capital-and-disclosure-requirements-amendment-regulations-2025_92539.html)

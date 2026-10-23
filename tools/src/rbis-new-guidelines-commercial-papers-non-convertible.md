@@ -25,3 +25,9 @@ These directions aim to strengthen the framework for short-term debt instruments
 Disclaimer: This summary is for informational purposes only. Professionals are advised to refer to the full RBI document for comprehensive details.
 
 [Link to RBI Master Direction](https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=12592)
+
+## Background
+
+The Reserve Bank of India (Commercial Paper and Non-Convertible Debentures of original or initial maturity upto one year) Directions, 2024 were issued as a Master Direction (FMRD.DIRD.10/14.02.001/2023-24) on 3 January 2024 and came into force on 1 April 2024. Eligible issuers include companies, NBFCs including housing finance companies, InvITs, REITs, All India Financial Institutions, and other body corporates, co-operative societies and LLPs with a minimum net worth of Rs. 100 crore, provided their fund-based facilities from banks, AIFIs or NBFCs are classified as standard. All residents may invest, and non-residents may invest to the extent permitted under FEMA, 1999; investment in instruments issued by related parties is not permitted. Commercial paper has a tenor of 7 days to one year and NCDs 90 days to one year. The minimum denomination is Rs. 5 lakh, issuance is in dematerialised form, a minimum credit rating of A3 applies, and the instruments cannot be underwritten or co-accepted.
+
+Source: Master Direction on Commercial Paper and Non-Convertible Debentures of original or initial maturity upto one year, 2024, FMRD.DIRD.10/14.02.001/2023-24, 3 January 2024 [link](https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=12592)
