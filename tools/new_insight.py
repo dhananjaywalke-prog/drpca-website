@@ -73,7 +73,7 @@ def split_background(body_md: str) -> tuple[str, str]:
 
 
 def md_to_html(md: str) -> str:
-    md = lib.no_em_dashes(lib.strip_emoji(md))
+    md = lib.rupee(lib.no_em_dashes(lib.strip_emoji(md)))
     out = markdown.markdown(md, extensions=["sane_lists", "smarty"], output_format="html5")
     # Give every H2 an id for the TOC
     counter = [0]
@@ -125,8 +125,8 @@ def main() -> None:
 
     slug = meta.get("slug") or lib.slugify(meta["title"])
     pub = date.fromisoformat(meta["date"])
-    title = lib.no_em_dashes(lib.strip_emoji(meta["title"]))
-    summary = lib.no_em_dashes(lib.strip_emoji(meta["summary"]))
+    title = lib.rupee(lib.no_em_dashes(lib.strip_emoji(meta["title"])))
+    summary = lib.rupee(lib.no_em_dashes(lib.strip_emoji(meta["summary"])))
     hook = lib.no_em_dashes(lib.strip_emoji(meta.get("hook", "")))
 
     post_md, background_md = split_background(body_md)

@@ -100,6 +100,11 @@ def fix_double_encoding(text: str) -> str:
     return text.replace("&amp;amp;", "&amp;").replace("&amp;quot;", "&quot;").replace("&amp;#39;", "&#39;")
 
 
+def rupee(text: str) -> str:
+    """House style: Rs. rather than the ₹ sign."""
+    return re.sub(r"₹\s*", "Rs. ", text)
+
+
 def no_em_dashes(text: str) -> str:
     # House style: no em-dashes. Replace with a comma-space or a full stop depending on context.
     text = text.replace(" — ", ", ").replace("—", ", ").replace(" – ", ", ")
