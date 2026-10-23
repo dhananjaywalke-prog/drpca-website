@@ -61,3 +61,9 @@ Institutional capital demands consistent disclosures, **independent valuations, 
 REITs are no longer an alternative vehicle, they’re now part of **mainstream equity markets.** This move bridges the gap between **physical real estate and capital markets**, unlocking **liquidity**, **institutional trust**, and **scalability.**
 
 Do you think this move will help developers tap into a new wave of capital and make real estate more liquid and transparent? Let’s discuss, your insights could shape how India’s property market evolves next.
+
+## Background
+
+At its 211th meeting on 12 September 2025 (PR No. 62/2025), the SEBI Board approved amendments to the SEBI (Mutual Funds) Regulations, 1996 reclassifying units of Real Estate Investment Trusts as equity for investment by mutual funds and Specialized Investment Funds. InvITs retain their hybrid classification, and the earlier combined limit for REITs and InvITs now applies to InvITs alone. The SEBI (Mutual Funds) (Second Amendment) Regulations, 2025, notified on 31 October 2025, add REIT units to the definition of equity related instruments and cap a mutual fund's holding across all schemes at 10% of the REIT units of a single issuer. A SEBI circular of 28 November 2025 provides that from 1 January 2026 mutual fund and SIF investments in REITs count as equity related instruments, REIT holdings in debt schemes as on 31 December 2025 are grandfathered, and REITs may enter equity indices from 1 July 2026.
+
+Source: SEBI (Mutual Funds) (Second Amendment) Regulations, 2025, notified 31 October 2025 [link](https://www.sebi.gov.in/legal/regulations/nov-2025/securities-and-exchange-board-of-india-mutual-funds-second-amendment-regulations-2025_97594.html)
