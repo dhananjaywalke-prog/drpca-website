@@ -43,3 +43,9 @@ Section 247 is more than a legal clause, it’s a **statement that valuation mat
 As India’s corporate landscape evolves, valuers who master the art of combining **technical accuracy with ethical clarity** will be the ones shaping the future of **financial transparency.**
 
 **How has Section 247 impacted the way you or your organization approaches valuation?** Share your thoughts in the comments.
+
+## Background
+
+Section 247 of the Companies Act, 2013 came into force on 18 October 2017. Where the Act requires valuation of property, shares, securities, goodwill, net worth or liabilities, it must be made by a person registered as a valuer. Under section 247(2) the valuer must make an impartial, true and fair valuation and must not value any asset in which he has a direct or indirect interest. The Companies (Registered Valuers and Valuation) Rules, 2017 were notified on 18 October 2017, and by notification dated 23 October 2017 the Central Government specified the Insolvency and Bankruptcy Board of India as the authority under the Rules. Individuals register through a registered valuers organisation in three asset classes: Land and Building, Plant and Machinery, and Securities or Financial Assets. Rule 8 requires valuations to follow standards notified by the Central Government or, until then, internationally accepted standards or those of a registered valuers organisation.
+
+Source: Companies (Registered Valuers and Valuation) Rules, 2017, rules 2, 3, 8 and Annexure IV [link](https://ibbi.gov.in/uploads/legalframwork/2023-06-21-181015-2hky8-8753099c776b53bf9675ac7fa1192257.pdf)
