@@ -62,8 +62,14 @@ AUTHORS = {
     "Rohan Adkar": {
         "name": "CA Rohan Adkar",
         "role": "Partner, DRP &amp; Co. LLP",
-        "avatar": "",
+        "avatar": "/assets/team/rohan-adkar.jpg",
         "linkedin": "",
+    },
+    "Priyank Vaidya": {
+        "name": "CA Priyank Vaidya",
+        "role": "Partner, DRP &amp; Co. LLP",
+        "avatar": "/assets/team/priyank-vaidya.jpg",
+        "linkedin": "https://www.linkedin.com/in/fca-priyank-vaidya-02a09a18/",
     },
 }
 
