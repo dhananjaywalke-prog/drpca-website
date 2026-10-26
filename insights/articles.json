@@ -468,6 +468,19 @@
     "linkedin_url": "https://www.linkedin.com/feed/update/urn:li:activity:7463487584737034242/"
   },
   {
+    "slug": "erp-records-risk-does-not-control-it",
+    "title": "Your ERP records risk. It does not control it.",
+    "date": "2026-05-21",
+    "date_display": "May 21, 2026",
+    "category": "Governance",
+    "cat_stripe": "governance",
+    "reading_time": 1,
+    "summary": "Implemented ERPs with daily reports still let one user create the vendor and approve the payment. The one question a system audit asks, and what the answer says about your controls.",
+    "author": "Priyank Vaidya",
+    "hook": "Your ERP is recording risk. It isn't controlling it. There's a vast difference.",
+    "linkedin_url": "https://www.linkedin.com/posts/fca-priyank-vaidya-02a09a18_systemaudit-erp-internalaudit-share-7463268715359297536-nKxC/"
+  },
+  {
     "slug": "personal-guarantee-survives-resolution-plan",
     "title": "A personal guarantee survives the resolution plan that saved the company",
     "date": "2026-05-20",
@@ -520,6 +533,19 @@
     "linkedin_url": "https://www.linkedin.com/feed/update/urn:li:activity:7460928209530908673/"
   },
   {
+    "slug": "five-questions-every-independent-director-must-ask",
+    "title": "Five questions every independent director should ask, that no one else will",
+    "date": "2026-05-14",
+    "date_display": "May 14, 2026",
+    "category": "Governance",
+    "cat_stripe": "governance",
+    "reading_time": 1,
+    "summary": "Five questions an independent director can ask in nearly every board meeting, and why management rarely asks them on its own.",
+    "author": "Priyank Vaidya",
+    "hook": "Most boardrooms drown in answers. Very few drown in the right questions.",
+    "linkedin_url": "https://www.linkedin.com/posts/fca-priyank-vaidya-02a09a18_independentdirector-boardroom-corporategovernance-share-7460732765525745664-FWDx/"
+  },
+  {
     "slug": "family-succession-move-the-disagreement",
     "title": "Family business succession: move the disagreement, not the person",
     "date": "2026-05-13",
@@ -544,6 +570,32 @@
     "author": "Dhananjay Walke",
     "hook": "A ₹62 Cr deal died in 40 minutes.",
     "linkedin_url": "https://www.linkedin.com/feed/update/urn:li:activity:7459482500256579584/"
+  },
+  {
+    "slug": "market-problem-is-a-working-capital-problem",
+    "title": "That \"market problem\" on your P&L is a working capital problem in disguise",
+    "date": "2026-05-03",
+    "date_display": "May 3, 2026",
+    "category": "Governance",
+    "cat_stripe": "governance",
+    "reading_time": 1,
+    "summary": "Boards blame soft demand. Trace the chain back and it often starts with a delayed supplier advance. Why the cash conversion cycle is a governance metric, not a finance one.",
+    "author": "Priyank Vaidya",
+    "hook": "That \"market problem\" on your P&L? It's actually a working capital problem wearing a costume.",
+    "linkedin_url": "https://www.linkedin.com/posts/fca-priyank-vaidya-02a09a18_workingcapital-cfo-manufacturingindia-share-7456711406994976769-aQgv/"
+  },
+  {
+    "slug": "when-every-department-is-right-the-company-still-loses",
+    "title": "When every department is right, the company still loses",
+    "date": "2026-04-28",
+    "date_display": "April 28, 2026",
+    "category": "Governance",
+    "cat_stripe": "governance",
+    "reading_time": 1,
+    "summary": "Marketing, production and finance each had data and each was right, and the company missed its numbers again. The governance blind spot, and the job of the one voice that names the pattern.",
+    "author": "Priyank Vaidya",
+    "hook": "When every department is right, the company still loses.",
+    "linkedin_url": "https://www.linkedin.com/posts/fca-priyank-vaidya-02a09a18_corporategovernance-independentdirector-boardroom-share-7454933948222124032-XI97/"
   },
   {
     "slug": "clarity-precedes-capital-what-twenty-years-in-finance-taught",
