@@ -225,18 +225,65 @@
             pointer-events: auto;
         }
 
-        /* Slide backgrounds */
+        /* Slide backgrounds: photo sits on its own layer so it can drift
+           slowly (panoramic pan) while the navy overlay and text stay still */
         .hero-slide--about {
-            background: linear-gradient(135deg, rgba(22,42,77,0.68) 0%, rgba(31,56,100,0.65) 40%, rgba(42,74,122,0.68) 100%), url('/assets/hero/slide-about.jpg') center/cover no-repeat;
+            --hero-img: url('/assets/hero/slide-about.jpg');
+            --hero-ov: linear-gradient(135deg, rgba(22,42,77,0.68) 0%, rgba(31,56,100,0.65) 40%, rgba(42,74,122,0.68) 100%);
+            --hero-pan: heroPanRight;
         }
         .hero-slide--assurance {
-            background: linear-gradient(135deg, rgba(26,47,82,0.68) 0%, rgba(31,56,100,0.65) 50%, rgba(38,63,110,0.68) 100%), url('/assets/hero/slide-assurance.jpg') center/cover no-repeat;
+            --hero-img: url('/assets/hero/slide-assurance.jpg');
+            --hero-ov: linear-gradient(135deg, rgba(26,47,82,0.68) 0%, rgba(31,56,100,0.65) 50%, rgba(38,63,110,0.68) 100%);
+            --hero-pan: heroPanLeft;
         }
         .hero-slide--advisory {
-            background: linear-gradient(135deg, rgba(29,52,96,0.65) 0%, rgba(36,66,114,0.62) 40%, rgba(46,95,163,0.68) 100%), url('/assets/hero/slide-advisory.jpg') center/cover no-repeat;
+            --hero-img: url('/assets/hero/slide-advisory.jpg');
+            --hero-ov: linear-gradient(135deg, rgba(29,52,96,0.65) 0%, rgba(36,66,114,0.62) 40%, rgba(46,95,163,0.68) 100%);
+            --hero-pan: heroPanRise;
         }
         .hero-slide--insights {
-            background: linear-gradient(135deg, rgba(22,42,77,0.68) 0%, rgba(28,49,88,0.65) 50%, rgba(46,95,163,0.68) 100%), url('/assets/hero/slide-insights.jpg') center/cover no-repeat;
+            --hero-img: url('/assets/hero/slide-insights.jpg');
+            --hero-ov: linear-gradient(135deg, rgba(22,42,77,0.68) 0%, rgba(28,49,88,0.65) 50%, rgba(46,95,163,0.68) 100%);
+            --hero-pan: heroPanRight;
+        }
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+            overflow: hidden;
+            pointer-events: none;
+        }
+        .hero-bg::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: var(--hero-img) center/cover no-repeat;
+            transform: scale(1.16) translate3d(-6%, 0, 0);
+            will-change: transform;
+            backface-visibility: hidden;
+        }
+        .hero-bg::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: var(--hero-ov);
+        }
+        .hero-slide.active .hero-bg::before,
+        .hero-slide.leaving .hero-bg::before {
+            animation: var(--hero-pan) 7s linear forwards;
+        }
+        @keyframes heroPanRight {
+            from { transform: scale(1.16) translate3d(-6%, 0.8%, 0); }
+            to   { transform: scale(1.18) translate3d(6%, -0.8%, 0); }
+        }
+        @keyframes heroPanLeft {
+            from { transform: scale(1.16) translate3d(6%, -0.8%, 0); }
+            to   { transform: scale(1.18) translate3d(-6%, 0.8%, 0); }
+        }
+        @keyframes heroPanRise {
+            from { transform: scale(1.24) translate3d(-4%, 4%, 0); }
+            to   { transform: scale(1.12) translate3d(4%, -3%, 0); }
         }
 
         /* Decorative elements on slides */
@@ -910,6 +957,7 @@
 
         <!-- Slide 2: About Us -->
     <div class="hero-slide hero-slide--about" data-slide="1">
+        <div class="hero-bg" aria-hidden="true"></div>
         <div class="hero-content">
             <div class="hero-label">Established 1995</div>
             <h1 class="hero-title">Chartered Accountants, Wealth Managers &amp; Valuation Professionals</h1>
@@ -923,6 +971,7 @@
 
     <!-- Slide 2: Assurance Services -->
     <div class="hero-slide hero-slide--assurance" data-slide="2">
+        <div class="hero-bg" aria-hidden="true"></div>
         <div class="hero-content">
             <div class="hero-label">Assurance Services</div>
             <h1 class="hero-title">Audit, Tax &amp; Governance Services</h1>
@@ -936,6 +985,7 @@
 
     <!-- Slide 3: Advisory Services -->
     <div class="hero-slide hero-slide--advisory" data-slide="3">
+        <div class="hero-bg" aria-hidden="true"></div>
         <div class="hero-content">
             <div class="hero-label">Advisory Services</div>
             <h1 class="hero-title">Valuation, Financial Advisory &amp; Wealth Management</h1>
@@ -949,6 +999,7 @@
 
     <!-- Slide 4: Insights -->
     <div class="hero-slide hero-slide--insights" data-slide="4">
+        <div class="hero-bg" aria-hidden="true"></div>
         <div class="hero-content">
             <div class="hero-label">Insights &amp; Updates</div>
             <h1 class="hero-title">Articles, Updates &amp; Professional Resources</h1>
@@ -1461,10 +1512,17 @@
     let autoTimer;
 
     function goToSlide(index) {
-        slides[current].classList.remove('active');
+        if (index === current) return;
+        const prev = slides[current];
+        prev.classList.remove('active');
+        prev.classList.add('leaving');   // keep the pan moving while it fades out
+        setTimeout(() => prev.classList.remove('leaving'), 900);
         dots[current].classList.remove('active');
         current = index;
-        slides[current].classList.add('active');
+        const next = slides[current];
+        next.classList.remove('leaving');
+        void next.offsetWidth;            // restart the pan from the beginning
+        next.classList.add('active');
         dots[current].classList.add('active');
         slideNum.textContent = String(current + 1).padStart(2, '0');
     }
@@ -1489,10 +1547,12 @@
         });
     });
 
-    // Pause on hover
+    // Pause only while the browser tab is hidden (not on mouse hover,
+    // since the hero fills most of the screen and hover stalled the slider)
     const hero = document.getElementById('hero');
-    hero.addEventListener('mouseenter', () => clearInterval(autoTimer));
-    hero.addEventListener('mouseleave', startAuto);
+    document.addEventListener('visibilitychange', () => {
+        if (document.hidden) clearInterval(autoTimer); else resetAuto();
+    });
 
     // Touch swipe support
     let touchStartX = 0;
